@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		E40C9D6F255194EE0050646C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C9D6E255194EE0050646C /* AppDelegate.swift */; };
 		E40C9D71255194EE0050646C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C9D70255194EE0050646C /* SceneDelegate.swift */; };
-		E40C9D73255194EE0050646C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C9D72255194EE0050646C /* ContentView.swift */; };
+		E40C9D73255194EE0050646C /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C9D72255194EE0050646C /* MainScreen.swift */; };
 		E40C9D75255194F00050646C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E40C9D74255194F00050646C /* Assets.xcassets */; };
 		E40C9D78255194F00050646C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E40C9D77255194F00050646C /* Preview Assets.xcassets */; };
 		E40C9D7B255194F00050646C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E40C9D79255194F00050646C /* LaunchScreen.storyboard */; };
+		E40C9D84255195740050646C /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C9D83255195740050646C /* MainScreenViewModel.swift */; };
+		E40C9D89255197C80050646C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C9D88255197C80050646C /* Colors.swift */; };
+		E40C9D8D255199550050646C /* Ext+UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C9D8C255199550050646C /* Ext+UIScreen.swift */; };
+		E40C9D93255199830050646C /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C9D92255199830050646C /* RoundedCorners.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E40C9D6B255194EE0050646C /* Kalkulator Urlopu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kalkulator Urlopu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40C9D6E255194EE0050646C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E40C9D70255194EE0050646C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E40C9D72255194EE0050646C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E40C9D72255194EE0050646C /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		E40C9D74255194F00050646C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E40C9D77255194F00050646C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E40C9D7A255194F00050646C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E40C9D7C255194F00050646C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E40C9D83255195740050646C /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
+		E40C9D88255197C80050646C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		E40C9D8C255199550050646C /* Ext+UIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UIScreen.swift"; sourceTree = "<group>"; };
+		E40C9D92255199830050646C /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +66,11 @@
 			children = (
 				E40C9D6E255194EE0050646C /* AppDelegate.swift */,
 				E40C9D70255194EE0050646C /* SceneDelegate.swift */,
-				E40C9D72255194EE0050646C /* ContentView.swift */,
+				E40C9D88255197C80050646C /* Colors.swift */,
+				E40C9D72255194EE0050646C /* MainScreen.swift */,
+				E40C9D83255195740050646C /* MainScreenViewModel.swift */,
+				E40C9D902551996D0050646C /* Helpers */,
+				E40C9D8B255199430050646C /* Extensions */,
 				E40C9D74255194F00050646C /* Assets.xcassets */,
 				E40C9D79255194F00050646C /* LaunchScreen.storyboard */,
 				E40C9D7C255194F00050646C /* Info.plist */,
@@ -73,6 +85,30 @@
 				E40C9D77255194F00050646C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E40C9D8B255199430050646C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E40C9D8C255199550050646C /* Ext+UIScreen.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E40C9D902551996D0050646C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E40C9D91255199720050646C /* Layout */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E40C9D91255199720050646C /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				E40C9D92255199830050646C /* RoundedCorners.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,8 +182,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E40C9D6F255194EE0050646C /* AppDelegate.swift in Sources */,
+				E40C9D89255197C80050646C /* Colors.swift in Sources */,
+				E40C9D84255195740050646C /* MainScreenViewModel.swift in Sources */,
+				E40C9D8D255199550050646C /* Ext+UIScreen.swift in Sources */,
 				E40C9D71255194EE0050646C /* SceneDelegate.swift in Sources */,
-				E40C9D73255194EE0050646C /* ContentView.swift in Sources */,
+				E40C9D73255194EE0050646C /* MainScreen.swift in Sources */,
+				E40C9D93255199830050646C /* RoundedCorners.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

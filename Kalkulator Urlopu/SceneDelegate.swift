@@ -1,7 +1,3 @@
-//
-//  SceneDelegate.swift
-//  Kalkulator Urlopu
-//
 //  Created by Tymoteusz Stokarski on 03/11/2020.
 //
 
@@ -11,7 +7,6 @@ import SwiftUI
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         let contentView = DaysOffView()

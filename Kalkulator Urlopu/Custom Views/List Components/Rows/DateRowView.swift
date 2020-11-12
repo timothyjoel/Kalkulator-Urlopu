@@ -9,15 +9,15 @@ struct DateRowView: View {
     @Binding var date: Date
     
     var body: some View {
-        HStack {
+        
             DatePicker(title, selection: $date, displayedComponents: .date)
-                .font(.system(size: 15, weight: .semibold, design: .rounded))
+                .font(.text)
                 .accentColor(Color.customPink)
                 .environment(\.locale, Locale.init(identifier: "pl"))
                 .foregroundColor(.customLabel)
-        }
-        .padding(.vertical, 8)
-        .padding(.horizontal, 16)
+                .padding(.vertical, 8)
+                .padding(.horizontal, 16)
+
     }
 }
 
@@ -33,6 +33,7 @@ struct DateRowView_Previews: PreviewProvider {
             DateRowView(title: "Title", date: .constant(Date()))
                 .previewDevice(PreviewDevice(rawValue: "iPhone XS Max"))
                 .previewDisplayName("iPhone XS Max")
+                .environment(\.colorScheme, .dark)
       }
     
    }

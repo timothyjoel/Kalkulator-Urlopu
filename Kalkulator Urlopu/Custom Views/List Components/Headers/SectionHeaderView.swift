@@ -10,7 +10,7 @@ struct SectionHeaderView: View {
     var body: some View {
         HStack() {
             Text(title)
-                .font(.system(size: 15, weight: .semibold, design: .rounded))
+                .font(.header)
                 .foregroundColor(.customSectionTitle)
                 .padding(.horizontal)
                 .padding(.top, 8)
@@ -32,6 +32,7 @@ struct SectionHeaderView_Previews: PreviewProvider {
             SectionHeaderView(title: "Title")
                 .previewDevice(PreviewDevice(rawValue: "iPhone XS Max"))
                 .previewDisplayName("iPhone XS Max")
+                .environment(\.colorScheme, .dark)
       }
     
    }

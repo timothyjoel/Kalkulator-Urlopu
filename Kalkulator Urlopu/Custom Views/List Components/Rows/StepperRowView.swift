@@ -11,11 +11,11 @@ struct StepperRowView: View {
     var body: some View {
         HStack {
             Stepper(title, value: $value)
-                .font(.system(size: 15, weight: .semibold, design: .rounded))
+                .font(.text)
                 .environment(\.locale, Locale.init(identifier: "pl"))
                 .foregroundColor(.customLabel)
         }
-        .padding(.vertical, 8)
+        .padding(.vertical, 16)
         .padding(.horizontal, 16)
     }
 }
@@ -32,6 +32,7 @@ struct StepperRowView_Previews: PreviewProvider {
             StepperRowView(title: "Title", value: .constant(10))
                 .previewDevice(PreviewDevice(rawValue: "iPhone XS Max"))
                 .previewDisplayName("iPhone XS Max")
+                .environment(\.colorScheme, .dark)
       }
     
    }

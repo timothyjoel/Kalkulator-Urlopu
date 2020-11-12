@@ -16,7 +16,7 @@ struct SectionView<Content>: View where Content: View {
     var body: some View {
         
         VStack {
-            SectionHeaderView(title: "Zatrudnienie")
+            SectionHeaderView(title: title)
             VStack {
                 content()
             }

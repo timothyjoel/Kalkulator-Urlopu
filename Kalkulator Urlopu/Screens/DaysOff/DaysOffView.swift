@@ -9,17 +9,19 @@ struct DaysOffView: View {
     @ObservedObject var vm = DaysOffViewModel()
     
     var body: some View {
-        ZStack {
-            Color.customBackground.edgesIgnoringSafeArea(.all)
-            BackgroundBottomAnimationView(show: $vm.result.isValid)
-            ScrollView {
-                    SectionView(title: "Zatrudnienie") {
+        
+        NavigationView {
+            ZStack {
+                Color.customBackground.edgesIgnoringSafeArea(.all)
+                BackgroundBottomAnimationView(show: $vm.result.isValid)
+                ScrollView {
+                    SectionView(title: "Dane dotyczące zatrudnienia") {
                         ToggleRowView(title: "Staż pracy poniżej 10 lat", isOn: $vm.query.workedLessThanTenYears)
                         DateRowView(title: "Początek", date: $vm.query.beginDate)
                         DateRowView(title: "Koniec", date: $vm.query.endDate)
                         StepperRowView(title: "Wymiar etatu: \(vm.query.workingTime)/4", value: $vm.query.workingTime)
                     }
-                    SectionView(title: vm.result.message) {
+                    SectionView(title: "Zakres urlopu") {
                         ResultRowView(title: "Liczba dni wolnych za wybrany okres:", result: vm.result.daysOff)
                         ResultRowView(title: "Godzinowy wymiar urlopu:", result: vm.result.hoursOff)
                         ResultRowView(title: "Liczba przepracowanych miesięcy:", result: vm.result.workedMonths)
@@ -29,7 +31,14 @@ struct DaysOffView: View {
                     .offset(x: 0, y: vm.result.isValid ? 0 : UIScreen.height)
                     .animation(.spring())
                     Spacer()
+                }
+                
             }
+            .navigationBarTitle(Text("Kalkulator urlopu"))
+            .navigationBarItems(trailing: NavigationButton(icon: .questionMark, action: {
+                print("tapped")
+            }))
+            
         }
         
     }
@@ -47,6 +56,7 @@ struct ContentView_Previews: PreviewProvider {
             DaysOffView()
                 .previewDevice(PreviewDevice(rawValue: "iPhone XS Max"))
                 .previewDisplayName("iPhone XS Max")
+                .environment(\.colorScheme, .dark)
       }
     
    }
@@ -68,4 +78,5 @@ struct BackgroundBottomAnimationView: View {
         .offset(x: 0, y: !show ? 0 : UIScreen.height)
         .animation(.spring())
     }
+    
 }

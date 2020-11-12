@@ -18,7 +18,6 @@
 		E40C9D78255194F00050646C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E40C9D77255194F00050646C /* Preview Assets.xcassets */; };
 		E40C9D7B255194F00050646C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E40C9D79255194F00050646C /* LaunchScreen.storyboard */; };
 		E40C9D84255195740050646C /* DaysOffViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C9D83255195740050646C /* DaysOffViewModel.swift */; };
-		E40C9D89255197C80050646C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C9D88255197C80050646C /* Colors.swift */; };
 		E40C9D8D255199550050646C /* Ext+UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C9D8C255199550050646C /* Ext+UIScreen.swift */; };
 		E40C9D93255199830050646C /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C9D92255199830050646C /* RoundedCorners.swift */; };
 		E4CE0375255C1FEA005F6300 /* DaysOffModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE0374255C1FEA005F6300 /* DaysOffModel.swift */; };
@@ -31,6 +30,9 @@
 		E4CE03A9255DAD1F005F6300 /* StepperRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE03A8255DAD1F005F6300 /* StepperRowView.swift */; };
 		E4CE03AD255DADFE005F6300 /* ToggleRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE03AC255DADFE005F6300 /* ToggleRowView.swift */; };
 		E4CE03BC255DB1F5005F6300 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE03BB255DB1F5005F6300 /* SectionView.swift */; };
+		E4FCDC72255DB60700192D6F /* Ext+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDC71255DB60700192D6F /* Ext+Font.swift */; };
+		E4FCDC76255DDF6C00192D6F /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDC75255DDF6C00192D6F /* NavigationButton.swift */; };
+		E4FCDC81255DE76900192D6F /* Ext+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDC80255DE76900192D6F /* Ext+Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +58,6 @@
 		E40C9D7A255194F00050646C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E40C9D7C255194F00050646C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E40C9D83255195740050646C /* DaysOffViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysOffViewModel.swift; sourceTree = "<group>"; };
-		E40C9D88255197C80050646C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		E40C9D8C255199550050646C /* Ext+UIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UIScreen.swift"; sourceTree = "<group>"; };
 		E40C9D92255199830050646C /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
 		E4CE0374255C1FEA005F6300 /* DaysOffModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysOffModel.swift; sourceTree = "<group>"; };
@@ -71,6 +72,9 @@
 		E4CE03A8255DAD1F005F6300 /* StepperRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperRowView.swift; sourceTree = "<group>"; };
 		E4CE03AC255DADFE005F6300 /* ToggleRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleRowView.swift; sourceTree = "<group>"; };
 		E4CE03BB255DB1F5005F6300 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
+		E4FCDC71255DB60700192D6F /* Ext+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Font.swift"; sourceTree = "<group>"; };
+		E4FCDC75255DDF6C00192D6F /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
+		E4FCDC80255DE76900192D6F /* Ext+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Color.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,7 @@
 		E40BF2702552CA95000715FD /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				E4FCDC75255DDF6C00192D6F /* NavigationButton.swift */,
 				E40BF2712552CAA6000715FD /* Icon.swift */,
 			);
 			path = Buttons;
@@ -163,6 +168,7 @@
 		E40C9D8B255199430050646C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E4FCDC7B255DE06600192D6F /* SwiftUI */,
 				E4CE0392255D8328005F6300 /* Foundation */,
 				E4CE03B2255DAE71005F6300 /* UIKit */,
 			);
@@ -182,7 +188,6 @@
 		E40C9D91255199720050646C /* View Modifiers */ = {
 			isa = PBXGroup;
 			children = (
-				E40C9D88255197C80050646C /* Colors.swift */,
 				E40C9D92255199830050646C /* RoundedCorners.swift */,
 			);
 			path = "View Modifiers";
@@ -259,6 +264,15 @@
 				E4CE0397255DA522005F6300 /* Rows */,
 			);
 			path = "List Components";
+			sourceTree = "<group>";
+		};
+		E4FCDC7B255DE06600192D6F /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				E4FCDC71255DB60700192D6F /* Ext+Font.swift */,
+				E4FCDC80255DE76900192D6F /* Ext+Color.swift */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,18 +387,20 @@
 				E4CE03BC255DB1F5005F6300 /* SectionView.swift in Sources */,
 				E4CE03AD255DADFE005F6300 /* ToggleRowView.swift in Sources */,
 				E4CE039F255DA60E005F6300 /* DateRowView.swift in Sources */,
-				E40C9D89255197C80050646C /* Colors.swift in Sources */,
 				E40BF2722552CAA6000715FD /* Icon.swift in Sources */,
 				E4CE03A9255DAD1F005F6300 /* StepperRowView.swift in Sources */,
 				E4CE0375255C1FEA005F6300 /* DaysOffModel.swift in Sources */,
 				E40C9D84255195740050646C /* DaysOffViewModel.swift in Sources */,
+				E4FCDC81255DE76900192D6F /* Ext+Color.swift in Sources */,
 				E4CE03A3255DA664005F6300 /* SectionHeaderView.swift in Sources */,
 				E40C9D8D255199550050646C /* Ext+UIScreen.swift in Sources */,
 				E40C9D71255194EE0050646C /* SceneDelegate.swift in Sources */,
 				E40C9D73255194EE0050646C /* DaysOffView.swift in Sources */,
+				E4FCDC76255DDF6C00192D6F /* NavigationButton.swift in Sources */,
 				E4CE0399255DA5CD005F6300 /* ResultRowView.swift in Sources */,
 				E4CE038B255D830E005F6300 /* Ext+Date.swift in Sources */,
 				E4CE0394255D83A4005F6300 /* Ext+Double.swift in Sources */,
+				E4FCDC72255DB60700192D6F /* Ext+Font.swift in Sources */,
 				E40C9D93255199830050646C /* RoundedCorners.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

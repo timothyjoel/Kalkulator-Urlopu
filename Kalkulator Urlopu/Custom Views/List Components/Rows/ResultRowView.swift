@@ -11,12 +11,13 @@ struct ResultRowView: View {
     var body: some View {
         HStack {
             Text(title)
-                .font(.system(size: 15, weight: .semibold, design: .rounded))
+                .font(.text)
                 .foregroundColor(.customLabel)
                 .padding(8)
             Spacer()
             Text("\(result)")
-                .font(.system(size: 15, weight: .semibold, design: .rounded))
+                .animation(nil)
+                .font(.text)
                 .foregroundColor(.blue)
                 .padding(8)
         }
@@ -36,6 +37,7 @@ struct ResultRowView_Previews: PreviewProvider {
             ResultRowView(title: "Title", result: 0)
                 .previewDevice(PreviewDevice(rawValue: "iPhone XS Max"))
                 .previewDisplayName("iPhone XS Max")
+                .environment(\.colorScheme, .dark)
       }
    }
 }

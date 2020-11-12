@@ -11,7 +11,7 @@ struct ToggleRowView: View {
     var body: some View {
         VStack {
             Toggle(title, isOn: $isOn)
-                .font(.system(size: 15, weight: .semibold, design: .rounded))
+                .font(.text)
                 .toggleStyle(SwitchToggleStyle(tint: .blue))
                 .environment(\.locale, Locale.init(identifier: "pl"))
                 .foregroundColor(.customLabel)
@@ -33,6 +33,7 @@ struct ToggleRowView_Previews: PreviewProvider {
             ToggleRowView(title: "Title", isOn: .constant(true))
                 .previewDevice(PreviewDevice(rawValue: "iPhone XS Max"))
                 .previewDisplayName("iPhone XS Max")
+                .environment(\.colorScheme, .dark)
       }
     
    }

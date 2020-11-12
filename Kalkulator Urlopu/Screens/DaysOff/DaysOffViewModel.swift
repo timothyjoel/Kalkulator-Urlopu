@@ -5,7 +5,7 @@ import Combine
 import SwiftUI
 
 class DaysOffViewModel: ObservableObject  {
-
+    
     @Published var query = DaysOffQuery() {
         didSet {
             calculateResult()

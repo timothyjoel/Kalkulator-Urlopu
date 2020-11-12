@@ -11,7 +11,7 @@ struct RoundedCorners: View {
     var bl: CGFloat = 0.0
     var br: CGFloat = 0.0
     
-    init(color: Color = .black, corners: CGFloat) {
+    init(color: Color = .black, corners: CGFloat = 10) {
         self.tl = corners
         self.tr = corners
         self.bl =  corners

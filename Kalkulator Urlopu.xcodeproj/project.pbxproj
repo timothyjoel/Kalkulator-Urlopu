@@ -3,39 +3,86 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E40BF26525521FC1000715FD /* LottieAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40BF26425521FC1000715FD /* LottieAnimation.swift */; };
+		E40BF26A25521FF7000715FD /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = E40BF26925521FF7000715FD /* Lottie */; };
+		E40BF26E25522105000715FD /* animation1.json in Resources */ = {isa = PBXBuildFile; fileRef = E40BF26D25522105000715FD /* animation1.json */; };
+		E40BF2722552CAA6000715FD /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40BF2712552CAA6000715FD /* Icon.swift */; };
 		E40C9D6F255194EE0050646C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C9D6E255194EE0050646C /* AppDelegate.swift */; };
 		E40C9D71255194EE0050646C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C9D70255194EE0050646C /* SceneDelegate.swift */; };
-		E40C9D73255194EE0050646C /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C9D72255194EE0050646C /* MainScreen.swift */; };
+		E40C9D73255194EE0050646C /* DaysOffView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C9D72255194EE0050646C /* DaysOffView.swift */; };
 		E40C9D75255194F00050646C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E40C9D74255194F00050646C /* Assets.xcassets */; };
 		E40C9D78255194F00050646C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E40C9D77255194F00050646C /* Preview Assets.xcassets */; };
 		E40C9D7B255194F00050646C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E40C9D79255194F00050646C /* LaunchScreen.storyboard */; };
-		E40C9D84255195740050646C /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C9D83255195740050646C /* MainScreenViewModel.swift */; };
+		E40C9D84255195740050646C /* DaysOffViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C9D83255195740050646C /* DaysOffViewModel.swift */; };
 		E40C9D89255197C80050646C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C9D88255197C80050646C /* Colors.swift */; };
 		E40C9D8D255199550050646C /* Ext+UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C9D8C255199550050646C /* Ext+UIScreen.swift */; };
 		E40C9D93255199830050646C /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40C9D92255199830050646C /* RoundedCorners.swift */; };
+		E4CE0375255C1FEA005F6300 /* DaysOffModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE0374255C1FEA005F6300 /* DaysOffModel.swift */; };
+		E4CE0381255D449D005F6300 /* Kalkulator_UrlopuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE0380255D449D005F6300 /* Kalkulator_UrlopuTests.swift */; };
+		E4CE038B255D830E005F6300 /* Ext+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE038A255D830E005F6300 /* Ext+Date.swift */; };
+		E4CE0394255D83A4005F6300 /* Ext+Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE0393255D83A4005F6300 /* Ext+Double.swift */; };
+		E4CE0399255DA5CD005F6300 /* ResultRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE0398255DA5CD005F6300 /* ResultRowView.swift */; };
+		E4CE039F255DA60E005F6300 /* DateRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE039E255DA60E005F6300 /* DateRowView.swift */; };
+		E4CE03A3255DA664005F6300 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE03A2255DA664005F6300 /* SectionHeaderView.swift */; };
+		E4CE03A9255DAD1F005F6300 /* StepperRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE03A8255DAD1F005F6300 /* StepperRowView.swift */; };
+		E4CE03AD255DADFE005F6300 /* ToggleRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE03AC255DADFE005F6300 /* ToggleRowView.swift */; };
+		E4CE03BC255DB1F5005F6300 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE03BB255DB1F5005F6300 /* SectionView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E4CE0383255D449D005F6300 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E40C9D63255194EE0050646C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E40C9D6A255194EE0050646C;
+			remoteInfo = "Kalkulator Urlopu";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		E40BF26425521FC1000715FD /* LottieAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieAnimation.swift; sourceTree = "<group>"; };
+		E40BF26D25522105000715FD /* animation1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation1.json; sourceTree = "<group>"; };
+		E40BF2712552CAA6000715FD /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 		E40C9D6B255194EE0050646C /* Kalkulator Urlopu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kalkulator Urlopu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40C9D6E255194EE0050646C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E40C9D70255194EE0050646C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E40C9D72255194EE0050646C /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		E40C9D72255194EE0050646C /* DaysOffView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysOffView.swift; sourceTree = "<group>"; };
 		E40C9D74255194F00050646C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E40C9D77255194F00050646C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E40C9D7A255194F00050646C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E40C9D7C255194F00050646C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E40C9D83255195740050646C /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
+		E40C9D83255195740050646C /* DaysOffViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysOffViewModel.swift; sourceTree = "<group>"; };
 		E40C9D88255197C80050646C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		E40C9D8C255199550050646C /* Ext+UIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UIScreen.swift"; sourceTree = "<group>"; };
 		E40C9D92255199830050646C /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
+		E4CE0374255C1FEA005F6300 /* DaysOffModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysOffModel.swift; sourceTree = "<group>"; };
+		E4CE037E255D449D005F6300 /* Kalkulator UrlopuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kalkulator UrlopuTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4CE0380255D449D005F6300 /* Kalkulator_UrlopuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kalkulator_UrlopuTests.swift; sourceTree = "<group>"; };
+		E4CE0382255D449D005F6300 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4CE038A255D830E005F6300 /* Ext+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Date.swift"; sourceTree = "<group>"; };
+		E4CE0393255D83A4005F6300 /* Ext+Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Double.swift"; sourceTree = "<group>"; };
+		E4CE0398255DA5CD005F6300 /* ResultRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultRowView.swift; sourceTree = "<group>"; };
+		E4CE039E255DA60E005F6300 /* DateRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRowView.swift; sourceTree = "<group>"; };
+		E4CE03A2255DA664005F6300 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		E4CE03A8255DAD1F005F6300 /* StepperRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperRowView.swift; sourceTree = "<group>"; };
+		E4CE03AC255DADFE005F6300 /* ToggleRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleRowView.swift; sourceTree = "<group>"; };
+		E4CE03BB255DB1F5005F6300 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E40C9D68255194EE0050646C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E40BF26A25521FF7000715FD /* Lottie in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4CE037B255D449D005F6300 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,10 +92,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E40BF26325521FB1000715FD /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				E40BF26425521FC1000715FD /* LottieAnimation.swift */,
+				E40BF26C255220F8000715FD /* AnimationFiles */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		E40BF26C255220F8000715FD /* AnimationFiles */ = {
+			isa = PBXGroup;
+			children = (
+				E40BF26D25522105000715FD /* animation1.json */,
+			);
+			path = AnimationFiles;
+			sourceTree = "<group>";
+		};
+		E40BF2702552CA95000715FD /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				E40BF2712552CAA6000715FD /* Icon.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		E40C9D62255194EE0050646C = {
 			isa = PBXGroup;
 			children = (
 				E40C9D6D255194EE0050646C /* Kalkulator Urlopu */,
+				E4CE037F255D449D005F6300 /* Kalkulator UrlopuTests */,
 				E40C9D6C255194EE0050646C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				E40C9D6B255194EE0050646C /* Kalkulator Urlopu.app */,
+				E4CE037E255D449D005F6300 /* Kalkulator UrlopuTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,10 +140,9 @@
 			children = (
 				E40C9D6E255194EE0050646C /* AppDelegate.swift */,
 				E40C9D70255194EE0050646C /* SceneDelegate.swift */,
-				E40C9D88255197C80050646C /* Colors.swift */,
-				E40C9D72255194EE0050646C /* MainScreen.swift */,
-				E40C9D83255195740050646C /* MainScreenViewModel.swift */,
-				E40C9D902551996D0050646C /* Helpers */,
+				E4CE03B0255DAE37005F6300 /* Screens */,
+				E40C9D902551996D0050646C /* Custom Views */,
+				E40BF26325521FB1000715FD /* Lottie */,
 				E40C9D8B255199430050646C /* Extensions */,
 				E40C9D74255194F00050646C /* Assets.xcassets */,
 				E40C9D79255194F00050646C /* LaunchScreen.storyboard */,
@@ -90,25 +163,102 @@
 		E40C9D8B255199430050646C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E40C9D8C255199550050646C /* Ext+UIScreen.swift */,
+				E4CE0392255D8328005F6300 /* Foundation */,
+				E4CE03B2255DAE71005F6300 /* UIKit */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		E40C9D902551996D0050646C /* Helpers */ = {
+		E40C9D902551996D0050646C /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
-				E40C9D91255199720050646C /* Layout */,
+				E40BF2702552CA95000715FD /* Buttons */,
+				E4CE03B6255DAE93005F6300 /* List Components */,
+				E40C9D91255199720050646C /* View Modifiers */,
 			);
-			path = Helpers;
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
-		E40C9D91255199720050646C /* Layout */ = {
+		E40C9D91255199720050646C /* View Modifiers */ = {
 			isa = PBXGroup;
 			children = (
+				E40C9D88255197C80050646C /* Colors.swift */,
 				E40C9D92255199830050646C /* RoundedCorners.swift */,
 			);
-			path = Layout;
+			path = "View Modifiers";
+			sourceTree = "<group>";
+		};
+		E4CE037F255D449D005F6300 /* Kalkulator UrlopuTests */ = {
+			isa = PBXGroup;
+			children = (
+				E4CE0380255D449D005F6300 /* Kalkulator_UrlopuTests.swift */,
+				E4CE0382255D449D005F6300 /* Info.plist */,
+			);
+			path = "Kalkulator UrlopuTests";
+			sourceTree = "<group>";
+		};
+		E4CE0392255D8328005F6300 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				E4CE038A255D830E005F6300 /* Ext+Date.swift */,
+				E4CE0393255D83A4005F6300 /* Ext+Double.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		E4CE0397255DA522005F6300 /* Rows */ = {
+			isa = PBXGroup;
+			children = (
+				E4CE039E255DA60E005F6300 /* DateRowView.swift */,
+				E4CE03A8255DAD1F005F6300 /* StepperRowView.swift */,
+				E4CE03AC255DADFE005F6300 /* ToggleRowView.swift */,
+				E4CE0398255DA5CD005F6300 /* ResultRowView.swift */,
+			);
+			path = Rows;
+			sourceTree = "<group>";
+		};
+		E4CE03B0255DAE37005F6300 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				E4CE03B1255DAE3D005F6300 /* DaysOff */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		E4CE03B1255DAE3D005F6300 /* DaysOff */ = {
+			isa = PBXGroup;
+			children = (
+				E4CE0374255C1FEA005F6300 /* DaysOffModel.swift */,
+				E40C9D83255195740050646C /* DaysOffViewModel.swift */,
+				E40C9D72255194EE0050646C /* DaysOffView.swift */,
+			);
+			path = DaysOff;
+			sourceTree = "<group>";
+		};
+		E4CE03B2255DAE71005F6300 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				E40C9D8C255199550050646C /* Ext+UIScreen.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		E4CE03B5255DAE8C005F6300 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				E4CE03A2255DA664005F6300 /* SectionHeaderView.swift */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		E4CE03B6255DAE93005F6300 /* List Components */ = {
+			isa = PBXGroup;
+			children = (
+				E4CE03BB255DB1F5005F6300 /* SectionView.swift */,
+				E4CE03B5255DAE8C005F6300 /* Headers */,
+				E4CE0397255DA522005F6300 /* Rows */,
+			);
+			path = "List Components";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,9 +277,30 @@
 			dependencies = (
 			);
 			name = "Kalkulator Urlopu";
+			packageProductDependencies = (
+				E40BF26925521FF7000715FD /* Lottie */,
+			);
 			productName = "Kalkulator Urlopu";
 			productReference = E40C9D6B255194EE0050646C /* Kalkulator Urlopu.app */;
 			productType = "com.apple.product-type.application";
+		};
+		E4CE037D255D449D005F6300 /* Kalkulator UrlopuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4CE0385255D449D005F6300 /* Build configuration list for PBXNativeTarget "Kalkulator UrlopuTests" */;
+			buildPhases = (
+				E4CE037A255D449D005F6300 /* Sources */,
+				E4CE037B255D449D005F6300 /* Frameworks */,
+				E4CE037C255D449D005F6300 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E4CE0384255D449D005F6300 /* PBXTargetDependency */,
+			);
+			name = "Kalkulator UrlopuTests";
+			productName = "Kalkulator UrlopuTests";
+			productReference = E4CE037E255D449D005F6300 /* Kalkulator UrlopuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -137,11 +308,15 @@
 		E40C9D63255194EE0050646C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
+				LastSwiftUpdateCheck = 1210;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
 					E40C9D6A255194EE0050646C = {
 						CreatedOnToolsVersion = 12.0.1;
+					};
+					E4CE037D255D449D005F6300 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = E40C9D6A255194EE0050646C;
 					};
 				};
 			};
@@ -154,11 +329,15 @@
 				Base,
 			);
 			mainGroup = E40C9D62255194EE0050646C;
+			packageReferences = (
+				E40BF26825521FF7000715FD /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = E40C9D6C255194EE0050646C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				E40C9D6A255194EE0050646C /* Kalkulator Urlopu */,
+				E4CE037D255D449D005F6300 /* Kalkulator UrlopuTests */,
 			);
 		};
 /* End PBXProject section */
@@ -168,9 +347,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E40BF26E25522105000715FD /* animation1.json in Resources */,
 				E40C9D7B255194F00050646C /* LaunchScreen.storyboard in Resources */,
 				E40C9D78255194F00050646C /* Preview Assets.xcassets in Resources */,
 				E40C9D75255194F00050646C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4CE037C255D449D005F6300 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,16 +369,43 @@
 			buildActionMask = 2147483647;
 			files = (
 				E40C9D6F255194EE0050646C /* AppDelegate.swift in Sources */,
+				E40BF26525521FC1000715FD /* LottieAnimation.swift in Sources */,
+				E4CE03BC255DB1F5005F6300 /* SectionView.swift in Sources */,
+				E4CE03AD255DADFE005F6300 /* ToggleRowView.swift in Sources */,
+				E4CE039F255DA60E005F6300 /* DateRowView.swift in Sources */,
 				E40C9D89255197C80050646C /* Colors.swift in Sources */,
-				E40C9D84255195740050646C /* MainScreenViewModel.swift in Sources */,
+				E40BF2722552CAA6000715FD /* Icon.swift in Sources */,
+				E4CE03A9255DAD1F005F6300 /* StepperRowView.swift in Sources */,
+				E4CE0375255C1FEA005F6300 /* DaysOffModel.swift in Sources */,
+				E40C9D84255195740050646C /* DaysOffViewModel.swift in Sources */,
+				E4CE03A3255DA664005F6300 /* SectionHeaderView.swift in Sources */,
 				E40C9D8D255199550050646C /* Ext+UIScreen.swift in Sources */,
 				E40C9D71255194EE0050646C /* SceneDelegate.swift in Sources */,
-				E40C9D73255194EE0050646C /* MainScreen.swift in Sources */,
+				E40C9D73255194EE0050646C /* DaysOffView.swift in Sources */,
+				E4CE0399255DA5CD005F6300 /* ResultRowView.swift in Sources */,
+				E4CE038B255D830E005F6300 /* Ext+Date.swift in Sources */,
+				E4CE0394255D83A4005F6300 /* Ext+Double.swift in Sources */,
 				E40C9D93255199830050646C /* RoundedCorners.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E4CE037A255D449D005F6300 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4CE0381255D449D005F6300 /* Kalkulator_UrlopuTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E4CE0384255D449D005F6300 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E40C9D6A255194EE0050646C /* Kalkulator Urlopu */;
+			targetProxy = E4CE0383255D449D005F6300 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E40C9D79255194F00050646C /* LaunchScreen.storyboard */ = {
@@ -363,6 +577,48 @@
 			};
 			name = Release;
 		};
+		E4CE0386255D449D005F6300 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KM42VYU5F9;
+				INFOPLIST_FILE = "Kalkulator UrlopuTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.timothystokarski.Kalkulator-UrlopuTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kalkulator Urlopu.app/Kalkulator Urlopu";
+			};
+			name = Debug;
+		};
+		E4CE0387255D449D005F6300 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KM42VYU5F9;
+				INFOPLIST_FILE = "Kalkulator UrlopuTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.timothystokarski.Kalkulator-UrlopuTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kalkulator Urlopu.app/Kalkulator Urlopu";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -384,7 +640,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		E4CE0385255D449D005F6300 /* Build configuration list for PBXNativeTarget "Kalkulator UrlopuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4CE0386255D449D005F6300 /* Debug */,
+				E4CE0387255D449D005F6300 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E40BF26825521FF7000715FD /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.9;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E40BF26925521FF7000715FD /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E40BF26825521FF7000715FD /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E40C9D63255194EE0050646C /* Project object */;
 }

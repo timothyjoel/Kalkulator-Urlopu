@@ -8,6 +8,7 @@ struct DaysOffQuery {
     var endDate = Date()
     /// Working time as number of quarters
     var workingTime = 4
+    var workingTimeRange = 1...4
     var workedLessThanTenYears = true
 }
 
@@ -24,6 +25,6 @@ struct DaysOffResult {
 struct DaysOffInfo {
     
     var message: String = "Niepełny miesiąc zatrudnienia zaokrągla się do pełnego miesiąca - jeżeli pracownik był zatrudniony w okresie od 15 stycznia do 16 lutego, od 15 stycznia do 14 lutego przepracował dokładnie miesiąc, natomiast od 15 lutego do 16 lutego dwa dni, które zaokrąglane są do pełnego miesiąca. Liczba przepracowanychc miesięcy wynoosi 2. Z okresu zatrudniena należy wyłączyć:"
-    var bulletPoints: [String] = ["bezpłatny urlop", "urlop wychowawczy", "odbywanie zasadniczej służby wojskowej lub jej form zastępczych, okresowej służby wojskowej, przeszkolenia wojskowego albo ćwiczeń wojskowych", "tymczasowy areszt", "odbywanie kary pozbawienia wolności", "nieusprawiedliwiona nieobecność w pracy"]
+    var bulletPoints: [String] = ["bezpłatny urlop", "urlop wychowawczy", "odbywanie zasadniczej służby wojskowej", "okresowa służba wojskowa", "szkolenia lub ćwiczenia wojskowe", "tymczasowy areszt", "odbywanie kary pozbawienia wolności", "nieusprawiedliwiona nieobecność w pracy"]
     
 }

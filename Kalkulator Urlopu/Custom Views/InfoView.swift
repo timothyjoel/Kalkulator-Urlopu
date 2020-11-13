@@ -1,7 +1,3 @@
-//
-//  InfoView.swift
-//  Kalkulator Urlopu
-//
 //  Created by Tymoteusz Stokarski on 13/11/2020.
 //
 
@@ -37,7 +33,7 @@ struct InfoView<Content>: View where Content: View {
                 Button(action: {
                     self.show.toggle()
                 }, label: {
-                    Text("Close")
+                    Text("Zamknij")
                         .font(.text)
                         .foregroundColor(.blue)
                 })

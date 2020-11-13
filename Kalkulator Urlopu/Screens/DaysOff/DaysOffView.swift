@@ -22,7 +22,7 @@ struct DaysOffView: View {
                         ToggleRowView(title: "Staż pracy poniżej 10 lat", isOn: $vm.query.workedLessThanTenYears)
                         DateRowView(title: "Początek", date: $vm.query.beginDate)
                         DateRowView(title: "Koniec", date: $vm.query.endDate)
-                        StepperRowView(title: "Wymiar etatu: \(vm.query.workingTime)/4", value: $vm.query.workingTime)
+                        StepperRowView(title: "Wymiar etatu: \(vm.query.workingTime)/4", value: $vm.query.workingTime, range: vm.query.workingTimeRange)
                     }
                     SectionView(title: "Zakres urlopu") {
                         ResultRowView(title: "Liczba dni wolnych za wybrany okres:", result: vm.result.daysOff)

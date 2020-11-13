@@ -16,15 +16,10 @@ class DaysOffViewModel: ObservableObject  {
     
     private func validateQuery() {
         let time = query.endDate.timeIntervalSince1970 - query.beginDate.timeIntervalSince1970
-        switch time {
-        case ...5000: result.isValid = false
-        case 5000...: result.isValid = true
-        default: break
-        }
+        result.isValid = time > 5000 ? true : false
     }
     
     private func calculateResult() {
-        setWorkingTime()
         validateQuery()
         guard result.isValid else { return }
     
@@ -42,14 +37,6 @@ class DaysOffViewModel: ObservableObject  {
         
         let hoursOff = daysOff*24
         result.hoursOff = hoursOff
-    }
-    
-    private func setWorkingTime() {
-        switch query.workingTime {
-        case 5...: query.workingTime = 4
-        case ...0: query.workingTime = 1
-        default: break
-        }
     }
     
 }

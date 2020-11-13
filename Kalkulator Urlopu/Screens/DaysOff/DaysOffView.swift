@@ -31,6 +31,7 @@ struct DaysOffView: View {
                         ResultRowView(title: "Wymiar roczny dla pełnego etatu:", result: vm.result.daysOffInYear)
                         ResultRowView(title: "Liczba godzin pracy w tygodniu:", result: vm.result.workHoursPerWeek)
                     }
+                    .padding(.bottom)
                     .offset(x: 0, y: vm.result.isValid ? 0 : UIScreen.height)
                     .animation(.spring())
                     Spacer()

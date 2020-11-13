@@ -12,6 +12,7 @@ class DaysOffViewModel: ObservableObject  {
         }
     }
     @Published var result = DaysOffResult()
+    var info = DaysOffInfo()
     
     private func validateQuery() {
         let time = query.endDate.timeIntervalSince1970 - query.beginDate.timeIntervalSince1970

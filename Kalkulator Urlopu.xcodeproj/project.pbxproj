@@ -33,6 +33,7 @@
 		E4FCDC72255DB60700192D6F /* Ext+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDC71255DB60700192D6F /* Ext+Font.swift */; };
 		E4FCDC76255DDF6C00192D6F /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDC75255DDF6C00192D6F /* NavigationButton.swift */; };
 		E4FCDC81255DE76900192D6F /* Ext+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDC80255DE76900192D6F /* Ext+Color.swift */; };
+		E4FCDC90255E00F600192D6F /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDC8F255E00F600192D6F /* InfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		E4FCDC71255DB60700192D6F /* Ext+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Font.swift"; sourceTree = "<group>"; };
 		E4FCDC75255DDF6C00192D6F /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
 		E4FCDC80255DE76900192D6F /* Ext+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Color.swift"; sourceTree = "<group>"; };
+		E4FCDC8F255E00F600192D6F /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 				E40BF2702552CA95000715FD /* Buttons */,
 				E4CE03B6255DAE93005F6300 /* List Components */,
 				E40C9D91255199720050646C /* View Modifiers */,
+				E4FCDC8F255E00F600192D6F /* InfoView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				E4CE03A3255DA664005F6300 /* SectionHeaderView.swift in Sources */,
 				E40C9D8D255199550050646C /* Ext+UIScreen.swift in Sources */,
 				E40C9D71255194EE0050646C /* SceneDelegate.swift in Sources */,
+				E4FCDC90255E00F600192D6F /* InfoView.swift in Sources */,
 				E40C9D73255194EE0050646C /* DaysOffView.swift in Sources */,
 				E4FCDC76255DDF6C00192D6F /* NavigationButton.swift in Sources */,
 				E4CE0399255DA5CD005F6300 /* ResultRowView.swift in Sources */,

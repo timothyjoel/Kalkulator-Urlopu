@@ -6,6 +6,7 @@ import SwiftUI
 
 struct DaysOffView: View {
     
+    @State var showInfo = false
     @ObservedObject var vm = DaysOffViewModel()
     
     var body: some View {
@@ -14,6 +15,8 @@ struct DaysOffView: View {
             ZStack {
                 Color.customBackground.edgesIgnoringSafeArea(.all)
                 BackgroundBottomAnimationView(show: $vm.result.isValid)
+                    .blur(radius: self.showInfo ? 10 : 0)
+                    .animation(nil)
                 ScrollView {
                     SectionView(title: "Dane dotyczące zatrudnienia") {
                         ToggleRowView(title: "Staż pracy poniżej 10 lat", isOn: $vm.query.workedLessThanTenYears)
@@ -32,11 +35,19 @@ struct DaysOffView: View {
                     .animation(.spring())
                     Spacer()
                 }
+                .allowsHitTesting(!showInfo)
+                .blur(radius: self.showInfo ? 10 : 0)
+                InfoView(show: $showInfo) {
+                    InfoMessageRow(message: vm.info.message)
+                    InfoBulletPointsRow(bulletPoints: vm.info.bulletPoints)
+                }
+                .animation(.spring())
+                .offset(x: 0, y: showInfo ? 0 : UIScreen.height )
                 
             }
             .navigationBarTitle(Text("Kalkulator urlopu"))
             .navigationBarItems(trailing: NavigationButton(icon: .questionMark, action: {
-                print("tapped")
+                self.showInfo.toggle()
             }))
             
         }

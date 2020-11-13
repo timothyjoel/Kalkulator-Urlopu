@@ -21,3 +21,9 @@ struct DaysOffResult {
     var workHoursPerWeek: Int = 0
 }
 
+struct DaysOffInfo {
+    
+    var message: String = "Należy pamiętać że niepełny miesiąc zatrudnienia zaokrągla się do pełnego miesiąca, np. jeżeli pracownik pracował w okresie od 15 stycznia do 16 lutego, od 15 stycznia do 14 lutego przepracował dokładnie miesiąc, natomiast od 15 lutego do 16 lutego dwa dni, które zaokrągla się do pełnego miesiąca, czyli liczba przepracowanych miesięcy wynosi 2."
+    var bulletPoints: [String] = ["urlopu bezpłatnego", "urlopu wychowawczego", "odbywania zasadniczej służby wojskowej lub jej form zastępczych, okresowej służby wojskowej, przeszkolenia wojskowego albo ćwiczeń wojskowych", "tymczasowego aresztowania", "odbywania kary pozbawienia wolności", "nieusprawiedliwionej nieobecności w pracy"]
+    
+}

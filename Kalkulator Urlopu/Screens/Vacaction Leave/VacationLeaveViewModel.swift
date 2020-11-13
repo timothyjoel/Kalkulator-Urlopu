@@ -4,15 +4,15 @@
 import Combine
 import SwiftUI
 
-class DaysOffViewModel: ObservableObject  {
+class VacationLeaveViewModel: ObservableObject  {
     
-    @Published var query = DaysOffQuery() {
+    @Published var query = VacationLeaveQuery() {
         didSet {
             calculateResult()
         }
     }
-    @Published var result = DaysOffResult()
-    var info = DaysOffInfo()
+    @Published var result = VacationLeaveResult()
+    var info = VacationLeaveInfo()
     
     private func validateQuery() {
         let time = query.endDate.timeIntervalSince1970 - query.beginDate.timeIntervalSince1970

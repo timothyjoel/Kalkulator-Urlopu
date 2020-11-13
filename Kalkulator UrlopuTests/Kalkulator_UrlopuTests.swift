@@ -77,8 +77,8 @@ class DaysOffViewModel_Tests: XCTestCase {
     }
     
     // MARK: - Helpers
-    func makeSUT(testedCase: TestedCase) -> DaysOffViewModel {
-        let sut =  DaysOffViewModel()
+    func makeSUT(testedCase: TestedCase) -> VacationLeaveViewModel {
+        let sut =  VacationLeaveViewModel()
         switch testedCase {
         case .wrongDates:
             sut.query.beginDate = Date(day: 10, month: 11, year: 2020)

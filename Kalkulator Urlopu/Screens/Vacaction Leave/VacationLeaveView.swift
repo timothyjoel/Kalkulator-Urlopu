@@ -4,14 +4,13 @@
 import Combine
 import SwiftUI
 
-struct DaysOffView: View {
+struct VacationLeaveView: View {
     
     @State var showInfo = false
-    @ObservedObject var vm = DaysOffViewModel()
+    @ObservedObject var vm = VacationLeaveViewModel()
     
     var body: some View {
-        
-        NavigationView {
+
             ZStack {
                 Color.customBackground.edgesIgnoringSafeArea(.all)
                 BackgroundBottomAnimationView(show: $vm.result.isValid)
@@ -31,7 +30,6 @@ struct DaysOffView: View {
                         ResultRowView(title: "Wymiar roczny dla pełnego etatu:", result: vm.result.daysOffInYear)
                         ResultRowView(title: "Liczba godzin pracy w tygodniu:", result: vm.result.workHoursPerWeek)
                     }
-                    .padding(.bottom)
                     .offset(x: 0, y: vm.result.isValid ? 0 : UIScreen.height)
                     .animation(.spring())
                     Spacer()
@@ -46,32 +44,30 @@ struct DaysOffView: View {
                 .offset(x: 0, y: showInfo ? 0 : UIScreen.height )
                 
             }
-            .navigationBarTitle(Text("Kalkulator urlopu"))
+            .navigationBarTitle(Text("Urlop wypoczynkowy"))
             .navigationBarItems(trailing: NavigationButton(icon: .questionMark, action: {
                 self.showInfo.toggle()
             }))
-            
-        }
         
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     
-   static var previews: some View {
-    
+    static var previews: some View {
+        
         Group {
-            DaysOffView()
+            VacationLeaveView()
                 .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
                 .previewDisplayName("iPhone 8")
-
-            DaysOffView()
+            
+            VacationLeaveView()
                 .previewDevice(PreviewDevice(rawValue: "iPhone XS Max"))
                 .previewDisplayName("iPhone XS Max")
                 .environment(\.colorScheme, .dark)
-      }
-    
-   }
+        }
+        
+    }
     
 }
 

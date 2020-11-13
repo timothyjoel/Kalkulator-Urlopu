@@ -19,14 +19,10 @@ struct InfoView<Content>: View where Content: View {
         VStack(alignment: .leading, spacing: 0) {
             HStack {
                 Spacer()
-                Text(title)
-                    .shadow(color: .customView, radius: 10)
-                .foregroundColor(.customPink)
-                .font(.header)
-                .padding(.horizontal)
-                .padding(.vertical)
+                RoundIconView(icon: .questionMark)
                 Spacer()
             }
+            .offset(x: 0, y: -28)
             content()
             HStack {
                 Spacer()
@@ -34,7 +30,7 @@ struct InfoView<Content>: View where Content: View {
                     self.show.toggle()
                 }, label: {
                     Text("Zamknij")
-                        .font(.text)
+                        .font(.boldedText)
                         .foregroundColor(.blue)
                 })
                 .padding(.vertical, 16)
@@ -43,7 +39,7 @@ struct InfoView<Content>: View where Content: View {
 
         }
         .frame(width: UIScreen.width-32)
-        .background(RoundedCorners(color: .customView, corners: 10).shadow(radius: 30))
+        .background(RoundedCorners(color: .customView, corners: 20).shadow(radius: 30))
         
     }
 }
@@ -71,7 +67,7 @@ struct InfoBulletPointsRow: View {
         
         VStack (alignment: .leading) {
             ForEach(bulletPoints, id: \.self) { text in
-                Text("• " + text)
+                Text("•  " + text)
                     .multilineTextAlignment(.leading)
                     .lineLimit(nil)
                     .foregroundColor(.customLabel)

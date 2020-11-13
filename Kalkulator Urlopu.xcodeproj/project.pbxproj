@@ -34,6 +34,7 @@
 		E4FCDC76255DDF6C00192D6F /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDC75255DDF6C00192D6F /* NavigationButton.swift */; };
 		E4FCDC81255DE76900192D6F /* Ext+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDC80255DE76900192D6F /* Ext+Color.swift */; };
 		E4FCDC90255E00F600192D6F /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDC8F255E00F600192D6F /* InfoView.swift */; };
+		E4FCDC9B255E89E400192D6F /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDC9A255E89E400192D6F /* IconView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		E4FCDC75255DDF6C00192D6F /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
 		E4FCDC80255DE76900192D6F /* Ext+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Color.swift"; sourceTree = "<group>"; };
 		E4FCDC8F255E00F600192D6F /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		E4FCDC9A255E89E400192D6F /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				E4FCDC75255DDF6C00192D6F /* NavigationButton.swift */,
-				E40BF2712552CAA6000715FD /* Icon.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -180,6 +181,7 @@
 		E40C9D902551996D0050646C /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				E4FCDC99255E89D300192D6F /* Images */,
 				E40BF2702552CA95000715FD /* Buttons */,
 				E4CE03B6255DAE93005F6300 /* List Components */,
 				E40C9D91255199720050646C /* View Modifiers */,
@@ -276,6 +278,15 @@
 				E4FCDC80255DE76900192D6F /* Ext+Color.swift */,
 			);
 			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		E4FCDC99255E89D300192D6F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E4FCDC9A255E89E400192D6F /* IconView.swift */,
+				E40BF2712552CAA6000715FD /* Icon.swift */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,6 +401,7 @@
 				E4CE03BC255DB1F5005F6300 /* SectionView.swift in Sources */,
 				E4CE03AD255DADFE005F6300 /* ToggleRowView.swift in Sources */,
 				E4CE039F255DA60E005F6300 /* DateRowView.swift in Sources */,
+				E4FCDC9B255E89E400192D6F /* IconView.swift in Sources */,
 				E40BF2722552CAA6000715FD /* Icon.swift in Sources */,
 				E4CE03A9255DAD1F005F6300 /* StepperRowView.swift in Sources */,
 				E4CE0375255C1FEA005F6300 /* DaysOffModel.swift in Sources */,

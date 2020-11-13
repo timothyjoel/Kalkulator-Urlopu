@@ -6,6 +6,10 @@ import SwiftUI
 extension Font {
     
     static var text: Font {
+        .system(size: 15, weight: .medium, design: .rounded)
+    }
+    
+    static var boldedText: Font {
         .system(size: 15, weight: .semibold, design: .rounded)
     }
     

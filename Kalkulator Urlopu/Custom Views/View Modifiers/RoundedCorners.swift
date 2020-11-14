@@ -19,6 +19,14 @@ struct RoundedCorners: View {
         self.color = color
     }
     
+    init(color: Color = .black, tl: CGFloat, tr: CGFloat, bl: CGFloat, br: CGFloat) {
+        self.tl = tl
+        self.tr = tr
+        self.bl =  bl
+        self.br =  br
+        self.color = color
+    }
+    
     var body: some View {
         GeometryReader { geometry in
             Path { path in

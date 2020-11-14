@@ -16,3 +16,14 @@ enum MenuCardImage {
     }
     
 }
+
+enum ReusableImages {
+    case questionCloud
+    
+    var image: String {
+        switch self {
+        case .questionCloud: return "questionCloud"
+        }
+    }
+    
+}

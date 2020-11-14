@@ -12,18 +12,20 @@ struct MenuView: View {
         NavigationView {
             ZStack {
                 Color.customBackground.edgesIgnoringSafeArea(.all)
-                ScrollView {
+                List {
                     ForEach(vm.cards, id: \.self) { card in
                         MenuCardView(card: card)
+                            .buttonStyle(PlainButtonStyle())
                     }
                 }
+                .edgesIgnoringSafeArea(.all)
+                .background(Color.red)
                 .navigationBarTitle(Text("Kalkulatory"))
                 .navigationBarItems(trailing: NavigationButton(icon: .questionMark, action: {
                     self.showInfo.toggle()
                 }))
             }
-            
-        }
+        }.edgesIgnoringSafeArea(.all)
     }
     
 }

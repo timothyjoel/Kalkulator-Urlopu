@@ -25,7 +25,6 @@ struct MaternityLeaveView: View {
                         ResultRowView(title: "Urlop macierzyński:", result: vm.result.maternityLeave)
                         ResultRowView(title: "Urlop rodzicielski:", result: vm.result.parentalLeave)
                         ResultRowView(title: "Urlop łącznie:", result: vm.result.summedLeave)
-                        ResultRowView(title: "Data rozpoczęcia:", result: vm.result.summedLeave)
                         ResultRowView(title: "Data zakończenia:", result: vm.result.summedLeave)
                     }
                     .offset(x: 0, y: vm.result.isValid ? 0 : UIScreen.height)

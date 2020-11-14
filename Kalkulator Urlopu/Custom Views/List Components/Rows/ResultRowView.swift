@@ -16,7 +16,6 @@ struct ResultRowView: View {
                 .padding(8)
             Spacer()
             Text("\(result)")
-                .animation(nil)
                 .font(.text)
                 .foregroundColor(.blue)
                 .padding(8)

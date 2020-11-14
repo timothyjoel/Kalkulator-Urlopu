@@ -24,7 +24,6 @@ struct SectionView<Content>: View where Content: View {
             .background(RoundedCorners(color: .customView, corners: 10))
             .padding(.horizontal, 16)
         }
-        .padding(.bottom)
 
     }
     

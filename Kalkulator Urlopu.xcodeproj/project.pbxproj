@@ -23,6 +23,7 @@
 		E418AACD255ED8830034B13B /* MaternityLeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418AACC255ED8830034B13B /* MaternityLeaveView.swift */; };
 		E418AAD1255EDB610034B13B /* MaternityLeaveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418AAD0255EDB610034B13B /* MaternityLeaveViewModel.swift */; };
 		E418AAD5255EDB990034B13B /* MaternityLeaveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418AAD4255EDB990034B13B /* MaternityLeaveModel.swift */; };
+		E4BA5F8825617EDE00C5D163 /* CustomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BA5F8725617EDE00C5D163 /* CustomList.swift */; };
 		E4CE0375255C1FEA005F6300 /* VacationLeaveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE0374255C1FEA005F6300 /* VacationLeaveModel.swift */; };
 		E4CE0381255D449D005F6300 /* Kalkulator_UrlopuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE0380255D449D005F6300 /* Kalkulator_UrlopuTests.swift */; };
 		E4CE038B255D830E005F6300 /* Ext+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE038A255D830E005F6300 /* Ext+Date.swift */; };
@@ -74,6 +75,7 @@
 		E418AACC255ED8830034B13B /* MaternityLeaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaternityLeaveView.swift; sourceTree = "<group>"; };
 		E418AAD0255EDB610034B13B /* MaternityLeaveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaternityLeaveViewModel.swift; sourceTree = "<group>"; };
 		E418AAD4255EDB990034B13B /* MaternityLeaveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaternityLeaveModel.swift; sourceTree = "<group>"; };
+		E4BA5F8725617EDE00C5D163 /* CustomList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomList.swift; sourceTree = "<group>"; };
 		E4CE0374255C1FEA005F6300 /* VacationLeaveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationLeaveModel.swift; sourceTree = "<group>"; };
 		E4CE037E255D449D005F6300 /* Kalkulator UrlopuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kalkulator UrlopuTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4CE0380255D449D005F6300 /* Kalkulator_UrlopuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kalkulator_UrlopuTests.swift; sourceTree = "<group>"; };
@@ -202,7 +204,7 @@
 			children = (
 				E4FCDC99255E89D300192D6F /* Images */,
 				E40BF2702552CA95000715FD /* Buttons */,
-				E4CE03B6255DAE93005F6300 /* List Components */,
+				E4CE03B6255DAE93005F6300 /* List */,
 				E40C9D91255199720050646C /* View Modifiers */,
 				E4FCDC8F255E00F600192D6F /* InfoView.swift */,
 			);
@@ -293,14 +295,15 @@
 			path = Headers;
 			sourceTree = "<group>";
 		};
-		E4CE03B6255DAE93005F6300 /* List Components */ = {
+		E4CE03B6255DAE93005F6300 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				E4BA5F8725617EDE00C5D163 /* CustomList.swift */,
 				E4CE03BB255DB1F5005F6300 /* SectionView.swift */,
 				E4CE03B5255DAE8C005F6300 /* Headers */,
 				E4CE0397255DA522005F6300 /* Rows */,
 			);
-			path = "List Components";
+			path = List;
 			sourceTree = "<group>";
 		};
 		E4FCDC7B255DE06600192D6F /* SwiftUI */ = {
@@ -449,6 +452,7 @@
 			files = (
 				E4FCDCA6255E943000192D6F /* MenuView.swift in Sources */,
 				E40C9D6F255194EE0050646C /* AppDelegate.swift in Sources */,
+				E4BA5F8825617EDE00C5D163 /* CustomList.swift in Sources */,
 				E40BF26525521FC1000715FD /* LottieAnimation.swift in Sources */,
 				E4FCDCAF255EB4F000192D6F /* MenuViewModel.swift in Sources */,
 				E4CE03BC255DB1F5005F6300 /* SectionView.swift in Sources */,

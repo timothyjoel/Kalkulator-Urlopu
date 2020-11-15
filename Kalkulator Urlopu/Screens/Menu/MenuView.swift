@@ -10,22 +10,16 @@ struct MenuView: View {
     
     var body: some View {
         NavigationView {
-            ZStack {
-                Color.customBackground.edgesIgnoringSafeArea(.all)
-                List {
-                    ForEach(vm.cards, id: \.self) { card in
-                        MenuCardView(card: card)
-                            .buttonStyle(PlainButtonStyle())
-                    }
+            CustomList(title: "Kalkulatory") {
+                ForEach(vm.cards, id: \.self) { card in
+                    MenuCardView(card: card)
+                        .buttonStyle(PlainButtonStyle())
                 }
-                .edgesIgnoringSafeArea(.all)
-                .background(Color.red)
-                .navigationBarTitle(Text("Kalkulatory"))
-                .navigationBarItems(trailing: NavigationButton(icon: .questionMark, action: {
-                    self.showInfo.toggle()
-                }))
             }
-        }.edgesIgnoringSafeArea(.all)
+            .navigationBarItems(trailing: NavigationButton(icon: .questionMark, action: { self.showInfo.toggle() })
+            )
+        }
+        .edgesIgnoringSafeArea(.all)
     }
     
 }

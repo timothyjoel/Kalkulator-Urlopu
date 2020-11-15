@@ -7,7 +7,7 @@ import SwiftUI
 struct VacationLeaveView: View {
     
     @State var showInfo = false
-    @ObservedObject var vm = VacationLeaveViewModel()
+    @ObservedObject var vm: VacationLeaveViewModel
     
     var body: some View {
 
@@ -57,11 +57,11 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         
         Group {
-            VacationLeaveView()
+            VacationLeaveView(vm: VacationLeaveViewModel())
                 .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
                 .previewDisplayName("iPhone 8")
             
-            VacationLeaveView()
+            VacationLeaveView(vm: VacationLeaveViewModel())
                 .previewDevice(PreviewDevice(rawValue: "iPhone XS Max"))
                 .previewDisplayName("iPhone XS Max")
                 .environment(\.colorScheme, .dark)

@@ -16,8 +16,14 @@ enum Link: NavigationCoordinator {
     
     func open() -> AnyView {
         switch self {
-        case .maternityLeaveCalculator: return AnyView(MaternityLeaveView())
-        case .vacationLeaveCalculator:  return AnyView(VacationLeaveView())
+        case .maternityLeaveCalculator:
+            let vm = MaternityLeaveViewModel()
+            let view = MaternityLeaveView(vm: vm)
+            return AnyView(view)
+        case .vacationLeaveCalculator:
+            let vm = VacationLeaveViewModel()
+            let view = VacationLeaveView(vm: vm)
+            return AnyView(view)
         }
     }
     

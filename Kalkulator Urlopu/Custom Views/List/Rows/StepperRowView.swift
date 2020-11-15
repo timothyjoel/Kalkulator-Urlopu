@@ -10,14 +10,15 @@ struct StepperRowView: View {
     var range: ClosedRange<Int>
     
     var body: some View {
-        HStack {
-            Stepper(title, value: $value, in: range)
-                .font(.text)
-                .foregroundColor(.customLabel)
-        }
-        .padding(.vertical, 16)
-        .padding(.horizontal, 16)
+        
+        Stepper(title, value: $value, in: range)
+            .font(.text)
+            .foregroundColor(.customLabel)
+            .padding(.vertical, 8)
+            .padding(.horizontal, 16)
+        
     }
+    
 }
 
 struct StepperRowView_Previews: PreviewProvider {

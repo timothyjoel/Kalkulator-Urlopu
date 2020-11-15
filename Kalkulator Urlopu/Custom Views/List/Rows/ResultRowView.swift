@@ -16,9 +16,11 @@ struct ResultRowView: View {
                 .padding(8)
             Spacer()
             Text("\(result)")
+                .multilineTextAlignment(.leading)
                 .font(.text)
                 .foregroundColor(.blue)
                 .padding(8)
+                
         }
         .padding(.vertical, 4)
         .padding(.horizontal, 8)

@@ -9,16 +9,17 @@ struct ToggleRowView: View {
     @Binding var isOn: Bool
     
     var body: some View {
-        VStack {
-            Toggle(title, isOn: $isOn)
-                .font(.text)
-                .toggleStyle(SwitchToggleStyle(tint: .blue))
-                .environment(\.locale, Locale.init(identifier: "pl"))
-                .foregroundColor(.customLabel)
-        }
-        .padding(.vertical, 8)
-        .padding(.horizontal, 16)
+        
+        Toggle(title, isOn: $isOn)
+            .font(.text)
+            .toggleStyle(SwitchToggleStyle(tint: .blue))
+            .environment(\.locale, Locale.init(identifier: "pl"))
+            .foregroundColor(.customLabel)
+            .padding(.vertical, 8)
+            .padding(.horizontal, 16)
+        
     }
+    
 }
 
 struct ToggleRowView_Previews: PreviewProvider {

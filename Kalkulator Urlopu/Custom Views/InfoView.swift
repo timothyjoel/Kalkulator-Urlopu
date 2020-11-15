@@ -39,9 +39,9 @@ struct InfoView<Content>: View where Content: View {
 
                     .padding(.top, 16)
                     .padding(.bottom, 8)
-                    content()
-                    
-                     //   .offset(y: -40)
+                    VStack(alignment: .leading, spacing: 8) {
+                        content()
+                    }
                     HStack {
                         Spacer()
                         Button(action: {
@@ -97,7 +97,6 @@ struct InfoBulletPointsRow: View {
                     .padding(.leading, 24)
             }
         }
-        .padding(.top)
         
     }
     

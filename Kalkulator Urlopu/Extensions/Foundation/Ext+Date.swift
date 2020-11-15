@@ -16,3 +16,14 @@ extension Date {
     }
     
 }
+
+extension Date {
+    
+    var stringDate: String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.dateFormat = "dd.MM.yyyy"
+        return formatter.string(from: self)
+    }
+    
+}

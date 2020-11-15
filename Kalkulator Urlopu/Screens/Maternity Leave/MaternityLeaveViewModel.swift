@@ -1,20 +1,27 @@
 //  Created by Tymoteusz Stokarski on 13/11/2020.
 //
 
+import Foundation
 import Combine
 
 class MaternityLeaveViewModel: ObservableObject {
     
+    init() {
+        calculateWeeks()
+        calculateDates()
+    }
+    
+    var info = MaternityLeaveInfo()
+    @Published var result: MaternityLeaveResult = MaternityLeaveResult(maternityLeave: 0, maternityLeaveStartDate: Date(), maternityLeaveFinishDate: Date(), parentalLeave: 0, parentalLeaveStartDate: Date(), parentalLeaveFinishDate: Date(), summedLeave: 0)
+    
     @Published var query = MaternityLeaveQuery() {
         didSet {
-            calculateResult()
+            calculateWeeks()
+            calculateDates()
         }
     }
     
-    @Published var result = MaternityLeaveResult()
-    
-    private func calculateResult() {
-        result.isValid = true
+    private func calculateWeeks() {
         var maternity: Int = 0
         var parental: Int = 0
         switch query.numberOfKidsBorn {
@@ -28,13 +35,26 @@ class MaternityLeaveViewModel: ObservableObject {
         result.maternityLeave = maternity
         result.parentalLeave = parental
         result.summedLeave = maternity + parental
-    }
-    
-    private func calculateDate() {
         
     }
+     
+    private func calculateDates() {
+        result.maternityLeaveStartDate = query.birthDate
+        
+        var maternityLeaveDays = DateComponents()
+        maternityLeaveDays.day = (result.maternityLeave * 7) - 1
+        result.maternityLeaveFinishDate = Calendar.current.date(byAdding: maternityLeaveDays, to: result.maternityLeaveStartDate)!
+        
+        var parentalLeaveDays = DateComponents()
+        parentalLeaveDays.day = (result.parentalLeave * 7) - 1
+        result.parentalLeaveStartDate = Calendar.current.date(byAdding: oneDay, to: result.maternityLeaveFinishDate)!
+        result.parentalLeaveFinishDate = Calendar.current.date(byAdding: parentalLeaveDays, to: result.parentalLeaveStartDate)!
+    }
     
-    
-    var info = MaternityLeaveInfo()
+    private var oneDay: DateComponents {
+        var day = DateComponents()
+        day.day = 1
+        return day
+    }
     
 }

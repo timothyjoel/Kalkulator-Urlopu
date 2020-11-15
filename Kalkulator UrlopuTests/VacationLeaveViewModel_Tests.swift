@@ -4,16 +4,16 @@
 @testable import Kalkulator_Urlopu
 import XCTest
 
-class DaysOffViewModel_Tests: XCTestCase {
+class VacationLeaveViewModel_Tests: XCTestCase {
 
     func test_WhenBeginDate_isBeforeEndDate_timePeriodIsValid() {
         let sut = makeSUT(testedCase: .oneMonth)
-        XCTAssertTrue(sut.isValidQuery, "Valid query search")
+        XCTAssertTrue(sut.result.isValid, "Valid query search")
     }
     
     func test_WhenBeginDate_isAfterEndDate_timePeriodIsNotValid() {
         let sut = makeSUT(testedCase: .wrongDates)
-        XCTAssertFalse(sut.isValidQuery, "Is not valid query search")
+        XCTAssertFalse(sut.result.isValid, "Is not valid query search")
     }
     
     func test_WhenWorkedLessThan10Years_daysOfInYearEquals20() {

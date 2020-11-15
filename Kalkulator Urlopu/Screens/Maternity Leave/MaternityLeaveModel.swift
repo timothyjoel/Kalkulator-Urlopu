@@ -5,16 +5,19 @@ import Foundation
 
 struct MaternityLeaveQuery {
     var birthDate = Date()
-    var numberOfKidsBorn = 4
+    var numberOfKidsBorn = 1
     var numberOfKidsBornRange = 1...5
 }
 
-struct MaternityLeaveResult {
-    typealias Week = Int
-    var maternityLeave: Week = 0
-    var parentalLeave: Week = 0
-    var summedLeave: Week = 0
-    var isValid: Bool = false
+struct MaternityLeaveResult: Equatable {
+    typealias Weeks = Int
+    var maternityLeave: Weeks
+    var maternityLeaveStartDate: Date
+    var maternityLeaveFinishDate: Date
+    var parentalLeave: Weeks
+    var parentalLeaveStartDate: Date
+    var parentalLeaveFinishDate: Date
+    var summedLeave: Weeks
 }
 
 struct MaternityLeaveInfo {

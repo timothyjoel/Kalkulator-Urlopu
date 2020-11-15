@@ -13,22 +13,22 @@ struct MaternityLeaveView: View {
 
             ZStack {
                 Color.customBackground.edgesIgnoringSafeArea(.all)
-                BackgroundBottomAnimationView(show: $vm.result.isValid)
-                    .blur(radius: self.showInfo ? 10 : 0)
-                    .animation(nil)
                 ScrollView {
                     SectionView(title: "Dane dotyczące urlopu") {
                         DateRowView(title: "Data porodu", date: $vm.query.birthDate)
                         StepperRowView(title: "Liczba urodzonych dzieci podczas porodu: \(vm.query.numberOfKidsBorn)", value: $vm.query.numberOfKidsBorn, range: vm.query.numberOfKidsBornRange)
                     }
-                    SectionView(title: "Zakres urlopu w tygodniach") {
-                        ResultRowView(title: "Urlop macierzyński:", result: vm.result.maternityLeave)
-                        ResultRowView(title: "Urlop rodzicielski:", result: vm.result.parentalLeave)
-                        ResultRowView(title: "Urlop łącznie:", result: vm.result.summedLeave)
-                        ResultRowView(title: "Data zakończenia:", result: vm.result.summedLeave)
+                    SectionView(title: "Urlop macierzyński") {
+                        ResultRowView(title: "Liczba tygodni:", result: vm.result.maternityLeave)
+                        ResultRowView(title: "Data rozpoczęcia:", result: vm.result.maternityLeaveStartDate.stringDate)
+                        ResultRowView(title: "Data zakończenia:", result: vm.result.maternityLeaveFinishDate.stringDate)
                     }
-                    .offset(x: 0, y: vm.result.isValid ? 0 : UIScreen.height)
-                    .animation(.spring())
+                    SectionView(title: "Urlop rodzicielski") {
+                        ResultRowView(title: "Liczba tygodni:", result: vm.result.parentalLeave)
+                        ResultRowView(title: "Data rozpoczęcia:", result: vm.result.parentalLeaveStartDate.stringDate)
+                        ResultRowView(title: "Data zakończenia:", result: vm.result.parentalLeaveFinishDate.stringDate)
+                    }
+            //        .animation(.spring())
                     Spacer()
                 }
                 .allowsHitTesting(!showInfo)

@@ -24,8 +24,9 @@
 		E418AAD1255EDB610034B13B /* MaternityLeaveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418AAD0255EDB610034B13B /* MaternityLeaveViewModel.swift */; };
 		E418AAD5255EDB990034B13B /* MaternityLeaveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418AAD4255EDB990034B13B /* MaternityLeaveModel.swift */; };
 		E4BA5F8825617EDE00C5D163 /* CustomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BA5F8725617EDE00C5D163 /* CustomList.swift */; };
+		E4BA5F90256187B300C5D163 /* MaternityLeaveViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BA5F8F256187B300C5D163 /* MaternityLeaveViewModel_Tests.swift */; };
 		E4CE0375255C1FEA005F6300 /* VacationLeaveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE0374255C1FEA005F6300 /* VacationLeaveModel.swift */; };
-		E4CE0381255D449D005F6300 /* Kalkulator_UrlopuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE0380255D449D005F6300 /* Kalkulator_UrlopuTests.swift */; };
+		E4CE0381255D449D005F6300 /* VacationLeaveViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE0380255D449D005F6300 /* VacationLeaveViewModel_Tests.swift */; };
 		E4CE038B255D830E005F6300 /* Ext+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE038A255D830E005F6300 /* Ext+Date.swift */; };
 		E4CE0394255D83A4005F6300 /* Ext+Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE0393255D83A4005F6300 /* Ext+Double.swift */; };
 		E4CE0399255DA5CD005F6300 /* ResultRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE0398255DA5CD005F6300 /* ResultRowView.swift */; };
@@ -76,9 +77,10 @@
 		E418AAD0255EDB610034B13B /* MaternityLeaveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaternityLeaveViewModel.swift; sourceTree = "<group>"; };
 		E418AAD4255EDB990034B13B /* MaternityLeaveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaternityLeaveModel.swift; sourceTree = "<group>"; };
 		E4BA5F8725617EDE00C5D163 /* CustomList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomList.swift; sourceTree = "<group>"; };
+		E4BA5F8F256187B300C5D163 /* MaternityLeaveViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaternityLeaveViewModel_Tests.swift; sourceTree = "<group>"; };
 		E4CE0374255C1FEA005F6300 /* VacationLeaveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationLeaveModel.swift; sourceTree = "<group>"; };
 		E4CE037E255D449D005F6300 /* Kalkulator UrlopuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kalkulator UrlopuTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4CE0380255D449D005F6300 /* Kalkulator_UrlopuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kalkulator_UrlopuTests.swift; sourceTree = "<group>"; };
+		E4CE0380255D449D005F6300 /* VacationLeaveViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationLeaveViewModel_Tests.swift; sourceTree = "<group>"; };
 		E4CE0382255D449D005F6300 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4CE038A255D830E005F6300 /* Ext+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Date.swift"; sourceTree = "<group>"; };
 		E4CE0393255D83A4005F6300 /* Ext+Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Double.swift"; sourceTree = "<group>"; };
@@ -232,7 +234,8 @@
 		E4CE037F255D449D005F6300 /* Kalkulator UrlopuTests */ = {
 			isa = PBXGroup;
 			children = (
-				E4CE0380255D449D005F6300 /* Kalkulator_UrlopuTests.swift */,
+				E4CE0380255D449D005F6300 /* VacationLeaveViewModel_Tests.swift */,
+				E4BA5F8F256187B300C5D163 /* MaternityLeaveViewModel_Tests.swift */,
 				E4CE0382255D449D005F6300 /* Info.plist */,
 			);
 			path = "Kalkulator UrlopuTests";
@@ -489,7 +492,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4CE0381255D449D005F6300 /* Kalkulator_UrlopuTests.swift in Sources */,
+				E4BA5F90256187B300C5D163 /* MaternityLeaveViewModel_Tests.swift in Sources */,
+				E4CE0381255D449D005F6300 /* VacationLeaveViewModel_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

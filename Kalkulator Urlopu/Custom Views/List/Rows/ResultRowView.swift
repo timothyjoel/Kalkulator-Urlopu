@@ -6,7 +6,7 @@ import SwiftUI
 struct ResultRowView: View {
     
     var title: String
-    var result: Int
+    var result: Any
     
     var body: some View {
         HStack {
@@ -15,7 +15,7 @@ struct ResultRowView: View {
                 .foregroundColor(.customLabel)
                 .padding(8)
             Spacer()
-            Text("\(result)")
+            Text(String(describing: result))
                 .multilineTextAlignment(.leading)
                 .font(.text)
                 .foregroundColor(.blue)
@@ -31,11 +31,11 @@ struct ResultRowView: View {
 struct ResultRowView_Previews: PreviewProvider {
    static var previews: some View {
         Group {
-            ResultRowView(title: "Title", result: 0)
+            ResultRowView(title: "Title", result: "0")
                 .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
                 .previewDisplayName("iPhone 8")
 
-            ResultRowView(title: "Title", result: 0)
+            ResultRowView(title: "Title", result: "0")
                 .previewDevice(PreviewDevice(rawValue: "iPhone XS Max"))
                 .previewDisplayName("iPhone XS Max")
                 .environment(\.colorScheme, .dark)

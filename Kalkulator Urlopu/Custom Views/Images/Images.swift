@@ -7,11 +7,13 @@ enum MenuCardImage {
     
     case maternityLeave
     case work1
+    case sick
     
     var image: String {
         switch self {
         case .maternityLeave: return "family"
         case .work1: return "work1"
+        case .sick: return "sick"
         }
     }
     

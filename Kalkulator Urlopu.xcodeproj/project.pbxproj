@@ -237,13 +237,13 @@
 			path = "Maternity Leave";
 			sourceTree = "<group>";
 		};
-		E458535F2561A24E0091C319 /* SickLeave */ = {
+		E458535F2561A24E0091C319 /* Sick Leave */ = {
 			isa = PBXGroup;
 			children = (
 				E458536E2561A42A0091C319 /* SickLeaveView.swift */,
 				E45853722561A4490091C319 /* SickLeaveViewModel.swift */,
 			);
-			path = SickLeave;
+			path = "Sick Leave";
 			sourceTree = "<group>";
 		};
 		E4CE037F255D449D005F6300 /* Kalkulator UrlopuTests */ = {
@@ -284,7 +284,7 @@
 				E4FCDCA4255E93CF00192D6F /* Menu */,
 				E418AAC3255ED7740034B13B /* Maternity Leave */,
 				E4CE03B1255DAE3D005F6300 /* Vacaction Leave */,
-				E458535F2561A24E0091C319 /* SickLeave */,
+				E458535F2561A24E0091C319 /* Sick Leave */,
 			);
 			path = Screens;
 			sourceTree = "<group>";

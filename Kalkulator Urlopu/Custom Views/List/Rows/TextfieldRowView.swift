@@ -8,7 +8,8 @@ struct TextfieldRowView: View {
     
     @Binding var text: String
     var title: String
-    var textfieldType: String?
+    var placeholder: String
+    var textfieldUnit: String?
     var keyboard: UIKeyboardType
     
     var body: some View {
@@ -21,31 +22,30 @@ struct TextfieldRowView: View {
             HStack {
                 Spacer()
                 VStack (alignment: .trailing) {
-                    TextField("", text: $text)
+                    TextField(placeholder, text: $text)
                         .foregroundColor(.blue)
                         .font(.text)
                         .multilineTextAlignment(.trailing)
-                        .textFieldStyle(DefaultTextFieldStyle())
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(width: 100)
-                        .keyboardType(.asciiCapable)
-                Spacer()
-                    .frame(width: 70, height: 1)
-                    .background(Color.blue)
+                        .background(Color.customView)
+                        .keyboardType(keyboard)
                 }
-
-                if textfieldType != nil {
-                    Text(textfieldType ?? "")
+                if textfieldUnit != nil {
+                    Text(textfieldUnit!)
                         .foregroundColor(.customLabel)
                         .font(.text)
                 }
             }
-
-            
         }
         .padding(.vertical, 8)
         .padding(.horizontal, 16)
-        
-        
+    }
+    
+    enum TextfieldType {
+        case digitsAndText
+        case textOnly
+        case digitsOnly
     }
     
 }
@@ -55,10 +55,10 @@ struct TextfieldRowView_Previews: PreviewProvider {
     static var previews: some View {
         
         Group {
-            TextfieldRowView(text: .constant("asd"), title: "Enter something", textfieldType: "PLN", keyboard: .numberPad)
+            TextfieldRowView(text: .constant("asd"), title: "Enter something", placeholder: "SomeText", textfieldUnit: "PLN", keyboard: .numberPad)
                 .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
                 .previewDisplayName("iPhone 8")
-            TextfieldRowView(text: .constant("asd"), title: "Enterr something", keyboard: .numberPad)
+            TextfieldRowView(text: .constant("asd"), title: "Enter something", placeholder: "SomeText", textfieldUnit: "PLN", keyboard: .numberPad)
                 .previewDevice(PreviewDevice(rawValue: "iPhone XS Max"))
                 .previewDisplayName("iPhone XS Max")
                 .environment(\.colorScheme, .dark)

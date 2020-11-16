@@ -13,31 +13,19 @@ struct SickLeaveView: View {
 
             ZStack {
                 Color.customBackground.edgesIgnoringSafeArea(.all)
-//                ScrollView {
-//                    SectionView(title: "Dane dotyczące urlopu") {
-//                        DateRowView(title: "Data porodu", date: $vm.query.birthDate)
-//                        StepperRowView(title: "Liczba urodzonych dzieci podczas porodu: \(vm.query.numberOfKidsBorn)", value: $vm.query.numberOfKidsBorn, range: vm.query.numberOfKidsBornRange)
-//                    }
-//                    SectionView(title: "Urlop macierzyński") {
-//                        ResultRowView(title: "Liczba tygodni:", result: vm.result.maternityLeave)
-//                        ResultRowView(title: "Data rozpoczęcia:", result: vm.result.maternityLeaveStartDate.stringDate)
-//                        ResultRowView(title: "Data zakończenia:", result: vm.result.maternityLeaveFinishDate.stringDate)
-//                    }
-//                    SectionView(title: "Urlop rodzicielski") {
-//                        ResultRowView(title: "Liczba tygodni:", result: vm.result.parentalLeave)
-//                        ResultRowView(title: "Data rozpoczęcia:", result: vm.result.parentalLeaveStartDate.stringDate)
-//                        ResultRowView(title: "Data zakończenia:", result: vm.result.parentalLeaveFinishDate.stringDate)
-//                    }
-//                    Spacer()
-//                }
-//                .allowsHitTesting(!showInfo)
-//                .blur(radius: self.showInfo ? 10 : 0)
-//                InfoView(show: $showInfo) {
-//                    InfoMessageRow(message: vm.info.message)
-//                    InfoBulletPointsRow(bulletPoints: vm.info.bulletPoints)
-//                }
-//                .animation(.spring())
-//                .offset(x: 0, y: showInfo ? 0 : UIScreen.height )
+                ScrollView {
+                    SectionView(title: "Wynagrodzenie") {
+                        TextfieldRowView(text: $vm.moneyPerMonth, title: "Wynagrodzenie netto", placeholder: "3500", textfieldUnit: "PLN", keyboard: .numberPad)
+                            .disabled(vm.moneyPerMonth.count > 5)
+                    }
+                    SectionView(title: "Dni nieobecności") {
+                        TextfieldRowView(text: $vm.daysOnSickLeave, title: "Okres nieobecności", placeholder: "30", textfieldUnit: "dni", keyboard: .numberPad)
+                            .disabled(vm.daysOnSickLeave.count > 3)
+                    }
+                    SectionView(title: "Przyczyna nieobecności") {
+                        GroupedRadioButtonsView(items: vm.sickLeaveReasons, selectedItem: $vm.sickLeaveReason)
+                    }
+                }
                 
             }
             .navigationBarTitle(Text("Urlop macierzyński"))

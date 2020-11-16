@@ -6,9 +6,9 @@ import Combine
 class MenuViewModel: ObservableObject {
     
     var cards = [
-        MenuCard(title: "Urlop macierzyński", subtitle: "Kalkulator oblicza pełny okres należnych urlopów z tytułu macierzyństwa na warunkach urlopu macierzyńskiego oraz urlopu rodzicielskiego.", image: .maternityLeave, link: .maternityLeaveCalculator),
-        MenuCard(title: "Urlop wypoczynkowy", subtitle: "Kalkulator oblicza wymiar dostępnego urlopu w przypadku nawiązania/rozwiązania przez pracownika stosunku pracy w trakcie roku kalendarzowego.", image: .work1, link: .vacationLeaveCalculator),
-        MenuCard(title: "Wynagrodzenie chorobowe", subtitle: "Kalkulator wynagrodzenia chorobowego oblicza wysokość wynagrodzenia za czas niezdolności do pracy z powodu choroby.", image: .sick, link: .vacationLeaveCalculator)
+        MenuCard(title: "Urlop macierzyński", subtitle: "Kalkulator oblicza pełny okres należnych urlopów z tytułu macierzyństwa na warunkach urlopu macierzyńskiego oraz urlopu rodzicielskiego.", image: .maternityLeave, background: [.customView, .customView], link: .maternityLeaveCalculator),
+        MenuCard(title: "Urlop wypoczynkowy", subtitle: "Kalkulator oblicza wymiar dostępnego urlopu w przypadku nawiązania/rozwiązania przez pracownika stosunku pracy w trakcie roku kalendarzowego.", image: .work1, background: [.customView, .customView], link: .vacationLeaveCalculator),
+        MenuCard(title: "Wynagrodzenie chorobowe", subtitle: "Kalkulator wynagrodzenia chorobowego oblicza wysokość wynagrodzenia za czas niezdolności do pracy z powodu choroby.", image: .sick, background: [.customView, .customView], link: .vacationLeaveCalculator)
         ]
     
 }

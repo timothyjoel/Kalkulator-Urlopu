@@ -8,6 +8,7 @@ struct MenuCard {
     var title: String
     var subtitle: String
     var image: MenuCardImage
+    var background: [Color]
     var link: Link
     
 }

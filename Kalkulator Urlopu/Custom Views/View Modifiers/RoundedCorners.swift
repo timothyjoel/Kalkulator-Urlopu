@@ -5,26 +5,33 @@ import SwiftUI
 
 struct RoundedCorners: View {
     
-    var color: Color = .black
+    var colors: [Color]
+    var startPoint: UnitPoint
+    var endPoint: UnitPoint
     var tl: CGFloat = 0.0
     var tr: CGFloat = 0.0
     var bl: CGFloat = 0.0
     var br: CGFloat = 0.0
     
-    init(color: Color = .black, corners: CGFloat = 10) {
+    
+    init(colors: [Color] = [.customBackground], startPoint: UnitPoint = .bottom, endPoint: UnitPoint = .top, corners: CGFloat = 10) {
         self.tl = corners
         self.tr = corners
         self.bl =  corners
         self.br =  corners
-        self.color = color
+        self.colors = colors
+        self.startPoint = startPoint
+        self.endPoint = endPoint
     }
     
-    init(color: Color = .black, tl: CGFloat, tr: CGFloat, bl: CGFloat, br: CGFloat) {
+    init(colors: [Color] = [.customBackground], startPoint: UnitPoint = .bottom, endPoint: UnitPoint = .top, tl: CGFloat, tr: CGFloat, bl: CGFloat, br: CGFloat) {
         self.tl = tl
         self.tr = tr
         self.bl =  bl
         self.br =  br
-        self.color = color
+        self.colors = colors
+        self.startPoint = startPoint
+        self.endPoint = endPoint
     }
     
     var body: some View {
@@ -48,7 +55,7 @@ struct RoundedCorners: View {
                 path.addLine(to: CGPoint(x: 0, y: tl))
                 path.addArc(center: CGPoint(x: tl, y: tl), radius: tl, startAngle: Angle(degrees: 180), endAngle: Angle(degrees: 270), clockwise: false)
                 }
-                .fill(self.color)
+            .fill(LinearGradient(gradient: Gradient(colors: colors), startPoint: startPoint, endPoint: endPoint))
         }
     }
     
@@ -56,6 +63,6 @@ struct RoundedCorners: View {
 
 struct Layout_Previews: PreviewProvider {
     static var previews: some View {
-        RoundedCorners(color: Color.red, corners: 16)
+        RoundedCorners(colors: [.red], corners: 16)
     }
 }

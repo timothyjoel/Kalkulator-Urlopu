@@ -27,7 +27,7 @@ struct RoundIconView: View {
             .frame(width: 32, height: 32)
             .foregroundColor(color)
             .padding(12)
-            .background(RoundedCorners(color: background, corners: 28))
+            .background(RoundedCorners(colors: [background], corners: 28))
     }
     
 }

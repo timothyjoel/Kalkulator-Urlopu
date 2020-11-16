@@ -48,15 +48,11 @@ struct MenuCardView: View {
                             .frame(width: UIScreen.width/4)
                     }
                     Spacer()
-                    
                 }
-                
                 .frame(height: 200, alignment: .center)
                 .padding(.vertical, 4)
-                
             }
-            
-            .background(RoundedCorners(color: .customView, corners: 10))
+            .background(RoundedCorners(colors: card.background, corners: 10))
             .padding(.bottom, 16)
         }
         .background(Color.customBackground)
@@ -71,11 +67,11 @@ struct MenuCardView_Previews: PreviewProvider {
     static var previews: some View {
         
         Group {
-            MenuCardView(card: MenuCard(title: "Sampletitle", subtitle: "asdasd asdasd asd asd asdasd asdasd asd asd asdasasdasd asdasd asd asd asd asdasd.", image: .maternityLeave, link: .maternityLeaveCalculator))
+            MenuCardView(card: MenuCard(title: "Sampletitle", subtitle: "asdasd asdasd asd asd asdasd asdasd asd asd asdasasdasd asdasd asd asd asd asdasd.", image: .maternityLeave, background: [.red, .orange], link: .maternityLeaveCalculator))
                 .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
                 .previewDisplayName("iPhone 8")
             
-            MenuCardView(card: MenuCard(title: "S", subtitle: "asdasd asdasd asd asd asdasd asdasd asd asd asdasasdasd asdasd asd asd asd asdasd.", image: .maternityLeave, link: .maternityLeaveCalculator))
+            MenuCardView(card: MenuCard(title: "S", subtitle: "asdasd asdasd asd asd asdasd asdasd asd asd asdasasdasd asdasd asd asd asd asdasd.", image: .maternityLeave, background: [.red, .orange], link: .maternityLeaveCalculator))
                 .previewDevice(PreviewDevice(rawValue: "iPhone XS Max"))
                 .previewDisplayName("iPhone XS Max")
                 .environment(\.colorScheme, .dark)

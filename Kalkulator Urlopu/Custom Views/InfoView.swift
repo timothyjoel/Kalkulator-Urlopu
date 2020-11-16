@@ -56,7 +56,7 @@ struct InfoView<Content>: View where Content: View {
                     }
 
                 }
-                .background(RoundedCorners(color: .customView, tl: 30, tr: 30, bl: 0, br: 0))
+                .background(RoundedCorners(colors: [.customView], tl: 30, tr: 30, bl: 0, br: 0))
                 
             }
 

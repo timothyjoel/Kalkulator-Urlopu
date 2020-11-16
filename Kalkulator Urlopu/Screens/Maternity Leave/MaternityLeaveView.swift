@@ -28,7 +28,6 @@ struct MaternityLeaveView: View {
                         ResultRowView(title: "Data rozpoczęcia:", result: vm.result.parentalLeaveStartDate.stringDate)
                         ResultRowView(title: "Data zakończenia:", result: vm.result.parentalLeaveFinishDate.stringDate)
                     }
-            //        .animation(.spring())
                     Spacer()
                 }
                 .allowsHitTesting(!showInfo)

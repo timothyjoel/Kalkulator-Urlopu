@@ -20,13 +20,13 @@ struct MaternityLeaveView: View {
                     }
                     SectionView(title: "Urlop macierzyński") {
                         ResultRowView(title: "Liczba tygodni:", result: vm.result.maternityLeave)
-                        ResultRowView(title: "Data rozpoczęcia:", result: vm.result.maternityLeaveStartDate.stringDate)
-                        ResultRowView(title: "Data zakończenia:", result: vm.result.maternityLeaveFinishDate.stringDate)
+                        ResultRowView(title: "Data rozpoczęcia:", result: vm.result.maternityLeaveStartDate)
+                        ResultRowView(title: "Data zakończenia:", result: vm.result.maternityLeaveFinishDate)
                     }
                     SectionView(title: "Urlop rodzicielski") {
                         ResultRowView(title: "Liczba tygodni:", result: vm.result.parentalLeave)
-                        ResultRowView(title: "Data rozpoczęcia:", result: vm.result.parentalLeaveStartDate.stringDate)
-                        ResultRowView(title: "Data zakończenia:", result: vm.result.parentalLeaveFinishDate.stringDate)
+                        ResultRowView(title: "Data rozpoczęcia:", result: vm.result.parentalLeaveStartDate)
+                        ResultRowView(title: "Data zakończenia:", result: vm.result.parentalLeaveFinishDate)
                     }
                     Spacer()
                 }

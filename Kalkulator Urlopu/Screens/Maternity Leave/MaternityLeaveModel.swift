@@ -12,11 +12,11 @@ struct MaternityLeaveQuery {
 struct MaternityLeaveResult: Equatable {
     typealias Weeks = Int
     var maternityLeave: Weeks
-    var maternityLeaveStartDate: Date
-    var maternityLeaveFinishDate: Date
+    var maternityLeaveStartDate: String
+    var maternityLeaveFinishDate: String
     var parentalLeave: Weeks
-    var parentalLeaveStartDate: Date
-    var parentalLeaveFinishDate: Date
+    var parentalLeaveStartDate: String
+    var parentalLeaveFinishDate: String
     var summedLeave: Weeks
 }
 

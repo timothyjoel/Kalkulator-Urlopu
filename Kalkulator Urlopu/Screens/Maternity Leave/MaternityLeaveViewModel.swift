@@ -12,7 +12,7 @@ class MaternityLeaveViewModel: ObservableObject {
     }
     
     var info = MaternityLeaveInfo()
-    @Published var result: MaternityLeaveResult = MaternityLeaveResult(maternityLeave: 0, maternityLeaveStartDate: Date(), maternityLeaveFinishDate: Date(), parentalLeave: 0, parentalLeaveStartDate: Date(), parentalLeaveFinishDate: Date(), summedLeave: 0)
+    @Published var result: MaternityLeaveResult = MaternityLeaveResult(maternityLeave: 0, maternityLeaveStartDate: "", maternityLeaveFinishDate: "", parentalLeave: 0, parentalLeaveStartDate: "", parentalLeaveFinishDate: "", summedLeave: 0)
     
     @Published var query = MaternityLeaveQuery() {
         didSet {
@@ -39,16 +39,20 @@ class MaternityLeaveViewModel: ObservableObject {
     }
      
     private func calculateDates() {
-        result.maternityLeaveStartDate = query.birthDate
+        result.maternityLeaveStartDate = query.birthDate.stringDate
         
         var maternityLeaveDays = DateComponents()
         maternityLeaveDays.day = (result.maternityLeave * 7) - 1
-        result.maternityLeaveFinishDate = Calendar.current.date(byAdding: maternityLeaveDays, to: result.maternityLeaveStartDate)!
+        let maternityLeaveFinishDate = Calendar.current.date(byAdding: maternityLeaveDays, to: query.birthDate)!
+        result.maternityLeaveFinishDate = maternityLeaveFinishDate.stringDate
         
         var parentalLeaveDays = DateComponents()
         parentalLeaveDays.day = (result.parentalLeave * 7) - 1
-        result.parentalLeaveStartDate = Calendar.current.date(byAdding: oneDay, to: result.maternityLeaveFinishDate)!
-        result.parentalLeaveFinishDate = Calendar.current.date(byAdding: parentalLeaveDays, to: result.parentalLeaveStartDate)!
+        let parentalLeaveStartDate = Calendar.current.date(byAdding: oneDay, to: maternityLeaveFinishDate)!
+        result.parentalLeaveStartDate = parentalLeaveStartDate.stringDate
+        
+        let parentalLeaveFinishDate = Calendar.current.date(byAdding: parentalLeaveDays, to: parentalLeaveStartDate)!
+        result.parentalLeaveFinishDate = parentalLeaveFinishDate.stringDate
     }
     
     private var oneDay: DateComponents {

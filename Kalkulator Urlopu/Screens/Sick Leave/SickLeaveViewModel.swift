@@ -6,38 +6,17 @@ import Combine
 
 class SickLeaveViewModel: ObservableObject {
     
-    @Published var moneyPerMonth = "3500"
-    @Published var daysOnSickLeave =  "30"
-    @Published var moneyForPeriod = "2800"
+    @Published var moneyPerMonth = 3500
+    @Published var daysOnSickLeave =  30
+    @Published var moneyForPeriod = 2800
+    @Published var percentage = 80
     
     var sickLeaveReasons = SickLeaveReason.allCases
     @Published var sickLeaveReason: SickLeaveReason = .regularSickness
-//
-//    @Published var regularSickness: Bool = true
-//     {
-//        didSet {
-//            sicknessReason = .regularSickness
-//            calculateResults()
-//        }
-//    }
-//    @Published var sickWhenPregnant: Bool = false
-//    {
-//        didSet {
-//            sicknessReason = .sickWhenPregnant
-//            calculateResults()
-//        }
-//    }
-//    @Published var accidentOnWayToWork: Bool = false
-//    {
-//        didSet {
-//            sicknessReason = .accidentOnWayToWork
-//            calculateResults()
-//        }
-//    }
-//
-//    var sicknessReason: SickLeaveReason = .regularSickness
-    
+
     private func calculateResults() {
+ //       let percentage = sickLeaveReason == .regularSickness ? self.percentage : "100"
+//        moneyForPeriod = String(Double(Int(moneyPerMonth) * Int(daysOnSickLeave) * Int(percentage)))
 //        regularSickness = sicknessReason == .regularSickness
 //        sickWhenPregnant = sicknessReason == .sickWhenPregnant
 //        accidentOnWayToWork = sicknessReason == .accidentOnWayToWork
@@ -47,7 +26,7 @@ class SickLeaveViewModel: ObservableObject {
 
 extension SickLeaveViewModel {
     
-    enum SickLeaveReason: StringDescriptive, Equatable, CaseIterable {
+    enum SickLeaveReason: CustomStringConvertible, Equatable, CaseIterable {
         
         case regularSickness
         case sickWhenPregnant

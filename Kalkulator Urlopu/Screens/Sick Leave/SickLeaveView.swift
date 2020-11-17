@@ -14,21 +14,20 @@ struct SickLeaveView: View {
             ZStack {
                 Color.customBackground.edgesIgnoringSafeArea(.all)
                 ScrollView {
-                    SectionView(title: "Wynagrodzenie") {
-                        TextfieldRowView(text: $vm.moneyPerMonth, title: "Wynagrodzenie netto", placeholder: "3500", textfieldUnit: "PLN", keyboard: .numberPad)
-                            .disabled(vm.moneyPerMonth.count > 5)
+                    SectionView(title: "Dane dotyczące zwolnienia") {
+                        TextfieldRowView(value: $vm.moneyPerMonth, title: "Wynagrodzenie netto", placeholder: "3500", textfieldUnit: "zł", keyboard: .numberPad, maximumCharacters: 5)
+                        TextfieldRowView(value: $vm.daysOnSickLeave, title: "Okres nieobecności", placeholder: "30", textfieldUnit: "dni", keyboard: .numberPad, maximumCharacters: 3)
+                        TextfieldRowView(value: $vm.percentage, title: "Procent wynagrodzenia", placeholder: "30", textfieldUnit: "%", keyboard: .numberPad, maximumCharacters: 3)
                     }
-                    SectionView(title: "Dni nieobecności") {
-                        TextfieldRowView(text: $vm.daysOnSickLeave, title: "Okres nieobecności", placeholder: "30", textfieldUnit: "dni", keyboard: .numberPad)
-                            .disabled(vm.daysOnSickLeave.count > 3)
-                    }
-                    SectionView(title: "Przyczyna nieobecności") {
+                    SectionView(title: "Rodzaj choroby") {
                         GroupedRadioButtonsView(items: vm.sickLeaveReasons, selectedItem: $vm.sickLeaveReason)
                     }
+                    SectionView(title: "Wynagrodzenie chorobowe") {
+                        ResultRowView(title: "Wynagrodzenie netto za wybrany okres", result: vm.moneyForPeriod)
+                    }
                 }
-                
             }
-            .navigationBarTitle(Text("Urlop macierzyński"))
+            .navigationBarTitle(Text("Zwolnienie lekarskie"))
             .navigationBarItems(trailing: NavigationButton(icon: .questionMark, action: {
                 self.showInfo.toggle()
             }))

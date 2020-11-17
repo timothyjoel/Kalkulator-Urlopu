@@ -7,7 +7,7 @@ protocol StringDescriptive {
     var description: String { get }
 }
 
-struct GroupedRadioButtonsView<T: StringDescriptive & Equatable>: View {
+struct GroupedRadioButtonsView<T: CustomStringConvertible & Equatable>: View {
     
     let items: [T]
     @Binding var selectedItem: T

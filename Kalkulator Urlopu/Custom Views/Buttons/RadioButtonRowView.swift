@@ -43,10 +43,10 @@ struct RadioButtonRowView_Previews: PreviewProvider {
     static var previews: some View {
         
         Group {
-            GroupedRadioButtonsView(items: SickLeaveViewModel.SickLeaveReason.allCases, selectedItem: .constant(.regularSickness))
+            GroupedRadioButtonsView(items: SickLeaveReason.allCases, selectedItem: .constant(.regularSickness))
                 .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
                 .previewDisplayName("iPhone 8")
-            GroupedRadioButtonsView(items: SickLeaveViewModel.SickLeaveReason.allCases, selectedItem: .constant(.regularSickness))
+            GroupedRadioButtonsView(items: SickLeaveReason.allCases, selectedItem: .constant(.regularSickness))
                 .previewDevice(PreviewDevice(rawValue: "iPhone XS Max"))
                 .previewDisplayName("iPhone XS Max")
                 .environment(\.colorScheme, .dark)

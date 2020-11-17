@@ -15,15 +15,15 @@ struct SickLeaveView: View {
                 Color.customBackground.edgesIgnoringSafeArea(.all)
                 ScrollView {
                     SectionView(title: "Dane dotyczące zwolnienia") {
-                        TextfieldRowView(value: $vm.moneyPerMonth, title: "Wynagrodzenie netto", placeholder: "3500", textfieldUnit: "zł", keyboard: .numberPad, maximumCharacters: 5)
-                        TextfieldRowView(value: $vm.daysOnSickLeave, title: "Okres nieobecności", placeholder: "30", textfieldUnit: "dni", keyboard: .numberPad, maximumCharacters: 3)
-                        TextfieldRowView(value: $vm.percentage, title: "Procent wynagrodzenia", placeholder: "30", textfieldUnit: "%", keyboard: .numberPad, maximumCharacters: 3)
+                        TextfieldRowView(value: $vm.query.moneyPerMonth, title: "Wynagrodzenie netto", placeholder: "3500", textfieldUnit: "zł", keyboard: .numberPad, maximumCharacters: 5)
+                        TextfieldRowView(value: $vm.query.daysOnSickLeave, title: "Okres nieobecności", placeholder: "30", textfieldUnit: "dni", keyboard: .numberPad, maximumCharacters: 3)
+                        TextfieldRowView(value: $vm.query.percentage, title: "Procent wynagrodzenia", placeholder: "30", textfieldUnit: "%", keyboard: .numberPad, maximumCharacters: 3)
                     }
                     SectionView(title: "Rodzaj choroby") {
-                        GroupedRadioButtonsView(items: vm.sickLeaveReasons, selectedItem: $vm.sickLeaveReason)
+                        GroupedRadioButtonsView(items: SickLeaveReason.allCases, selectedItem: $vm.query.sickLeaveReason)
                     }
-                    SectionView(title: "Wynagrodzenie chorobowe") {
-                        ResultRowView(title: "Wynagrodzenie netto za wybrany okres", result: vm.moneyForPeriod)
+                    SectionView(title: "Wynagrodzenie") {
+                        ResultRowView(title: "Netto za wybrany okres", result: vm.result)
                     }
                 }
             }

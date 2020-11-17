@@ -27,6 +27,8 @@
 		E45853732561A4490091C319 /* SickLeaveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45853722561A4490091C319 /* SickLeaveViewModel.swift */; };
 		E45853772561A4FE0091C319 /* TextfieldRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45853762561A4FE0091C319 /* TextfieldRowView.swift */; };
 		E458538325627A030091C319 /* RadioButtonRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E458538225627A030091C319 /* RadioButtonRowView.swift */; };
+		E458538925648A360091C319 /* SickLeaveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E458538825648A360091C319 /* SickLeaveModel.swift */; };
+		E458538D25648BE50091C319 /* SickLeaveViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E458538C25648BE50091C319 /* SickLeaveViewModel_Tests.swift */; };
 		E4BA5F8825617EDE00C5D163 /* CustomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BA5F8725617EDE00C5D163 /* CustomList.swift */; };
 		E4BA5F90256187B300C5D163 /* MaternityLeaveViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BA5F8F256187B300C5D163 /* MaternityLeaveViewModel_Tests.swift */; };
 		E4CE0375255C1FEA005F6300 /* VacationLeaveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE0374255C1FEA005F6300 /* VacationLeaveModel.swift */; };
@@ -84,6 +86,8 @@
 		E45853722561A4490091C319 /* SickLeaveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SickLeaveViewModel.swift; sourceTree = "<group>"; };
 		E45853762561A4FE0091C319 /* TextfieldRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldRowView.swift; sourceTree = "<group>"; };
 		E458538225627A030091C319 /* RadioButtonRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonRowView.swift; sourceTree = "<group>"; };
+		E458538825648A360091C319 /* SickLeaveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SickLeaveModel.swift; sourceTree = "<group>"; };
+		E458538C25648BE50091C319 /* SickLeaveViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SickLeaveViewModel_Tests.swift; sourceTree = "<group>"; };
 		E4BA5F8725617EDE00C5D163 /* CustomList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomList.swift; sourceTree = "<group>"; };
 		E4BA5F8F256187B300C5D163 /* MaternityLeaveViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaternityLeaveViewModel_Tests.swift; sourceTree = "<group>"; };
 		E4CE0374255C1FEA005F6300 /* VacationLeaveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationLeaveModel.swift; sourceTree = "<group>"; };
@@ -245,6 +249,7 @@
 			children = (
 				E458536E2561A42A0091C319 /* SickLeaveView.swift */,
 				E45853722561A4490091C319 /* SickLeaveViewModel.swift */,
+				E458538825648A360091C319 /* SickLeaveModel.swift */,
 			);
 			path = "Sick Leave";
 			sourceTree = "<group>";
@@ -254,6 +259,7 @@
 			children = (
 				E4CE0380255D449D005F6300 /* VacationLeaveViewModel_Tests.swift */,
 				E4BA5F8F256187B300C5D163 /* MaternityLeaveViewModel_Tests.swift */,
+				E458538C25648BE50091C319 /* SickLeaveViewModel_Tests.swift */,
 				E4CE0382255D449D005F6300 /* Info.plist */,
 			);
 			path = "Kalkulator UrlopuTests";
@@ -503,6 +509,7 @@
 				E4FCDC76255DDF6C00192D6F /* NavigationButton.swift in Sources */,
 				E45853772561A4FE0091C319 /* TextfieldRowView.swift in Sources */,
 				E4CE0399255DA5CD005F6300 /* ResultRowView.swift in Sources */,
+				E458538925648A360091C319 /* SickLeaveModel.swift in Sources */,
 				E458538325627A030091C319 /* RadioButtonRowView.swift in Sources */,
 				E4CE038B255D830E005F6300 /* Ext+Date.swift in Sources */,
 				E4FCDCB5255EB52200192D6F /* MenuModel.swift in Sources */,
@@ -518,6 +525,7 @@
 			files = (
 				E4BA5F90256187B300C5D163 /* MaternityLeaveViewModel_Tests.swift in Sources */,
 				E4CE0381255D449D005F6300 /* VacationLeaveViewModel_Tests.swift in Sources */,
+				E458538D25648BE50091C319 /* SickLeaveViewModel_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

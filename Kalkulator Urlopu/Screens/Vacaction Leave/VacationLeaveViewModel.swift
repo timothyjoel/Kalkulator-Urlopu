@@ -6,6 +6,8 @@ import SwiftUI
 
 class VacationLeaveViewModel: ObservableObject  {
     
+    var webLinks: [WebLink] = [WebLink(title: "Kodeks pracy", url: "http://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU19740240141/U/D19740141Lj.pdf")]
+    
     @Published var query = VacationLeaveQuery() {
         didSet {
             calculateResult()

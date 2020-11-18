@@ -9,7 +9,7 @@ struct MenuCard {
     var subtitle: String
     var image: MenuCardImage
     var background: [Color]
-    var link: Link
+    var route: Route
     
 }
 

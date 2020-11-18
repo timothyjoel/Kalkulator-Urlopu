@@ -3,13 +3,13 @@
 
 import SwiftUI
 
-protocol NavigationCoordinator {
+protocol Router {
     
     func open() -> AnyView
     
 }
 
-enum Link: NavigationCoordinator {
+enum Route: Router {
     
     case maternityLeaveCalculator
     case vacationLeaveCalculator

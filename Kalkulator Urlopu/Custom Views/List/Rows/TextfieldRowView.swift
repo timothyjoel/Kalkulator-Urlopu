@@ -9,8 +9,8 @@ struct TextfieldRowView<T>: View {
     
     @Binding var value: T
     var title: String
-    var placeholder: String
-    var textfieldUnit: String?
+    var placeholder: String? = nil
+    var textfieldUnit: String? = nil
     var keyboard: UIKeyboardType = .default
     var maximumCharacters: Int = 5
     
@@ -21,7 +21,7 @@ struct TextfieldRowView<T>: View {
                 .foregroundColor(.customLabel)
                 .font(.text)
             Spacer()
-            TextField(placeholder, value: $value, formatter: keyboard == .numberPad ? NumberFormatter() : Formatter())
+            TextField((placeholder ?? textfieldUnit) ?? "", value: $value, formatter: keyboard == .numberPad ? NumberFormatter() : Formatter())
                 .foregroundColor(.blue)
                 .font(.text)
                 .multilineTextAlignment(.trailing)

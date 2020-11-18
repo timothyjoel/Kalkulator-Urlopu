@@ -55,7 +55,7 @@
 		E4FCDCAF255EB4F000192D6F /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDCAE255EB4F000192D6F /* MenuViewModel.swift */; };
 		E4FCDCB5255EB52200192D6F /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDCB4255EB52200192D6F /* MenuModel.swift */; };
 		E4FCDCBA255EBD8000192D6F /* MenuCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDCB9255EBD8000192D6F /* MenuCardView.swift */; };
-		E4FCDCC7255EC30B00192D6F /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDCC6255EC30B00192D6F /* Link.swift */; };
+		E4FCDCC7255EC30B00192D6F /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDCC6255EC30B00192D6F /* Route.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,7 +120,7 @@
 		E4FCDCAE255EB4F000192D6F /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		E4FCDCB4255EB52200192D6F /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		E4FCDCB9255EBD8000192D6F /* MenuCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCardView.swift; sourceTree = "<group>"; };
-		E4FCDCC6255EC30B00192D6F /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
+		E4FCDCC6255EC30B00192D6F /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -387,7 +387,7 @@
 		E4FCDCBF255EC2A500192D6F /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				E4FCDCC6255EC30B00192D6F /* Link.swift */,
+				E4FCDCC6255EC30B00192D6F /* Route.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -525,7 +525,7 @@
 				E458536F2561A42A0091C319 /* SickLeaveView.swift in Sources */,
 				E40C9D71255194EE0050646C /* SceneDelegate.swift in Sources */,
 				E418AACD255ED8830034B13B /* MaternityLeaveView.swift in Sources */,
-				E4FCDCC7255EC30B00192D6F /* Link.swift in Sources */,
+				E4FCDCC7255EC30B00192D6F /* Route.swift in Sources */,
 				E4FCDC90255E00F600192D6F /* InfoView.swift in Sources */,
 				E40C9D73255194EE0050646C /* VacationLeaveView.swift in Sources */,
 				E4FCDC76255DDF6C00192D6F /* NavigationButton.swift in Sources */,

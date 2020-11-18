@@ -12,7 +12,7 @@ struct MenuCardView: View {
         ZStack {
             // This is a trick to make link arrow disapper in list
             NavigationLink(
-                destination: card.link.open()) {
+                destination: card.route.open()) {
                 EmptyView()
             }
             .opacity(0.0)
@@ -67,11 +67,11 @@ struct MenuCardView_Previews: PreviewProvider {
     static var previews: some View {
         
         Group {
-            MenuCardView(card: MenuCard(title: "Sampletitle", subtitle: "asdasd asdasd asd asd asdasd asdasd asd asd asdasasdasd asdasd asd asd asd asdasd.", image: .maternityLeave, background: [.red, .orange], link: .maternityLeaveCalculator))
+            MenuCardView(card: MenuCard(title: "Sampletitle", subtitle: "asdasd asdasd asd asd asdasd asdasd asd asd asdasasdasd asdasd asd asd asd asdasd.", image: .maternityLeave, background: [.red, .orange], route: .maternityLeaveCalculator))
                 .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
                 .previewDisplayName("iPhone 8")
             
-            MenuCardView(card: MenuCard(title: "S", subtitle: "asdasd asdasd asd asd asdasd asdasd asd asd asdasasdasd asdasd asd asd asd asdasd.", image: .maternityLeave, background: [.red, .orange], link: .maternityLeaveCalculator))
+            MenuCardView(card: MenuCard(title: "S", subtitle: "asdasd asdasd asd asd asdasd asdasd asd asd asdasasdasd asdasd asd asd asd asdasd.", image: .maternityLeave, background: [.red, .orange], route: .maternityLeaveCalculator))
                 .previewDevice(PreviewDevice(rawValue: "iPhone XS Max"))
                 .previewDisplayName("iPhone XS Max")
                 .environment(\.colorScheme, .dark)

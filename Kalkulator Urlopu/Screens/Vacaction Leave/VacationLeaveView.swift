@@ -17,6 +17,9 @@ struct VacationLeaveView: View {
                     .blur(radius: self.showInfo ? 10 : 0)
                     .animation(nil)
                 ScrollView {
+                    SectionView(title: "Podstawa prawna") {
+                        LegalBasisRowView(webLinks: vm.webLinks)
+                    }
                     SectionView(title: "Dane dotyczące zatrudnienia") {
                         ToggleRowView(title: "Staż pracy poniżej 10 lat", isOn: $vm.query.workedLessThanTenYears)
                         DateRowView(title: "Początek", date: $vm.query.beginDate)

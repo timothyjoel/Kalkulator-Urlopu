@@ -6,16 +6,22 @@ import Combine
 
 class SickLeaveViewModel: ObservableObject {
     
+    var webLinks: [WebLink] = [
+        WebLink(title: "Rozdział 8", url: "http://www.przepisy.gofin.pl/przepisy,4,17,50,381,,,ustawa-z-dnia-25061999-r-o-swiadczeniach-pienieznych-z.html#P269745")
+    ]
+    
     @Published var query = SickLeaveQuery(moneyPerMonth: 3500, daysOnSickLeave: 30, percentage: 80, sickLeaveReason: .regularSickness) {
         didSet {
             calculateResult()
         }
     }
     @Published var result: Double = 2800
+    @Published var resultPerDay: Double = 800
 
     private func calculateResult() {
-        let percentage = query.sickLeaveReason == .regularSickness ? self.query.percentage : 10
+        let percentage = query.sickLeaveReason == .regularSickness ? self.query.percentage : 100
         result = Double(percentage)/100 * Double(query.daysOnSickLeave) * Double(query.moneyPerMonth) / 30
+        resultPerDay = result / Double(query.daysOnSickLeave)
     }
     
 }

@@ -6,7 +6,6 @@ import SwiftUI
 
 struct MaternityLeaveView: View {
     
-    @State var showInfo = false
     @ObservedObject var vm: MaternityLeaveViewModel
     
     var body: some View {
@@ -30,21 +29,9 @@ struct MaternityLeaveView: View {
                     }
                     Spacer()
                 }
-                .allowsHitTesting(!showInfo)
-                .blur(radius: self.showInfo ? 10 : 0)
-                InfoView(show: $showInfo) {
-                    InfoMessageRow(message: vm.info.message)
-                    InfoBulletPointsRow(bulletPoints: vm.info.bulletPoints)
-                }
-                .animation(.spring())
-                .offset(x: 0, y: showInfo ? 0 : UIScreen.height )
-                
             }
             .navigationBarTitle(Text("Urlop macierzyński"))
-            .navigationBarItems(trailing: NavigationButton(icon: .questionMark, action: {
-                self.showInfo.toggle()
-            }))
-        
+
     }
 }
 

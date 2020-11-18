@@ -7,21 +7,18 @@ import Combine
 class MaternityLeaveViewModel: ObservableObject {
     
     init() {
-        calculateWeeks()
-        calculateDates()
+        calculate { [weak self] in self?.result = $0 }
     }
-    
-    var info = MaternityLeaveInfo()
-    @Published var result: MaternityLeaveResult = MaternityLeaveResult(maternityLeave: 0, maternityLeaveStartDate: "", maternityLeaveFinishDate: "", parentalLeave: 0, parentalLeaveStartDate: "", parentalLeaveFinishDate: "", summedLeave: 0)
     
     @Published var query = MaternityLeaveQuery() {
         didSet {
-            calculateWeeks()
-            calculateDates()
+            calculate { [weak self] in self?.result = $0 }
         }
     }
     
-    private func calculateWeeks() {
+    @Published var result: MaternityLeaveResult!
+    
+    private func calculate(completion: (MaternityLeaveResult) -> Void) {
         var maternity: Int = 0
         var parental: Int = 0
         switch query.numberOfKidsBorn {
@@ -32,27 +29,26 @@ class MaternityLeaveViewModel: ObservableObject {
         case 5: maternity = 37; parental = 34
         default: break
         }
-        result.maternityLeave = maternity
-        result.parentalLeave = parental
-        result.summedLeave = maternity + parental
         
-    }
-     
-    private func calculateDates() {
-        result.maternityLeaveStartDate = query.birthDate.stringDate
+        let maternityLeaveStartDate = query.birthDate.stringDate
         
         var maternityLeaveDays = DateComponents()
-        maternityLeaveDays.day = (result.maternityLeave * 7) - 1
+        maternityLeaveDays.day = (maternity * 7) - 1
         let maternityLeaveFinishDate = Calendar.current.date(byAdding: maternityLeaveDays, to: query.birthDate)!
-        result.maternityLeaveFinishDate = maternityLeaveFinishDate.stringDate
         
         var parentalLeaveDays = DateComponents()
-        parentalLeaveDays.day = (result.parentalLeave * 7) - 1
+        parentalLeaveDays.day = (parental * 7) - 1
         let parentalLeaveStartDate = Calendar.current.date(byAdding: oneDay, to: maternityLeaveFinishDate)!
-        result.parentalLeaveStartDate = parentalLeaveStartDate.stringDate
-        
         let parentalLeaveFinishDate = Calendar.current.date(byAdding: parentalLeaveDays, to: parentalLeaveStartDate)!
-        result.parentalLeaveFinishDate = parentalLeaveFinishDate.stringDate
+        
+        completion(MaternityLeaveResult(
+                    maternityLeave: maternity,
+                    maternityLeaveStartDate: maternityLeaveStartDate,
+                    maternityLeaveFinishDate: maternityLeaveFinishDate.stringDate,
+                    parentalLeave: parental,
+                    parentalLeaveStartDate: parentalLeaveStartDate.stringDate,
+                    parentalLeaveFinishDate: parentalLeaveFinishDate.stringDate,
+                    summedLeave: maternity + parental))
     }
     
     private var oneDay: DateComponents {

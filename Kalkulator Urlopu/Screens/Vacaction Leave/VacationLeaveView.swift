@@ -15,7 +15,7 @@ struct VacationLeaveView: View {
                 Color.customBackground.edgesIgnoringSafeArea(.all)
                 ScrollView {
                     SectionView(title: "Podstawa prawna") {
-                        LegalBasisRowView(webLinks: vm.webLinks)
+                        LinksRowView(webLinks: vm.webLinks)
                     }
                     SectionView(title: "Dane dotyczące zatrudnienia") {
                         ToggleRowView(title: "Staż pracy poniżej 10 lat", isOn: $vm.query.workedLessThanTenYears)

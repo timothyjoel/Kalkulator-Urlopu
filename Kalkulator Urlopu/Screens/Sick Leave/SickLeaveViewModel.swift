@@ -7,7 +7,7 @@ import Combine
 class SickLeaveViewModel: ObservableObject {
     
     var webLinks: [WebLink] = [
-        WebLink(title: "Rozdział 8", url: "http://www.przepisy.gofin.pl/przepisy,4,17,50,381,,,ustawa-z-dnia-25061999-r-o-swiadczeniach-pienieznych-z.html#P269745")
+        WebLink(title: "Ustawa o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa", url: .leaveBenefits)
     ]
     
     @Published var query = SickLeaveQuery(moneyPerMonth: 3500, daysOnSickLeave: 30, percentage: 80, sickLeaveReason: .regularSickness) {

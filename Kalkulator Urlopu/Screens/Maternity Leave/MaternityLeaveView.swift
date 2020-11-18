@@ -13,6 +13,10 @@ struct MaternityLeaveView: View {
             ZStack {
                 Color.customBackground.edgesIgnoringSafeArea(.all)
                 ScrollView {
+                    
+                    SectionView(title: "Podstawa prawna") {
+                        LinksRowView(webLinks: vm.webLinks)
+                    }
                     SectionView(title: "Dane dotyczące urlopu") {
                         DateRowView(title: "Data porodu", date: $vm.query.birthDate)
                         StepperRowView(title: "Liczba urodzonych dzieci podczas porodu: \(vm.query.numberOfKidsBorn)", value: $vm.query.numberOfKidsBorn, range: vm.query.numberOfKidsBornRange)

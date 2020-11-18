@@ -32,7 +32,8 @@
 		E4585394256497440091C319 /* SickLeaveDailyPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4585393256497440091C319 /* SickLeaveDailyPaymentView.swift */; };
 		E458539C2564977D0091C319 /* SickLeaveDailyPaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E458539B2564977D0091C319 /* SickLeaveDailyPaymentViewModel.swift */; };
 		E45853A0256498110091C319 /* SickLeaveDailyPaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E458539F256498110091C319 /* SickLeaveDailyPaymentModel.swift */; };
-		E45853A625649A8C0091C319 /* InfoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45853A525649A8C0091C319 /* InfoRowView.swift */; };
+		E45853A625649A8C0091C319 /* LinksRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45853A525649A8C0091C319 /* LinksRowView.swift */; };
+		E45853AD256574500091C319 /* Constants+LinkURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45853AC256574500091C319 /* Constants+LinkURL.swift */; };
 		E4BA5F8825617EDE00C5D163 /* CustomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BA5F8725617EDE00C5D163 /* CustomList.swift */; };
 		E4BA5F90256187B300C5D163 /* MaternityLeaveViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BA5F8F256187B300C5D163 /* MaternityLeaveViewModel_Tests.swift */; };
 		E4CE0375255C1FEA005F6300 /* VacationLeaveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE0374255C1FEA005F6300 /* VacationLeaveModel.swift */; };
@@ -95,7 +96,8 @@
 		E4585393256497440091C319 /* SickLeaveDailyPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SickLeaveDailyPaymentView.swift; sourceTree = "<group>"; };
 		E458539B2564977D0091C319 /* SickLeaveDailyPaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SickLeaveDailyPaymentViewModel.swift; sourceTree = "<group>"; };
 		E458539F256498110091C319 /* SickLeaveDailyPaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SickLeaveDailyPaymentModel.swift; sourceTree = "<group>"; };
-		E45853A525649A8C0091C319 /* InfoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRowView.swift; sourceTree = "<group>"; };
+		E45853A525649A8C0091C319 /* LinksRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksRowView.swift; sourceTree = "<group>"; };
+		E45853AC256574500091C319 /* Constants+LinkURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+LinkURL.swift"; sourceTree = "<group>"; };
 		E4BA5F8725617EDE00C5D163 /* CustomList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomList.swift; sourceTree = "<group>"; };
 		E4BA5F8F256187B300C5D163 /* MaternityLeaveViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaternityLeaveViewModel_Tests.swift; sourceTree = "<group>"; };
 		E4CE0374255C1FEA005F6300 /* VacationLeaveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationLeaveModel.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			children = (
 				E40C9D6E255194EE0050646C /* AppDelegate.swift */,
 				E40C9D70255194EE0050646C /* SceneDelegate.swift */,
+				E45853AB256574340091C319 /* Constants */,
 				E4FCDCBF255EC2A500192D6F /* Navigation */,
 				E4CE03B0255DAE37005F6300 /* Screens */,
 				E40C9D902551996D0050646C /* Custom Views */,
@@ -272,6 +275,14 @@
 			path = "Sick Leave Daily Payment";
 			sourceTree = "<group>";
 		};
+		E45853AB256574340091C319 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				E45853AC256574500091C319 /* Constants+LinkURL.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		E4CE037F255D449D005F6300 /* Kalkulator UrlopuTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,7 +312,7 @@
 				E4CE03AC255DADFE005F6300 /* ToggleRowView.swift */,
 				E4CE0398255DA5CD005F6300 /* ResultRowView.swift */,
 				E45853762561A4FE0091C319 /* TextfieldRowView.swift */,
-				E45853A525649A8C0091C319 /* InfoRowView.swift */,
+				E45853A525649A8C0091C319 /* LinksRowView.swift */,
 			);
 			path = Rows;
 			sourceTree = "<group>";
@@ -526,6 +537,7 @@
 				E40C9D71255194EE0050646C /* SceneDelegate.swift in Sources */,
 				E418AACD255ED8830034B13B /* MaternityLeaveView.swift in Sources */,
 				E4FCDCC7255EC30B00192D6F /* Route.swift in Sources */,
+				E45853AD256574500091C319 /* Constants+LinkURL.swift in Sources */,
 				E4FCDC90255E00F600192D6F /* InfoView.swift in Sources */,
 				E40C9D73255194EE0050646C /* VacationLeaveView.swift in Sources */,
 				E4FCDC76255DDF6C00192D6F /* NavigationButton.swift in Sources */,
@@ -533,7 +545,7 @@
 				E4CE0399255DA5CD005F6300 /* ResultRowView.swift in Sources */,
 				E458538925648A360091C319 /* SickLeaveModel.swift in Sources */,
 				E458538325627A030091C319 /* RadioButtonRowView.swift in Sources */,
-				E45853A625649A8C0091C319 /* InfoRowView.swift in Sources */,
+				E45853A625649A8C0091C319 /* LinksRowView.swift in Sources */,
 				E4CE038B255D830E005F6300 /* Ext+Date.swift in Sources */,
 				E458539C2564977D0091C319 /* SickLeaveDailyPaymentViewModel.swift in Sources */,
 				E4FCDCB5255EB52200192D6F /* MenuModel.swift in Sources */,

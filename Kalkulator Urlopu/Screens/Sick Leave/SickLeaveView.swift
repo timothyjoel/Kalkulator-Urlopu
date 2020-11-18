@@ -15,7 +15,7 @@ struct SickLeaveView: View {
                 Color.customBackground.edgesIgnoringSafeArea(.all)
                 ScrollView {
                     SectionView(title: "Podstawa prawna") {
-                        LegalBasisRowView(law: "Ustawa zasiłkowa", webLinks: vm.webLinks)
+                        LinksRowView(webLinks: vm.webLinks)
                     }
                     SectionView(title: "Dane dotyczące zwolnienia") {
                         TextfieldRowView(value: $vm.query.moneyPerMonth, title: "Wynagrodzenie netto", textfieldUnit: "zł", keyboard: .numberPad, maximumCharacters: 5)

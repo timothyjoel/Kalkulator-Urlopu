@@ -4,27 +4,18 @@
 import Foundation
 
 struct VacationLeaveQuery {
+    typealias QuartersNumber = Int
     var beginDate = Date()
     var endDate = Date()
-    /// Working time as number of quarters
-    var workingTime = 4
+    var workingTime: QuartersNumber = 4
     var workingTimeRange = 1...4
     var workedLessThanTenYears = true
 }
 
-struct VacationLeaveResult {
-    var isValid: Bool = false
-    var message: String = "Wypełnij powyższe dane"
-    var daysOff: Int = 0
-    var hoursOff: Int = 0
-    var workedMonths: Int = 0
-    var daysOffInYear: Int = 0
-    var workHoursPerWeek: Int = 0
-}
-
-struct VacationLeaveInfo {
-    
-    var message: String = "Niepełny miesiąc zatrudnienia zaokrąglany jest do pełnego miesiąca - jeżeli pracownik był zatrudniony w okresie od 15 stycznia do 16 lutego, od 15 stycznia do 14 lutego przepracował dokładnie miesiąc, natomiast od 15 lutego do 16 lutego dwa dni, które zaokrąglane są jako kolejny przepracowany miesiąc. Z okresu zatrudnienia należy wyłączyć:"
-    var bulletPoints: [String] = ["bezpłatny urlop", "urlop wychowawczy", "odbywanie zasadniczej służby wojskowej", "okresowa służba wojskowa", "szkolenia lub ćwiczenia wojskowe", "tymczasowy areszt", "odbywanie kary pozbawienia wolności", "nieusprawiedliwiona nieobecność w pracy"]
-    
+struct VacationLeaveResult: Equatable {
+    var daysOff: Int?
+    var hoursOff: Int?
+    var workedMonths: Int?
+    var daysOffInYear: Int?
+    var workHoursPerWeek: Int?
 }

@@ -6,39 +6,37 @@ import SwiftUI
 
 class VacationLeaveViewModel: ObservableObject  {
     
+    init() {
+        calculate { [weak self] in self?.result = $0 }
+    }
+    
     var webLinks: [WebLink] = [WebLink(title: "Kodeks pracy", url: "http://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU19740240141/U/D19740141Lj.pdf")]
     
     @Published var query = VacationLeaveQuery() {
         didSet {
-            calculateResult()
+            calculate { result = $0 }
         }
     }
     @Published var result = VacationLeaveResult()
-    var info = VacationLeaveInfo()
     
-    private func validateQuery() {
-        let time = query.endDate.timeIntervalSince1970 - query.beginDate.timeIntervalSince1970
-        result.isValid = time > 5000 ? true : false
+    private var isValidQuery: Bool {
+        query.endDate.timeIntervalSince1970 - query.beginDate.timeIntervalSince1970 > 5000 ? true : false
     }
     
-    private func calculateResult() {
-        validateQuery()
-        guard result.isValid else { return }
-    
-        result.workHoursPerWeek = query.workingTime * 10
-        result.daysOffInYear = query.workedLessThanTenYears ? 20 : 26
+    private func calculate(completion: (VacationLeaveResult) -> Void)  {
+        guard isValidQuery else { completion(VacationLeaveResult()); return }
+        
         let components = Calendar.current.dateComponents([.day, .hour], from: query.beginDate, to: query.endDate)
         var days = components.day!
         if components.hour! > 0 && components.day! >= 0 { days += 1 }
-
-        let monthsWorked = ((Double(days)/365) * 12).roundedUp
-        result.workedMonths = monthsWorked
         
-        let daysOff = (Double(monthsWorked)/12 * Double(result.daysOffInYear) * (Double(query.workingTime)/4)).roundedUp
-        result.daysOff = daysOff
-        
+        let workHoursPerWeek = query.workingTime * 10
+        let daysOffInYear = query.workedLessThanTenYears ? 20 : 26
+        let workedMonths = ((Double(days)/365) * 12).roundedUp
+        let daysOff = (Double(workedMonths)/12 * Double(daysOffInYear) * (Double(query.workingTime)/4)).roundedUp
         let hoursOff = daysOff*24
-        result.hoursOff = hoursOff
+        
+        completion(VacationLeaveResult(daysOff: daysOff, hoursOff: hoursOff, workedMonths: workedMonths, daysOffInYear: daysOffInYear, workHoursPerWeek: workHoursPerWeek))
     }
     
 }

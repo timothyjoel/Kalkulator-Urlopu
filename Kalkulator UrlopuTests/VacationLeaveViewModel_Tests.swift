@@ -6,14 +6,9 @@ import XCTest
 
 class VacationLeaveViewModel_Tests: XCTestCase {
 
-    func test_WhenBeginDate_isBeforeEndDate_timePeriodIsValid() {
-        let sut = makeSUT(testedCase: .oneMonth)
-        XCTAssertTrue(sut.result.isValid, "Valid query search")
-    }
-    
-    func test_WhenBeginDate_isAfterEndDate_timePeriodIsNotValid() {
+    func test_WhenBeginDate_isAfterEndDate_resultIsEmpty() {
         let sut = makeSUT(testedCase: .wrongDates)
-        XCTAssertFalse(sut.result.isValid, "Is not valid query search")
+        XCTAssertEqual(sut.result, VacationLeaveResult())
     }
     
     func test_WhenWorkedLessThan10Years_daysOfInYearEquals20() {

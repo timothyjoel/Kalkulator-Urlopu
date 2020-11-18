@@ -6,16 +6,13 @@ import SwiftUI
 
 struct VacationLeaveView: View {
     
-    @State var showInfo = false
+//    @State var showInfo = false
     @ObservedObject var vm: VacationLeaveViewModel
     
     var body: some View {
 
             ZStack {
                 Color.customBackground.edgesIgnoringSafeArea(.all)
-                BackgroundBottomAnimationView(show: $vm.result.isValid)
-                    .blur(radius: self.showInfo ? 10 : 0)
-                    .animation(nil)
                 ScrollView {
                     SectionView(title: "Podstawa prawna") {
                         LegalBasisRowView(webLinks: vm.webLinks)
@@ -27,30 +24,16 @@ struct VacationLeaveView: View {
                         StepperRowView(title: "Wymiar etatu: \(vm.query.workingTime)/4", value: $vm.query.workingTime, range: vm.query.workingTimeRange)
                     }
                     SectionView(title: "Zakres urlopu") {
-                        ResultRowView(title: "Liczba dni wolnych za wybrany okres:", result: vm.result.daysOff)
-                        ResultRowView(title: "Godzinowy wymiar urlopu:", result: vm.result.hoursOff)
-                        ResultRowView(title: "Liczba przepracowanych miesięcy:", result: vm.result.workedMonths)
-                        ResultRowView(title: "Wymiar roczny dla pełnego etatu:", result: vm.result.daysOffInYear)
-                        ResultRowView(title: "Liczba godzin pracy w tygodniu:", result: vm.result.workHoursPerWeek)
+                        ResultRowView(title: "Liczba dni wolnych za wybrany okres:", result: vm.result.daysOff ?? 0)
+                        ResultRowView(title: "Godzinowy wymiar urlopu:", result: vm.result.hoursOff ?? 0)
+                        ResultRowView(title: "Liczba przepracowanych miesięcy:", result: vm.result.workedMonths ?? 0)
+                        ResultRowView(title: "Wymiar roczny dla pełnego etatu:", result: vm.result.daysOffInYear ?? 0)
+                        ResultRowView(title: "Liczba godzin pracy w tygodniu:", result: vm.result.workHoursPerWeek ??  0)
                     }
-                    .offset(x: 0, y: vm.result.isValid ? 0 : UIScreen.height)
-                    .animation(.spring())
                     Spacer()
                 }
-                .allowsHitTesting(!showInfo)
-                .blur(radius: self.showInfo ? 10 : 0)
-                InfoView(show: $showInfo) {
-                    InfoMessageRow(message: vm.info.message)
-                    InfoBulletPointsRow(bulletPoints: vm.info.bulletPoints)
-                }
-                .animation(.spring())
-                .offset(x: 0, y: showInfo ? 0 : UIScreen.height )
-                
             }
             .navigationBarTitle(Text("Urlop wypoczynkowy"))
-            .navigationBarItems(trailing: NavigationButton(icon: .questionMark, action: {
-                self.showInfo.toggle()
-            }))
         
     }
 }

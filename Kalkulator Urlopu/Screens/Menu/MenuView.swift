@@ -16,7 +16,7 @@ struct MenuView: View {
                 VStack (spacing: 8) {
                     SearchBar(placeholder: "Wprowadź nazwę kalkulatora...", text: $searchEntry)
                         .padding(.horizontal, 10)
-                    CustomList(title: "Kalkulatory") {
+                    CustomList(title: "Kalkulator prawny") {
                         ForEach(self.vm.cards.filter({ card -> Bool in
                             searchEntry.isEmpty ? true : card.title.lowercased()
                                 .contains(searchEntry.lowercased())
@@ -26,7 +26,7 @@ struct MenuView: View {
                                 .background(Color.red, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         }
                     }
-                  //  Spacer()
+                    Spacer()
                 }
             }
             .navigationBarItems(trailing: NavigationButton(icon: .questionMark, action: { self.showInfo.toggle() })

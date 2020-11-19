@@ -20,6 +20,7 @@ struct CustomList<Content>: View where Content: View {
             List {
                 content()
             }
+            .background(Color.red)
             .edgesIgnoringSafeArea(.all)
             .navigationBarTitle(Text(title))
         }

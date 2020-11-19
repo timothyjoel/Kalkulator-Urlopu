@@ -60,6 +60,7 @@ struct MenuCardView: View {
         .listRowInsets(EdgeInsets())
         
     }
+    
 }
 
 struct MenuCardView_Previews: PreviewProvider {

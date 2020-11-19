@@ -35,6 +35,7 @@
 		E45853C425666B7D0091C319 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = E45853C325666B7D0091C319 /* Introspect */; };
 		E45853C825666BD40091C319 /* Ext+UITextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45853C725666BD40091C319 /* Ext+UITextfield.swift */; };
 		E45853CC25668DA00091C319 /* Ext+Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45853CB25668DA00091C319 /* Ext+Int.swift */; };
+		E45853D825669DAD0091C319 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45853D725669DAD0091C319 /* SearchBar.swift */; };
 		E4BA5F8825617EDE00C5D163 /* CustomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BA5F8725617EDE00C5D163 /* CustomList.swift */; };
 		E4BA5F90256187B300C5D163 /* MaternityLeaveViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BA5F8F256187B300C5D163 /* MaternityLeaveViewModel_Tests.swift */; };
 		E4CE0375255C1FEA005F6300 /* VacationLeaveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE0374255C1FEA005F6300 /* VacationLeaveModel.swift */; };
@@ -99,6 +100,7 @@
 		E45853BC256668510091C319 /* Ext+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+View.swift"; sourceTree = "<group>"; };
 		E45853C725666BD40091C319 /* Ext+UITextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UITextfield.swift"; sourceTree = "<group>"; };
 		E45853CB25668DA00091C319 /* Ext+Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Int.swift"; sourceTree = "<group>"; };
+		E45853D725669DAD0091C319 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		E4BA5F8725617EDE00C5D163 /* CustomList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomList.swift; sourceTree = "<group>"; };
 		E4BA5F8F256187B300C5D163 /* MaternityLeaveViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaternityLeaveViewModel_Tests.swift; sourceTree = "<group>"; };
 		E4CE0374255C1FEA005F6300 /* VacationLeaveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationLeaveModel.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 		E40C9D902551996D0050646C /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				E45853D625669D9F0091C319 /* Other */,
 				E4FCDC99255E89D300192D6F /* Images */,
 				E40BF2702552CA95000715FD /* Buttons */,
 				E4CE03B6255DAE93005F6300 /* List */,
@@ -273,6 +276,14 @@
 				E45853AC256574500091C319 /* Constants+LinkURL.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		E45853D625669D9F0091C319 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				E45853D725669DAD0091C319 /* SearchBar.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		E4CE037F255D449D005F6300 /* Kalkulator UrlopuTests */ = {
@@ -545,6 +556,7 @@
 				E45853A625649A8C0091C319 /* LinksRowView.swift in Sources */,
 				E4CE038B255D830E005F6300 /* Ext+Date.swift in Sources */,
 				E4FCDCB5255EB52200192D6F /* MenuModel.swift in Sources */,
+				E45853D825669DAD0091C319 /* SearchBar.swift in Sources */,
 				E4CE0394255D83A4005F6300 /* Ext+Double.swift in Sources */,
 				E4FCDC72255DB60700192D6F /* Ext+Font.swift in Sources */,
 				E40C9D93255199830050646C /* RoundedCorners.swift in Sources */,

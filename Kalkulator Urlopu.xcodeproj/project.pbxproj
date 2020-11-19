@@ -25,7 +25,7 @@
 		E418AAD5255EDB990034B13B /* MaternityLeaveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E418AAD4255EDB990034B13B /* MaternityLeaveModel.swift */; };
 		E458536F2561A42A0091C319 /* SickLeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E458536E2561A42A0091C319 /* SickLeaveView.swift */; };
 		E45853732561A4490091C319 /* SickLeaveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45853722561A4490091C319 /* SickLeaveViewModel.swift */; };
-		E45853772561A4FE0091C319 /* TextfieldRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45853762561A4FE0091C319 /* TextfieldRowView.swift */; };
+		E45853772561A4FE0091C319 /* NumericTextfieldRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45853762561A4FE0091C319 /* NumericTextfieldRow.swift */; };
 		E458538325627A030091C319 /* RadioButtonRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E458538225627A030091C319 /* RadioButtonRowView.swift */; };
 		E458538925648A360091C319 /* SickLeaveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E458538825648A360091C319 /* SickLeaveModel.swift */; };
 		E458538D25648BE50091C319 /* SickLeaveViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E458538C25648BE50091C319 /* SickLeaveViewModel_Tests.swift */; };
@@ -34,6 +34,10 @@
 		E45853A0256498110091C319 /* SickLeaveDailyPaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E458539F256498110091C319 /* SickLeaveDailyPaymentModel.swift */; };
 		E45853A625649A8C0091C319 /* LinksRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45853A525649A8C0091C319 /* LinksRowView.swift */; };
 		E45853AD256574500091C319 /* Constants+LinkURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45853AC256574500091C319 /* Constants+LinkURL.swift */; };
+		E45853BD256668520091C319 /* Ext+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45853BC256668510091C319 /* Ext+View.swift */; };
+		E45853C425666B7D0091C319 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = E45853C325666B7D0091C319 /* Introspect */; };
+		E45853C825666BD40091C319 /* Ext+UITextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45853C725666BD40091C319 /* Ext+UITextfield.swift */; };
+		E45853CC25668DA00091C319 /* Ext+Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45853CB25668DA00091C319 /* Ext+Int.swift */; };
 		E4BA5F8825617EDE00C5D163 /* CustomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BA5F8725617EDE00C5D163 /* CustomList.swift */; };
 		E4BA5F90256187B300C5D163 /* MaternityLeaveViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BA5F8F256187B300C5D163 /* MaternityLeaveViewModel_Tests.swift */; };
 		E4CE0375255C1FEA005F6300 /* VacationLeaveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE0374255C1FEA005F6300 /* VacationLeaveModel.swift */; };
@@ -89,7 +93,7 @@
 		E418AAD4255EDB990034B13B /* MaternityLeaveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaternityLeaveModel.swift; sourceTree = "<group>"; };
 		E458536E2561A42A0091C319 /* SickLeaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SickLeaveView.swift; sourceTree = "<group>"; };
 		E45853722561A4490091C319 /* SickLeaveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SickLeaveViewModel.swift; sourceTree = "<group>"; };
-		E45853762561A4FE0091C319 /* TextfieldRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldRowView.swift; sourceTree = "<group>"; };
+		E45853762561A4FE0091C319 /* NumericTextfieldRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericTextfieldRow.swift; sourceTree = "<group>"; };
 		E458538225627A030091C319 /* RadioButtonRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonRowView.swift; sourceTree = "<group>"; };
 		E458538825648A360091C319 /* SickLeaveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SickLeaveModel.swift; sourceTree = "<group>"; };
 		E458538C25648BE50091C319 /* SickLeaveViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SickLeaveViewModel_Tests.swift; sourceTree = "<group>"; };
@@ -98,6 +102,9 @@
 		E458539F256498110091C319 /* SickLeaveDailyPaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SickLeaveDailyPaymentModel.swift; sourceTree = "<group>"; };
 		E45853A525649A8C0091C319 /* LinksRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksRowView.swift; sourceTree = "<group>"; };
 		E45853AC256574500091C319 /* Constants+LinkURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+LinkURL.swift"; sourceTree = "<group>"; };
+		E45853BC256668510091C319 /* Ext+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+View.swift"; sourceTree = "<group>"; };
+		E45853C725666BD40091C319 /* Ext+UITextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UITextfield.swift"; sourceTree = "<group>"; };
+		E45853CB25668DA00091C319 /* Ext+Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Int.swift"; sourceTree = "<group>"; };
 		E4BA5F8725617EDE00C5D163 /* CustomList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomList.swift; sourceTree = "<group>"; };
 		E4BA5F8F256187B300C5D163 /* MaternityLeaveViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaternityLeaveViewModel_Tests.swift; sourceTree = "<group>"; };
 		E4CE0374255C1FEA005F6300 /* VacationLeaveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationLeaveModel.swift; sourceTree = "<group>"; };
@@ -131,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E40BF26A25521FF7000715FD /* Lottie in Frameworks */,
+				E45853C425666B7D0091C319 /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				E4CE038A255D830E005F6300 /* Ext+Date.swift */,
+				E45853CB25668DA00091C319 /* Ext+Int.swift */,
 				E4CE0393255D83A4005F6300 /* Ext+Double.swift */,
 			);
 			path = Foundation;
@@ -311,7 +320,7 @@
 				E4CE03A8255DAD1F005F6300 /* StepperRowView.swift */,
 				E4CE03AC255DADFE005F6300 /* ToggleRowView.swift */,
 				E4CE0398255DA5CD005F6300 /* ResultRowView.swift */,
-				E45853762561A4FE0091C319 /* TextfieldRowView.swift */,
+				E45853762561A4FE0091C319 /* NumericTextfieldRow.swift */,
 				E45853A525649A8C0091C319 /* LinksRowView.swift */,
 			);
 			path = Rows;
@@ -343,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				E40C9D8C255199550050646C /* Ext+UIScreen.swift */,
+				E45853C725666BD40091C319 /* Ext+UITextfield.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -369,6 +379,7 @@
 		E4FCDC7B255DE06600192D6F /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				E45853BC256668510091C319 /* Ext+View.swift */,
 				E4FCDC71255DB60700192D6F /* Ext+Font.swift */,
 				E4FCDC80255DE76900192D6F /* Ext+Color.swift */,
 			);
@@ -421,6 +432,7 @@
 			name = "Kalkulator Urlopu";
 			packageProductDependencies = (
 				E40BF26925521FF7000715FD /* Lottie */,
+				E45853C325666B7D0091C319 /* Introspect */,
 			);
 			productName = "Kalkulator Urlopu";
 			productReference = E40C9D6B255194EE0050646C /* Kalkulator Urlopu.app */;
@@ -473,6 +485,7 @@
 			mainGroup = E40C9D62255194EE0050646C;
 			packageReferences = (
 				E40BF26825521FF7000715FD /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				E45853C225666B7D0091C319 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = E40C9D6C255194EE0050646C /* Products */;
 			projectDirPath = "";
@@ -511,6 +524,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4FCDCA6255E943000192D6F /* MenuView.swift in Sources */,
+				E45853BD256668520091C319 /* Ext+View.swift in Sources */,
 				E40C9D6F255194EE0050646C /* AppDelegate.swift in Sources */,
 				E4BA5F8825617EDE00C5D163 /* CustomList.swift in Sources */,
 				E40BF26525521FC1000715FD /* LottieAnimation.swift in Sources */,
@@ -523,6 +537,7 @@
 				E418AAD1255EDB610034B13B /* MaternityLeaveViewModel.swift in Sources */,
 				E4CE039F255DA60E005F6300 /* DateRowView.swift in Sources */,
 				E4FCDC9B255E89E400192D6F /* IconView.swift in Sources */,
+				E45853CC25668DA00091C319 /* Ext+Int.swift in Sources */,
 				E40BF2722552CAA6000715FD /* Icon.swift in Sources */,
 				E4CE03A9255DAD1F005F6300 /* StepperRowView.swift in Sources */,
 				E4CE0375255C1FEA005F6300 /* VacationLeaveModel.swift in Sources */,
@@ -540,8 +555,9 @@
 				E45853AD256574500091C319 /* Constants+LinkURL.swift in Sources */,
 				E4FCDC90255E00F600192D6F /* InfoView.swift in Sources */,
 				E40C9D73255194EE0050646C /* VacationLeaveView.swift in Sources */,
+				E45853C825666BD40091C319 /* Ext+UITextfield.swift in Sources */,
 				E4FCDC76255DDF6C00192D6F /* NavigationButton.swift in Sources */,
-				E45853772561A4FE0091C319 /* TextfieldRowView.swift in Sources */,
+				E45853772561A4FE0091C319 /* NumericTextfieldRow.swift in Sources */,
 				E4CE0399255DA5CD005F6300 /* ResultRowView.swift in Sources */,
 				E458538925648A360091C319 /* SickLeaveModel.swift in Sources */,
 				E458538325627A030091C319 /* RadioButtonRowView.swift in Sources */,
@@ -828,6 +844,14 @@
 				minimumVersion = 3.1.9;
 			};
 		};
+		E45853C225666B7D0091C319 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -835,6 +859,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E40BF26825521FF7000715FD /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		E45853C325666B7D0091C319 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E45853C225666B7D0091C319 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -10,18 +10,18 @@ class SickLeaveViewModel: ObservableObject {
         WebLink(title: "Ustawa o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa", url: .leaveBenefits)
     ]
     
-    @Published var query = SickLeaveQuery(moneyPerMonth: 3500, daysOnSickLeave: 30, percentage: 80, sickLeaveReason: .regularSickness) {
+    @Published var query = SickLeaveQuery() {
         didSet {
             calculateResult()
         }
     }
-    @Published var result: Double = 2800
-    @Published var resultPerDay: Double = 800
+    @Published var result: Float = 0
+    @Published var resultPerDay: Float = 0
 
     private func calculateResult() {
-        let percentage = query.sickLeaveReason == .regularSickness ? self.query.percentage : 100
-        result = Double(percentage)/100 * Double(query.daysOnSickLeave) * Double(query.moneyPerMonth) / 30
-        resultPerDay = result / Double(query.daysOnSickLeave)
+        let percentage = query.sickLeaveReason == .regularSickness ? 80 : 100
+        result = Float(Double(percentage)/100 * Double(query.daysOnSickLeave) * Double(query.moneyPerMonth) / 30)
+        resultPerDay = result == 0 ? 0 : Float(Double(result) / Double(query.daysOnSickLeave))
     }
     
 }
@@ -34,7 +34,7 @@ enum SickLeaveReason: CustomStringConvertible, Equatable, CaseIterable {
     
     var description: String {
         switch self {
-        case .regularSickness: return "Choroba"
+        case .regularSickness: return "Normalne zwolnienie lekarskie"
         case .sickWhenPregnant: return "Choroba w ciąży"
         case .accidentOnWayToWork: return "Wypadek w drodze do/z pracy"
         }

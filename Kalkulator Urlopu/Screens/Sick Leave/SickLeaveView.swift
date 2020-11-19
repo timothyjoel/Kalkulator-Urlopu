@@ -6,7 +6,6 @@ import SwiftUI
 
 struct SickLeaveView: View {
     
-    @State var showInfo = false
     @ObservedObject var vm: SickLeaveViewModel
     
     var body: some View {
@@ -17,24 +16,20 @@ struct SickLeaveView: View {
                     SectionView(title: "Podstawa prawna") {
                         LinksRowView(webLinks: vm.webLinks)
                     }
-                    SectionView(title: "Dane dotyczące zwolnienia") {
-                        TextfieldRowView(value: $vm.query.moneyPerMonth, title: "Wynagrodzenie netto", textfieldUnit: "zł", keyboard: .numberPad, maximumCharacters: 5)
-                        TextfieldRowView(value: $vm.query.daysOnSickLeave, title: "Okres nieobecności", textfieldUnit: "dni", keyboard: .numberPad, maximumCharacters: 3)
-                        TextfieldRowView(value: $vm.query.percentage, title: "Procent wynagrodzenia", textfieldUnit: "%", keyboard: .numberPad, maximumCharacters: 3)
+                    SectionView(title: "Dane dotyczące zatrudnienia") {
+                        NumericTextfieldRow(title: "Wynagrodzenie netto", textfieldUnit: "zł", value: $vm.query.moneyPerMonth, keyboard: .numberPad, maxValue: 100000)
+                        NumericTextfieldRow(title: "Okres nieobecności", textfieldUnit: "dni", value: $vm.query.daysOnSickLeave, keyboard: .numberPad, maxValue: 365)
                     }
-                    SectionView(title: "Rodzaj choroby") {
+                    SectionView(title: "Rodzaj zwolnienia") {
                         GroupedRadioButtonsView(items: SickLeaveReason.allCases, selectedItem: $vm.query.sickLeaveReason)
                     }
-                    SectionView(title: "Wynagrodzenie") {
-                        ResultRowView(title: "Netto za wybrany okres", result: vm.result)
+                    SectionView(title: "Wysokosć zwolnienia") {
+                        ResultRowView(title: "Netto za wybrany okres", unit: "zł", result: vm.result)
+                        ResultRowView(title: "Netto za dzień", unit: "zł", result: vm.resultPerDay)
                     }
                 }
             }
             .navigationBarTitle(Text("Zwolnienie lekarskie"))
-            .navigationBarItems(trailing: NavigationButton(icon: .questionMark, action: {
-                self.showInfo.toggle()
-            }))
-        
     }
     
 }

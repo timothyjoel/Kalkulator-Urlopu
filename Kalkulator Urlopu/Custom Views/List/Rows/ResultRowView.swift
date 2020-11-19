@@ -6,14 +6,20 @@ import SwiftUI
 struct ResultRowView: View {
     
     var title: String
+    var unit: String? = nil
     var result: Any
     
     var body: some View {
-        HStack {
+        HStack (spacing: 0) {
             Text(title)
                 .font(.text)
                 .foregroundColor(.customLabel)
-                .padding(8)
+                .padding(.leading, 8)
+            if let unit = unit {
+                Text(" [\(unit)]")
+                    .font(.text)
+                    .foregroundColor(.customLabel)
+            }
             Spacer()
             Text(String(describing: result))
                 .multilineTextAlignment(.leading)

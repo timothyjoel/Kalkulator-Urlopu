@@ -5,9 +5,8 @@ import Foundation
 
 struct SickLeaveQuery {
     
-    var moneyPerMonth: Int
-    var daysOnSickLeave: Int
-    var percentage: Int
+    var moneyPerMonth: Int = 0
+    var daysOnSickLeave: Int = 0
     var sickLeaveReason: SickLeaveReason = .regularSickness
     
 }

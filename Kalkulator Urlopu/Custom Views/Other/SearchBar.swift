@@ -15,6 +15,10 @@ struct SearchBar: UIViewRepresentable {
         init(text: Binding<String>) {
             self._text = text
         }
+        
+        func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+            searchBar.resignFirstResponder()
+        }
 
         func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
             text = searchText
@@ -43,9 +47,8 @@ struct SearchBar: UIViewRepresentable {
         searchBar.searchBarStyle = .minimal
         searchBar.returnKeyType = .done
         searchBar.placeholder = placeholder
-        searchBar.enablesReturnKeyAutomatically = true
-        searchBar.keyboardType = .default
-        searchBar.tintColor = .blue
+        searchBar.enablesReturnKeyAutomatically = false
+        searchBar.tintColor = .systemBlue
         return searchBar
     }
 

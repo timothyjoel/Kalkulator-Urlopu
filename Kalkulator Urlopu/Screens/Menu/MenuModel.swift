@@ -3,17 +3,17 @@
 
 import SwiftUI
 
-struct MenuCard {
+struct Card {
 
     var title: String
     var subtitle: String
-    var image: MenuCardImage
+    var image: CardImage
     var background: [Color]
     var route: Route
     
 }
 
-extension MenuCard: Hashable {
+extension Card: Hashable {
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(self.title)
@@ -22,8 +22,8 @@ extension MenuCard: Hashable {
     
 }
 
-extension MenuCard: Equatable {
-    static func == (lhs: MenuCard, rhs: MenuCard) -> Bool {
+extension Card: Equatable {
+    static func == (lhs: Card, rhs: Card) -> Bool {
         lhs.title == rhs.title && lhs.subtitle == lhs.subtitle && lhs.image == rhs.image
     }
 }

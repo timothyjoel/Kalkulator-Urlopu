@@ -21,7 +21,7 @@ struct MenuView: View {
                             searchEntry.isEmpty ? true : card.title.lowercased()
                                 .contains(searchEntry.lowercased())
                         }), id: \.self) { card in
-                            MenuCardView(card: card)
+                            CardView(card: card)
                                 .buttonStyle(PlainButtonStyle())
                                 .background(Color.red, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         }

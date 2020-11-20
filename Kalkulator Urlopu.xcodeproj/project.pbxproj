@@ -57,7 +57,7 @@
 		E4FCDCAA255EA44400192D6F /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDCA9255EA44400192D6F /* Images.swift */; };
 		E4FCDCAF255EB4F000192D6F /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDCAE255EB4F000192D6F /* MenuViewModel.swift */; };
 		E4FCDCB5255EB52200192D6F /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDCB4255EB52200192D6F /* MenuModel.swift */; };
-		E4FCDCBA255EBD8000192D6F /* MenuCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDCB9255EBD8000192D6F /* MenuCardView.swift */; };
+		E4FCDCBA255EBD8000192D6F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDCB9255EBD8000192D6F /* CardView.swift */; };
 		E4FCDCC7255EC30B00192D6F /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDCC6255EC30B00192D6F /* Route.swift */; };
 /* End PBXBuildFile section */
 
@@ -124,7 +124,7 @@
 		E4FCDCA9255EA44400192D6F /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		E4FCDCAE255EB4F000192D6F /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		E4FCDCB4255EB52200192D6F /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
-		E4FCDCB9255EBD8000192D6F /* MenuCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCardView.swift; sourceTree = "<group>"; };
+		E4FCDCB9255EBD8000192D6F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		E4FCDCC6255EC30B00192D6F /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -310,7 +310,7 @@
 		E4CE0397255DA522005F6300 /* Rows */ = {
 			isa = PBXGroup;
 			children = (
-				E4FCDCB9255EBD8000192D6F /* MenuCardView.swift */,
+				E4FCDCB9255EBD8000192D6F /* CardView.swift */,
 				E4CE039E255DA60E005F6300 /* DateRowView.swift */,
 				E4CE03A8255DAD1F005F6300 /* StepperRowView.swift */,
 				E4CE03AC255DADFE005F6300 /* ToggleRowView.swift */,
@@ -533,7 +533,7 @@
 				E40BF2722552CAA6000715FD /* Icon.swift in Sources */,
 				E4CE03A9255DAD1F005F6300 /* StepperRowView.swift in Sources */,
 				E4CE0375255C1FEA005F6300 /* VacationLeaveModel.swift in Sources */,
-				E4FCDCBA255EBD8000192D6F /* MenuCardView.swift in Sources */,
+				E4FCDCBA255EBD8000192D6F /* CardView.swift in Sources */,
 				E40C9D84255195740050646C /* VacationLeaveViewModel.swift in Sources */,
 				E4FCDC81255DE76900192D6F /* Ext+Color.swift in Sources */,
 				E4CE03A3255DA664005F6300 /* SectionHeaderView.swift in Sources */,

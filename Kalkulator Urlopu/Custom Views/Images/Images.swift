@@ -3,7 +3,7 @@
 
 import Foundation
 
-enum MenuCardImage {
+enum CardImage {
     
     case maternityLeave
     case work1

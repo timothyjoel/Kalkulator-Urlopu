@@ -9,6 +9,8 @@ enum Icon {
     case filledInfo
     case circleFilled
     case circleEmpty
+    case list
+    case grid
     
     
     var name: String {
@@ -17,6 +19,8 @@ enum Icon {
         case .filledInfo: return "info.circle.fill"
         case .circleEmpty: return "circle"
         case .circleFilled: return "largecircle.fill.circle"
+        case .list: return "list.dash"
+        case .grid: return "rectangle.grid.1x2"
         }
     }
     

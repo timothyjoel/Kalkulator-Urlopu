@@ -56,3 +56,9 @@ struct MenuView_Previews: PreviewProvider {
         
     }
 }
+
+struct TestableStruct  {
+    
+    var title: String
+    
+}

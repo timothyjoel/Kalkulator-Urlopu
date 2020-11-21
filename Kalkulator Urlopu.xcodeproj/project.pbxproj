@@ -51,6 +51,7 @@
 		E4CE03BC255DB1F5005F6300 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE03BB255DB1F5005F6300 /* SectionView.swift */; };
 		E4E9276625692A4B00E02F7C /* SalaryBelow26yView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E9276525692A4B00E02F7C /* SalaryBelow26yView.swift */; };
 		E4E9276C25692A5F00E02F7C /* SalaryBelow26yViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E9276B25692A5F00E02F7C /* SalaryBelow26yViewModel.swift */; };
+		E4E9277C25694D5C00E02F7C /* SalaryBelow26ViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E9277B25694D5C00E02F7C /* SalaryBelow26ViewModel_Tests.swift */; };
 		E4FCDC72255DB60700192D6F /* Ext+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDC71255DB60700192D6F /* Ext+Font.swift */; };
 		E4FCDC76255DDF6C00192D6F /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDC75255DDF6C00192D6F /* NavigationButton.swift */; };
 		E4FCDC81255DE76900192D6F /* Ext+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDC80255DE76900192D6F /* Ext+Color.swift */; };
@@ -121,6 +122,7 @@
 		E4CE03BB255DB1F5005F6300 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 		E4E9276525692A4B00E02F7C /* SalaryBelow26yView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryBelow26yView.swift; sourceTree = "<group>"; };
 		E4E9276B25692A5F00E02F7C /* SalaryBelow26yViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryBelow26yViewModel.swift; sourceTree = "<group>"; };
+		E4E9277B25694D5C00E02F7C /* SalaryBelow26ViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryBelow26ViewModel_Tests.swift; sourceTree = "<group>"; };
 		E4FCDC71255DB60700192D6F /* Ext+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Font.swift"; sourceTree = "<group>"; };
 		E4FCDC75255DDF6C00192D6F /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
 		E4FCDC80255DE76900192D6F /* Ext+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Color.swift"; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 				E4CE0380255D449D005F6300 /* VacationLeaveViewModel_Tests.swift */,
 				E4BA5F8F256187B300C5D163 /* MaternityLeaveViewModel_Tests.swift */,
 				E458538C25648BE50091C319 /* SickLeaveViewModel_Tests.swift */,
+				E4E9277B25694D5C00E02F7C /* SalaryBelow26ViewModel_Tests.swift */,
 				E4CE0382255D449D005F6300 /* Info.plist */,
 			);
 			path = "Kalkulator UrlopuTests";
@@ -331,11 +334,11 @@
 		E4CE03B0255DAE37005F6300 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				E4E92764256929E000E02F7C /* Salary Below 26y */,
 				E4FCDCA4255E93CF00192D6F /* Menu */,
 				E418AAC3255ED7740034B13B /* Maternity Leave */,
 				E4CE03B1255DAE3D005F6300 /* Vacaction Leave */,
 				E458535F2561A24E0091C319 /* Sick Leave */,
+				E4E92764256929E000E02F7C /* Salary Below 26y */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -587,6 +590,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4E9277C25694D5C00E02F7C /* SalaryBelow26ViewModel_Tests.swift in Sources */,
 				E4BA5F90256187B300C5D163 /* MaternityLeaveViewModel_Tests.swift in Sources */,
 				E4CE0381255D449D005F6300 /* VacationLeaveViewModel_Tests.swift in Sources */,
 				E458538D25648BE50091C319 /* SickLeaveViewModel_Tests.swift in Sources */,

@@ -44,7 +44,7 @@ struct LegalBasisRowView_Previews: PreviewProvider {
    static var previews: some View {
     
         Group {
-            LinksRowView(webLinks: [WebLink(title: "Rozdział 8", url: .labourLaw), WebLink(title: "Rozdział 10", url: .labourLaw)])
+            LinksRowView(webLinks: [WebLink(title: "Rozdział 8", url: .kokdeksPracy), WebLink(title: "Rozdział 10", url: .kokdeksPracy)])
                 .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
                 .previewDisplayName("iPhone 8")
 

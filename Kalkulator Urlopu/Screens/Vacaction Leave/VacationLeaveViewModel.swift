@@ -10,7 +10,7 @@ class VacationLeaveViewModel: ObservableObject  {
         calculate { [weak self] in self?.result = $0 }
     }
     
-    var webLinks: [WebLink] = [WebLink(title: "Kodeks pracy, Art. 152-175", url: .labourLaw)]
+    var webLinks: [WebLink] = [WebLink(title: "Kodeks pracy, Art. 152-175", url: .kokdeksPracy)]
     
     @Published var query = VacationLeaveQuery() {
         didSet {

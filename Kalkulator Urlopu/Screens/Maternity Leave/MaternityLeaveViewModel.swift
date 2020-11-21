@@ -6,7 +6,7 @@ import Combine
 
 class MaternityLeaveViewModel: ObservableObject {
     
-    var webLinks: [WebLink] = [WebLink(title: "Kodeks pracy, Art. 180", url: .labourLaw)]
+    var webLinks: [WebLink] = [WebLink(title: "Kodeks pracy, Art. 180", url: .kokdeksPracy)]
     @Published var result: MaternityLeaveResult!
     @Published var query = MaternityLeaveQuery() { didSet { calculate { [weak self] in self?.result = $0 } } }
     

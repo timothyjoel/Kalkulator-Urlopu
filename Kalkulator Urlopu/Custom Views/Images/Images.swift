@@ -9,6 +9,7 @@ enum ImageAsset {
     case work1
     case sick
     case questionCloud
+    case moneyFromBox
     
     var image: String {
         switch self {
@@ -16,6 +17,7 @@ enum ImageAsset {
         case .work1: return "work1"
         case .sick: return "sick"
         case .questionCloud: return "questionCloud"
+        case .moneyFromBox: return "moneyFromBox"
         }
     }
     

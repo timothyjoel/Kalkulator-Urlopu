@@ -4,9 +4,9 @@
 import Combine
 import SwiftUI
 
-struct PaymentBelow26yView: View {
+struct SalaryBelow26yView: View {
     
-    @ObservedObject var vm: PaymentBelow26yViewModel
+    @ObservedObject var vm: SalaryBelow26yViewModel
     
     var body: some View {
 
@@ -36,16 +36,16 @@ struct PaymentBelow26yView: View {
     }
 }
 
-struct PaymentBelow26yView_Previews: PreviewProvider {
+struct SalaryBelow26yView_Previews: PreviewProvider {
     
     static var previews: some View {
         
         Group {
-            PaymentBelow26yView(vm: PaymentBelow26yViewModel())
+            SalaryBelow26yView(vm: SalaryBelow26yViewModel())
                 .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
                 .previewDisplayName("iPhone 8")
             
-            PaymentBelow26yView(vm: PaymentBelow26yViewModel())
+            SalaryBelow26yView(vm: SalaryBelow26yViewModel())
                 .previewDevice(PreviewDevice(rawValue: "iPhone XS Max"))
                 .previewDisplayName("iPhone XS Max")
                 .environment(\.colorScheme, .dark)

@@ -3,7 +3,7 @@
 
 import Combine
 
-class PaymentBelow26yViewModel: ObservableObject {
+class SalaryBelow26yViewModel: ObservableObject {
     
     var webLinks: [WebLink] = [WebLink(title: "Nowa preferencja w podatku dochodowym od osób fizycznych dla młodych osób", url: .ulgaPodatkowaDlaMlodych)]
     var pensionContribution1 = 9.76

@@ -49,8 +49,8 @@
 		E4CE03A9255DAD1F005F6300 /* StepperRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE03A8255DAD1F005F6300 /* StepperRowView.swift */; };
 		E4CE03AD255DADFE005F6300 /* ToggleRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE03AC255DADFE005F6300 /* ToggleRowView.swift */; };
 		E4CE03BC255DB1F5005F6300 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CE03BB255DB1F5005F6300 /* SectionView.swift */; };
-		E4E9276625692A4B00E02F7C /* PaymentBelow26View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E9276525692A4B00E02F7C /* PaymentBelow26View.swift */; };
-		E4E9276C25692A5F00E02F7C /* PaymentBelow26yViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E9276B25692A5F00E02F7C /* PaymentBelow26yViewModel.swift */; };
+		E4E9276625692A4B00E02F7C /* SalaryBelow26yView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E9276525692A4B00E02F7C /* SalaryBelow26yView.swift */; };
+		E4E9276C25692A5F00E02F7C /* SalaryBelow26yViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E9276B25692A5F00E02F7C /* SalaryBelow26yViewModel.swift */; };
 		E4FCDC72255DB60700192D6F /* Ext+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDC71255DB60700192D6F /* Ext+Font.swift */; };
 		E4FCDC76255DDF6C00192D6F /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDC75255DDF6C00192D6F /* NavigationButton.swift */; };
 		E4FCDC81255DE76900192D6F /* Ext+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDC80255DE76900192D6F /* Ext+Color.swift */; };
@@ -119,8 +119,8 @@
 		E4CE03A8255DAD1F005F6300 /* StepperRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperRowView.swift; sourceTree = "<group>"; };
 		E4CE03AC255DADFE005F6300 /* ToggleRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleRowView.swift; sourceTree = "<group>"; };
 		E4CE03BB255DB1F5005F6300 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
-		E4E9276525692A4B00E02F7C /* PaymentBelow26View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentBelow26View.swift; sourceTree = "<group>"; };
-		E4E9276B25692A5F00E02F7C /* PaymentBelow26yViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentBelow26yViewModel.swift; sourceTree = "<group>"; };
+		E4E9276525692A4B00E02F7C /* SalaryBelow26yView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryBelow26yView.swift; sourceTree = "<group>"; };
+		E4E9276B25692A5F00E02F7C /* SalaryBelow26yViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryBelow26yViewModel.swift; sourceTree = "<group>"; };
 		E4FCDC71255DB60700192D6F /* Ext+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Font.swift"; sourceTree = "<group>"; };
 		E4FCDC75255DDF6C00192D6F /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
 		E4FCDC80255DE76900192D6F /* Ext+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Color.swift"; sourceTree = "<group>"; };
@@ -331,7 +331,7 @@
 		E4CE03B0255DAE37005F6300 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				E4E92764256929E000E02F7C /* Payment Below 26y */,
+				E4E92764256929E000E02F7C /* Salary Below 26y */,
 				E4FCDCA4255E93CF00192D6F /* Menu */,
 				E418AAC3255ED7740034B13B /* Maternity Leave */,
 				E4CE03B1255DAE3D005F6300 /* Vacaction Leave */,
@@ -378,13 +378,13 @@
 			path = List;
 			sourceTree = "<group>";
 		};
-		E4E92764256929E000E02F7C /* Payment Below 26y */ = {
+		E4E92764256929E000E02F7C /* Salary Below 26y */ = {
 			isa = PBXGroup;
 			children = (
-				E4E9276525692A4B00E02F7C /* PaymentBelow26View.swift */,
-				E4E9276B25692A5F00E02F7C /* PaymentBelow26yViewModel.swift */,
+				E4E9276525692A4B00E02F7C /* SalaryBelow26yView.swift */,
+				E4E9276B25692A5F00E02F7C /* SalaryBelow26yViewModel.swift */,
 			);
-			path = "Payment Below 26y";
+			path = "Salary Below 26y";
 			sourceTree = "<group>";
 		};
 		E4FCDC7B255DE06600192D6F /* SwiftUI */ = {
@@ -561,12 +561,12 @@
 				E458536F2561A42A0091C319 /* SickLeaveView.swift in Sources */,
 				E40C9D71255194EE0050646C /* SceneDelegate.swift in Sources */,
 				E418AACD255ED8830034B13B /* MaternityLeaveView.swift in Sources */,
-				E4E9276C25692A5F00E02F7C /* PaymentBelow26yViewModel.swift in Sources */,
+				E4E9276C25692A5F00E02F7C /* SalaryBelow26yViewModel.swift in Sources */,
 				E4FCDCC7255EC30B00192D6F /* Route.swift in Sources */,
 				E45853AD256574500091C319 /* Constants+LinkURL.swift in Sources */,
 				E4FCDC90255E00F600192D6F /* InfoView.swift in Sources */,
 				E40C9D73255194EE0050646C /* VacationLeaveView.swift in Sources */,
-				E4E9276625692A4B00E02F7C /* PaymentBelow26View.swift in Sources */,
+				E4E9276625692A4B00E02F7C /* SalaryBelow26yView.swift in Sources */,
 				E45853C825666BD40091C319 /* Ext+UITextfield.swift in Sources */,
 				E4FCDC76255DDF6C00192D6F /* NavigationButton.swift in Sources */,
 				E45853772561A4FE0091C319 /* NumericTextfieldRow.swift in Sources */,

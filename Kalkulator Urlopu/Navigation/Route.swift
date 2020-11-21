@@ -31,8 +31,8 @@ enum Route: Router {
             let view = SickLeaveView(vm: vm)
             return AnyView(view)
         case .salaryBelow26Calculator:
-            let vm = PaymentBelow26yViewModel()
-            let view = PaymentBelow26yView(vm: vm)
+            let vm = SalaryBelow26yViewModel()
+            let view = SalaryBelow26yView(vm: vm)
             return AnyView(view)
         }
     }

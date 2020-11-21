@@ -15,6 +15,7 @@ enum Route: Router {
     case vacationLeaveCalculator
     case sickLeaveCalculator
     case salaryBelow26Calculator
+    case survivorsPensionCalculator
     
     func open() -> AnyView {
         switch self {
@@ -33,6 +34,10 @@ enum Route: Router {
         case .salaryBelow26Calculator:
             let vm = SalaryBelow26yViewModel()
             let view = SalaryBelow26yView(vm: vm)
+            return AnyView(view)
+        case .survivorsPensionCalculator:
+            let vm = SurvivorsPensionViewModel()
+            let view = SurvivorsPensionView(vm: vm)
             return AnyView(view)
         }
     }

@@ -1,7 +1,6 @@
 //  Created by Tymoteusz Stokarski on 21/11/2020.
 //
 
-import Combine
 import SwiftUI
 
 struct SalaryBelow26yView: View {

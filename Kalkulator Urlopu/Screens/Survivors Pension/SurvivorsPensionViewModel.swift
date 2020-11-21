@@ -7,7 +7,7 @@ import Combine
 class SurvivorsPensionViewModel: ObservableObject {
     
     // MARK: Properties
-    var webLinks: [WebLink] = [WebLink(title: "Nowa preferencja w podatku dochodowym od osób fizycznych dla młodych osób", url: .ulgaPodatkowaDlaMlodych)]
+    var webLinks: [WebLink] = [WebLink(title: "Ustawa o emeryturach i rentach z Funduszu Ubezpieczeń Społecznych, Art. 73, 73, 85", url: .emeryturyRenty)]
     var survivorsPensionInsuranceTypes = SurvivorsPensionInsuranceType.allCases
     
     @Published var query = SurvivorsPensionQuery() {

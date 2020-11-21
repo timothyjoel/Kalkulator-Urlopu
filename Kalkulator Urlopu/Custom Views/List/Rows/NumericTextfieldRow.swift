@@ -34,7 +34,6 @@ struct NumericTextfieldRow: View {
                 let convertedValue = Int(text)?.trimTo(maxValue)
                 self.text = convertedValue == nil ? "" : String(convertedValue!)
                 self.value = convertedValue ?? 0
-                print(value)
             }.onAppear(perform: {
                 self.text = value != 0 ? value.asString() : ""
             })

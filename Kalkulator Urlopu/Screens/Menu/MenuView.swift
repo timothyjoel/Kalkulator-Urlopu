@@ -17,7 +17,7 @@ struct MenuView: View {
                 VStack (spacing: 8) {
                     SearchBar(placeholder: "Wprowadź nazwę kalkulatora...", text: $searchEntry)
                         .padding(.horizontal, 10)
-                    CustomList(title: "Kalkulator prawny") {
+                    ListScreenView(title: "Kalkulator prawny") {
                         ForEach(self.vm.cards.filter({ card -> Bool in
                             searchEntry.isEmpty ? true : card.title.lowercased()
                                 .contains(searchEntry.lowercased())

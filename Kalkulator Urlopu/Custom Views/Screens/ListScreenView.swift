@@ -3,7 +3,7 @@
 
 import SwiftUI
 
-struct CustomList<Content>: View where Content: View {
+struct ListScreenView<Content>: View where Content: View {
     
     let title: String
     let content: () -> Content

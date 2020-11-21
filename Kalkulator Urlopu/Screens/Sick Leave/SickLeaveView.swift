@@ -9,30 +9,27 @@ struct SickLeaveView: View {
     @ObservedObject var vm: SickLeaveViewModel
     
     var body: some View {
-
-            ZStack {
-                Color.customBackground.edgesIgnoringSafeArea(.all)
-                ScrollView {
-                    SectionView(title: "Podstawa prawna") {
-                        LinksRowView(webLinks: vm.webLinks)
-                    }
-                    SectionView(title: "Dane dotyczące zatrudnienia") {
-                        NumericTextfieldRow(title: "Wynagrodzenie netto", textfieldUnit: "zł", value: $vm.query.moneyPerMonth, keyboard: .numberPad, maxValue: 100000)
-                        NumericTextfieldRow(title: "Okres nieobecności", textfieldUnit: "dni", value: $vm.query.daysOnSickLeave, keyboard: .numberPad, maxValue: 365)
-                    }
-                    SectionView(title: "Rodzaj zwolnienia") {
-                        GroupedRadioButtonsView(items: SickLeaveReason.allCases, selectedItem: $vm.query.sickLeaveReason)
-                    }
-                    SectionView(title: "Wysokosć zwolnienia") {
-                        ResultRowView(title: "Netto za wybrany okres", unit: "zł", result: vm.result)
-                        ResultRowView(title: "Netto za dzień", unit: "zł", result: vm.resultPerDay)
-                    }
-                }
+        
+        ScrollScreenView(title: "Zwolnienie lekarskie") {
+            SectionView(title: "Podstawa prawna") {
+                LinksRowView(webLinks: vm.webLinks)
             }
-            .navigationBarTitle(Text("Zwolnienie lekarskie"))
+            SectionView(title: "Dane dotyczące zatrudnienia") {
+                NumericTextfieldRow(title: "Wynagrodzenie netto", textfieldUnit: "zł", value: $vm.query.moneyPerMonth, keyboard: .numberPad, maxValue: 100000)
+                NumericTextfieldRow(title: "Okres nieobecności", textfieldUnit: "dni", value: $vm.query.daysOnSickLeave, keyboard: .numberPad, maxValue: 365)
+            }
+            SectionView(title: "Rodzaj zwolnienia") {
+                GroupedRadioButtonsView(items: SickLeaveReason.allCases, selectedItem: $vm.query.sickLeaveReason)
+            }
+            SectionView(title: "Wysokosć zwolnienia") {
+                ResultRowView(title: "Netto za wybrany okres", unit: "zł", result: vm.result)
+                ResultRowView(title: "Netto za dzień", unit: "zł", result: vm.resultPerDay)
+            }
+        }
     }
     
 }
+
 
 struct SickLeaveView_Previews: PreviewProvider {
     

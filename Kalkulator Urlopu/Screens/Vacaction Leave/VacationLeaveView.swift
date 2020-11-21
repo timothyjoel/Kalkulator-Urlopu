@@ -6,34 +6,29 @@ import SwiftUI
 
 struct VacationLeaveView: View {
     
-//    @State var showInfo = false
     @ObservedObject var vm: VacationLeaveViewModel
     
     var body: some View {
-
-            ZStack {
-                Color.customBackground.edgesIgnoringSafeArea(.all)
-                ScrollView {
-                    SectionView(title: "Podstawa prawna") {
-                        LinksRowView(webLinks: vm.webLinks)
-                    }
-                    SectionView(title: "Dane dotyczące zatrudnienia") {
-                        ToggleRowView(title: "Staż pracy poniżej 10 lat", isOn: $vm.query.workedLessThanTenYears)
-                        DateRowView(title: "Początek", date: $vm.query.beginDate)
-                        DateRowView(title: "Koniec", date: $vm.query.endDate)
-                        StepperRowView(title: "Wymiar etatu: \(vm.query.workingTime)/4", value: $vm.query.workingTime, range: vm.query.workingTimeRange)
-                    }
-                    SectionView(title: "Zakres urlopu") {
-                        ResultRowView(title: "Liczba dni wolnych za wybrany okres:", result: vm.result.daysOff ?? 0)
-                        ResultRowView(title: "Godzinowy wymiar urlopu:", result: vm.result.hoursOff ?? 0)
-                        ResultRowView(title: "Liczba przepracowanych miesięcy:", result: vm.result.workedMonths ?? 0)
-                        ResultRowView(title: "Wymiar roczny dla pełnego etatu:", result: vm.result.daysOffInYear ?? 0)
-                        ResultRowView(title: "Liczba godzin pracy w tygodniu:", result: vm.result.workHoursPerWeek ??  0)
-                    }
-                    Spacer()
-                }
+        
+        ScrollScreenView(title: "Urlop wypoczynkowy") {
+            SectionView(title: "Podstawa prawna") {
+                LinksRowView(webLinks: vm.webLinks)
             }
-            .navigationBarTitle(Text("Urlop wypoczynkowy"))
+            SectionView(title: "Dane dotyczące zatrudnienia") {
+                ToggleRowView(title: "Staż pracy poniżej 10 lat", isOn: $vm.query.workedLessThanTenYears)
+                DateRowView(title: "Początek", date: $vm.query.beginDate)
+                DateRowView(title: "Koniec", date: $vm.query.endDate)
+                StepperRowView(title: "Wymiar etatu: \(vm.query.workingTime)/4", value: $vm.query.workingTime, range: vm.query.workingTimeRange)
+            }
+            SectionView(title: "Zakres urlopu") {
+                ResultRowView(title: "Liczba dni wolnych za wybrany okres:", result: vm.result.daysOff ?? 0)
+                ResultRowView(title: "Godzinowy wymiar urlopu:", result: vm.result.hoursOff ?? 0)
+                ResultRowView(title: "Liczba przepracowanych miesięcy:", result: vm.result.workedMonths ?? 0)
+                ResultRowView(title: "Wymiar roczny dla pełnego etatu:", result: vm.result.daysOffInYear ?? 0)
+                ResultRowView(title: "Liczba godzin pracy w tygodniu:", result: vm.result.workHoursPerWeek ??  0)
+            }
+            
+        }
         
     }
 }

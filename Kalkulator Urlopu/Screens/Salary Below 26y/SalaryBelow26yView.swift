@@ -9,31 +9,25 @@ struct SalaryBelow26yView: View {
     @ObservedObject var vm: SalaryBelow26yViewModel
     
     var body: some View {
-
-        ZStack {
-            Color.customBackground.edgesIgnoringSafeArea(.all)
-            ScrollView {
-                SectionView(title: "Podstawa prawna") {
-                    LinksRowView(webLinks: vm.webLinks)
-                }
-                SectionView(title: "Dane dotyczące zatrudnienia") {
-                    NumericTextfieldRow(title: "Wynagrodzenie brutto", textfieldUnit: "zł", value: $vm.grossSalary, keyboard: .numberPad, maxValue: 100000)
-                    ResultRowView(title: "Składka emerytalna", unit: "%", result: vm.pensionContribution1)
-                    ResultRowView(title: "Składka rentowa", unit: "%", result: vm.pensionContribution2)
-                    ResultRowView(title: "Składka chorobowa", unit: "%", result: vm.sicknessContribution)
-                    ResultRowView(title: "Składka na ubezpieczenie zdrowotne", unit: "%", result: vm.healhtInsuranceContribution)
-                }
-                
-                SectionView(title: "Wynagrodzenie") {
-                    ResultRowView(title: "Wynagrodzenie netto", unit: "zł", result: vm.netSalary)
-                }
-
-                Spacer()
+        
+        ScrollScreenView(title: "Wynagrodzenie") {
+            SectionView(title: "Podstawa prawna") {
+                LinksRowView(webLinks: vm.webLinks)
+            }
+            SectionView(title: "Dane dotyczące zatrudnienia") {
+                NumericTextfieldRow(title: "Wynagrodzenie brutto", textfieldUnit: "zł", value: $vm.grossSalary, keyboard: .numberPad, maxValue: 100000)
+                ResultRowView(title: "Składka emerytalna", unit: "%", result: vm.pensionContribution1)
+                ResultRowView(title: "Składka rentowa", unit: "%", result: vm.pensionContribution2)
+                ResultRowView(title: "Składka chorobowa", unit: "%", result: vm.sicknessContribution)
+                ResultRowView(title: "Składka na ubezpieczenie zdrowotne", unit: "%", result: vm.healhtInsuranceContribution)
+            }
+            SectionView(title: "Wynagrodzenie") {
+                ResultRowView(title: "Wynagrodzenie netto", unit: "zł", result: vm.netSalary)
             }
         }
-        .navigationBarTitle(Text("Wynagrodzenie"))
-
+        
     }
+    
 }
 
 struct SalaryBelow26yView_Previews: PreviewProvider {

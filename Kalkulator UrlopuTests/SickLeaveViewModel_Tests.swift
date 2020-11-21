@@ -11,11 +11,6 @@ class SickLeaveViewModel_Tests: XCTestCase {
         XCTAssertEqual(sut.result, 2800)
     }
     
-    func test_WhenQueryHas70Percentage__Money2800() {
-        let sut = makeSUT(percentage: 70)
-        XCTAssertEqual(sut.result, 2450.0)
-    }
-    
     func test_WhenQueryHasDaysOnSickLeave20__Money2800() {
         let sut = makeSUT(daysOnSickLeave: 20)
         XCTAssertEqual(Int(sut.result), 1866)
@@ -33,7 +28,6 @@ class SickLeaveViewModel_Tests: XCTestCase {
     func makeSUT(moneyPerMonth: Int = 3500, percentage: Int = 80, daysOnSickLeave: Int = 30, sickLeaveReason: SickLeaveReason = .regularSickness) -> SickLeaveViewModel {
         let sut = SickLeaveViewModel()
         sut.query.moneyPerMonth = moneyPerMonth
-        sut.query.percentage = percentage
         sut.query.daysOnSickLeave = daysOnSickLeave
         sut.query.sickLeaveReason = sickLeaveReason
         return sut

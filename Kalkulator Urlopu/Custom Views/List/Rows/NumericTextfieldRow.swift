@@ -13,12 +13,14 @@ struct NumericTextfieldRow: View {
     private var title: String
     private var textfieldUnit: TextfieldUnit? = nil
     private var maxValue: Int
+    private var minValue: Int
     
-    init(title: String, textfieldUnit: TextfieldUnit? = nil, value: Binding<Int>, maxValue: Int) {
+    init(title: String, textfieldUnit: TextfieldUnit? = nil, value: Binding<Int>, maxValue: Int, minValue: Int = 0) {
         self.title = title
         self.textfieldUnit = textfieldUnit
         self._value = value
         self.maxValue = maxValue
+        self.minValue = minValue
     }
     
     var body: some View {
@@ -27,12 +29,20 @@ struct NumericTextfieldRow: View {
             Text(title + (textfieldUnit != nil ? " [\(textfieldUnit!.value)]" : ""))
                 .foregroundColor(.customLabel)
                 .font(.text)
+                .multilineTextAlignment(.leading)
+                .lineLimit(2)
             Spacer()
             TextField(textfieldUnit?.value ?? "", text: $text) { changed in
-                let convertedValue = Int(text)?.trimTo(maxValue)
-                self.text = convertedValue == nil ? "" : String(convertedValue!)
-                self.value = convertedValue ?? 0
-            }.onAppear(perform: {
+                guard let convertedValue = Int(text)?.trimTo(maxValue) else {
+                    self.text = ""
+                    self.value = minValue
+                    return
+                }
+                let valueToDisplay = convertedValue > minValue ? convertedValue : minValue
+                self.text = String(valueToDisplay)
+                self.value = valueToDisplay
+            }
+            .onAppear(perform: {
                 self.text = value != 0 ? value.asString() : ""
             })
                 .foregroundColor(.blue)

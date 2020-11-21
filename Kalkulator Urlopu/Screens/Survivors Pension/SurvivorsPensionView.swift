@@ -14,15 +14,18 @@ struct SurvivorsPensionView: View {
                 LinksRowView(webLinks: vm.webLinks)
             }
             SectionView(title: "Dane dotyczące renty") {
-                NumericTextfieldRow(title: "Świadczenie zmarłego", textfieldUnit: .PLN, value: $vm.grossSalary, maxValue: 100000)
-                StepperRowView(title: "Liczba osób uprawnionych do renty", value: $vm.numberOfPeople, range: 1...6)
-                DateRowView(title: "Data nabycia prawa do renty", date: $vm.acquireDate)
+                NumericTextfieldRow(title: "Świadczenie zmarłego", textfieldUnit: .PLN, value: $vm.query.moneyAmount, maxValue: 100000)
+                NumericTextfieldRow(title: "Osoby uprawnione do renty", textfieldUnit: .number, value: $vm.query.numberOfPeople, maxValue: 6, minValue: 1)
             }
             SectionView(title: "Renta z ubezpieczenia") {
-                GroupedRadioButtonsView(items: vm.survivorsPensionInsuranceTypes, selectedItem: $vm.pensionType)
+                GroupedRadioButtonsView(items: vm.survivorsPensionInsuranceTypes, selectedItem: $vm.query.pensionType)
             }
-            SectionView(title: "Wynagrodzenie") {
-                ResultRowView(title: "Wynagrodzenie netto", unit: "zł", result: vm.netSalary)
+            SectionView(title: "Renta rodzinna z ubezpieczenia rentowego") {
+                ResultRowView(title: "Wysokość świadczenia osoby zmarłej", unit: "%", result: vm.result.percentage)
+                ResultRowView(title: "Obliczona", unit: "zł", result: vm.result.calculatedAmount)
+                ResultRowView(title: "Gwarantowana", unit: "zł", result: vm.result.guaranteedAmount)
+                ResultRowView(title: "Należna", unit: "zł", result: vm.result.dueAmount)
+                ResultRowView(title: "Należna na osobę", unit: "zł", result: vm.result.dueAmountPerPerson)
             }
         }
         

@@ -6,38 +6,38 @@ import Combine
 
 class SurvivorsPensionViewModel: ObservableObject {
     
+    // MARK: Properties
     var webLinks: [WebLink] = [WebLink(title: "Nowa preferencja w podatku dochodowym od osób fizycznych dla młodych osób", url: .ulgaPodatkowaDlaMlodych)]
     var survivorsPensionInsuranceTypes = SurvivorsPensionInsuranceType.allCases
-    @Published var pensionType: SurvivorsPensionInsuranceType = .accident
-    @Published var numberOfPeople = 1
     
-    var pensionContribution1 = 9.76
-    var pensionContribution2 = 1.5
-    var sicknessContribution = 2.45
-    var healhtInsuranceContribution = 9
-    
-    @Published var acquireDate = Date()
-    
-    @Published var grossSalary: Int = 0 {
+    @Published var query = SurvivorsPensionQuery() {
         didSet  {
             calculateResults()
         }
     }
+    @Published var result = SurvivorsPensionResult()
     
-    @Published var netSalary: Float = 0
+    // MARK: - Methods
+    private func calculateResults() {
+        result.percentage = percentage
+        result.calculatedAmount = Float(query.moneyAmount) * percentage
+        result.guaranteedAmount = query.pensionType == .accident ? 1320 : 1100
+        let amount = result.calculatedAmount > result.guaranteedAmount ? result.calculatedAmount : result.guaranteedAmount
+        result.dueAmount = amount
+        result.dueAmountPerPerson = amount / Float(query.numberOfPeople)
+    }
     
-    func calculateResults() {
-        let pension1 = Double(grossSalary) * pensionContribution1 / 100
-        let pension2 = Double(grossSalary) * pensionContribution2 / 100
-        let sickness = Double(grossSalary) * sicknessContribution / 100
-        let basisForHealthInsurance = Double(grossSalary) -  Double(pension1) - Double(pension2) - Double(sickness)
-        let healthInsurance = Float(basisForHealthInsurance * Double(healhtInsuranceContribution) / 100)
-        netSalary = Float(basisForHealthInsurance) - healthInsurance
+    private var percentage: Float {
+        switch query.numberOfPeople {
+        case 1: return 0.85
+        case 2: return 0.90
+        default: return 0.95
+        }
     }
     
 }
 
-enum SurvivorsPensionInsuranceType: CustomStringConvertible, Equatable, CaseIterable {
+enum SurvivorsPensionInsuranceType: StringDescriptiveItem {
     
     case accident
     case pension

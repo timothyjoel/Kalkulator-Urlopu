@@ -55,6 +55,7 @@
 		E4E927822569524A00E02F7C /* ScrollScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E927812569524A00E02F7C /* ScrollScreenView.swift */; };
 		E4E9278F2569554100E02F7C /* SurvivorsPensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E9278E2569554100E02F7C /* SurvivorsPensionView.swift */; };
 		E4E927952569554F00E02F7C /* SurvivorsPensionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E927942569554F00E02F7C /* SurvivorsPensionViewModel.swift */; };
+		E4E92799256998F900E02F7C /* SurvivorsPensionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E92798256998F900E02F7C /* SurvivorsPensionModel.swift */; };
 		E4FCDC72255DB60700192D6F /* Ext+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDC71255DB60700192D6F /* Ext+Font.swift */; };
 		E4FCDC76255DDF6C00192D6F /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDC75255DDF6C00192D6F /* NavigationButton.swift */; };
 		E4FCDC81255DE76900192D6F /* Ext+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDC80255DE76900192D6F /* Ext+Color.swift */; };
@@ -129,6 +130,7 @@
 		E4E927812569524A00E02F7C /* ScrollScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollScreenView.swift; sourceTree = "<group>"; };
 		E4E9278E2569554100E02F7C /* SurvivorsPensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurvivorsPensionView.swift; sourceTree = "<group>"; };
 		E4E927942569554F00E02F7C /* SurvivorsPensionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurvivorsPensionViewModel.swift; sourceTree = "<group>"; };
+		E4E92798256998F900E02F7C /* SurvivorsPensionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurvivorsPensionModel.swift; sourceTree = "<group>"; };
 		E4FCDC71255DB60700192D6F /* Ext+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Font.swift"; sourceTree = "<group>"; };
 		E4FCDC75255DDF6C00192D6F /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
 		E4FCDC80255DE76900192D6F /* Ext+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Color.swift"; sourceTree = "<group>"; };
@@ -411,6 +413,7 @@
 			children = (
 				E4E9278E2569554100E02F7C /* SurvivorsPensionView.swift */,
 				E4E927942569554F00E02F7C /* SurvivorsPensionViewModel.swift */,
+				E4E92798256998F900E02F7C /* SurvivorsPensionModel.swift */,
 			);
 			path = "Survivors Pension";
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4E92799256998F900E02F7C /* SurvivorsPensionModel.swift in Sources */,
 				E4FCDCA6255E943000192D6F /* MenuView.swift in Sources */,
 				E45853BD256668520091C319 /* Ext+View.swift in Sources */,
 				E40C9D6F255194EE0050646C /* AppDelegate.swift in Sources */,

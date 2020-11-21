@@ -26,7 +26,7 @@ class SickLeaveViewModel: ObservableObject {
     
 }
 
-enum SickLeaveReason: CustomStringConvertible, Equatable, CaseIterable {
+enum SickLeaveReason: StringDescriptiveItem {
     
     case regularSickness
     case sickWhenPregnant

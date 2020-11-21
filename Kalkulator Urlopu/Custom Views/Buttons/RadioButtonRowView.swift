@@ -3,11 +3,11 @@
 
 import SwiftUI
 
-protocol StringDescriptive {
+protocol StringDescriptiveItem: Equatable, CaseIterable {
     var description: String { get }
 }
 
-struct GroupedRadioButtonsView<T: CustomStringConvertible & Equatable>: View {
+struct GroupedRadioButtonsView<T: StringDescriptiveItem>: View {
     
     let items: [T]
     @Binding var selectedItem: T

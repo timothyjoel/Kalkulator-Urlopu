@@ -29,6 +29,7 @@ struct MenuView: View {
                             }
                         }
                     }
+                    .animation(.interactiveSpring())
                     Spacer()
                 }
                 .background(Color.customBackground)

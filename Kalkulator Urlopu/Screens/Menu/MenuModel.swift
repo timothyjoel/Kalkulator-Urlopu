@@ -3,11 +3,21 @@
 
 import SwiftUI
 
-struct Card {
+protocol RoutingText {
+    var title: String { get }
+    var route: Route { get }
+}
+
+protocol RoutingImage {
+    var image: ImageAsset { get }
+    var route: Route { get }
+}
+
+struct Card: RoutingText, RoutingImage {
 
     var title: String
     var subtitle: String
-    var image: CardImage
+    var image: ImageAsset
     var background: [Color]
     var route: Route
     

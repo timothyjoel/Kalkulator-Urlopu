@@ -8,6 +8,7 @@ struct MenuView: View {
     @ObservedObject var vm = MenuViewModel()
     @State var showInfo: Bool = false
     @State var searchEntry: String = ""
+    @State var showCardsList: Bool = true
     
     var body: some View {
         NavigationView {
@@ -21,16 +22,18 @@ struct MenuView: View {
                             searchEntry.isEmpty ? true : card.title.lowercased()
                                 .contains(searchEntry.lowercased())
                         }), id: \.self) { card in
-                            CardView(card: card)
-                                .buttonStyle(PlainButtonStyle())
-                                .background(Color.red, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            if showCardsList {
+                                CardView(card: card)
+                            } else {
+                                NavigationTextRow(item: card)
+                            }
                         }
                     }
                     Spacer()
                 }
+                .background(Color.customBackground)
             }
-            .navigationBarItems(trailing: NavigationButton(icon: .questionMark, action: { self.showInfo.toggle() })
-            )
+            .navigationBarItems(leading: NavigationButton(icon: showCardsList ? .list : .grid, action: { self.showCardsList.toggle() }), trailing: NavigationButton(icon: .questionMark, action: { self.showInfo.toggle() }))
         }
         .edgesIgnoringSafeArea(.all)
     }

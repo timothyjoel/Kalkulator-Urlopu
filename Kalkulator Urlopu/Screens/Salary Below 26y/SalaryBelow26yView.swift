@@ -14,7 +14,7 @@ struct SalaryBelow26yView: View {
                 LinksRowView(webLinks: vm.webLinks)
             }
             SectionView(title: "Dane dotyczące zatrudnienia") {
-                NumericTextfieldRow(title: "Wynagrodzenie brutto", textfieldUnit: "zł", value: $vm.grossSalary, keyboard: .numberPad, maxValue: 100000)
+                NumericTextfieldRow(title: "Wynagrodzenie brutto", textfieldUnit: .PLN, value: $vm.grossSalary, maxValue: 100000)
                 ResultRowView(title: "Składka emerytalna", unit: "%", result: vm.pensionContribution1)
                 ResultRowView(title: "Składka rentowa", unit: "%", result: vm.pensionContribution2)
                 ResultRowView(title: "Składka chorobowa", unit: "%", result: vm.sicknessContribution)

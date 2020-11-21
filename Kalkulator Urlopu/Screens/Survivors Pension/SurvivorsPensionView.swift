@@ -14,7 +14,7 @@ struct SurvivorsPensionView: View {
                 LinksRowView(webLinks: vm.webLinks)
             }
             SectionView(title: "Dane dotyczące renty") {
-                NumericTextfieldRow(title: "Świadczenie zmarłego", textfieldUnit: "zł", value: $vm.grossSalary, keyboard: .numberPad, maxValue: 100000)
+                NumericTextfieldRow(title: "Świadczenie zmarłego", textfieldUnit: .PLN, value: $vm.grossSalary, maxValue: 100000)
                 StepperRowView(title: "Liczba osób uprawnionych do renty", value: $vm.numberOfPeople, range: 1...6)
                 DateRowView(title: "Data nabycia prawa do renty", date: $vm.acquireDate)
             }

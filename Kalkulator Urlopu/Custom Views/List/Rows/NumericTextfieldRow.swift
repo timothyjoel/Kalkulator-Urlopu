@@ -11,26 +11,24 @@ struct NumericTextfieldRow: View {
     @Binding var value: Int
     @State var text: String = ""
     private var title: String
-    private var textfieldUnit: String? = nil
-    private var keyboard: UIKeyboardType = .default
+    private var textfieldUnit: TextfieldUnit? = nil
     private var maxValue: Int
     
-    init(title: String, textfieldUnit: String? = nil, value: Binding<Int>, keyboard: UIKeyboardType = .default, maxValue: Int) {
+    init(title: String, textfieldUnit: TextfieldUnit? = nil, value: Binding<Int>, maxValue: Int) {
         self.title = title
         self.textfieldUnit = textfieldUnit
         self._value = value
-        self.keyboard = keyboard
         self.maxValue = maxValue
     }
     
     var body: some View {
 
         HStack (spacing: 4) {
-            Text(title + (textfieldUnit != nil ? " [\(textfieldUnit!)]" : ""))
+            Text(title + (textfieldUnit != nil ? " [\(textfieldUnit!.value)]" : ""))
                 .foregroundColor(.customLabel)
                 .font(.text)
             Spacer()
-            TextField(textfieldUnit ?? "", text: $text) { changed in
+            TextField(textfieldUnit?.value ?? "", text: $text) { changed in
                 let convertedValue = Int(text)?.trimTo(maxValue)
                 self.text = convertedValue == nil ? "" : String(convertedValue!)
                 self.value = convertedValue ?? 0
@@ -43,7 +41,7 @@ struct NumericTextfieldRow: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .frame(width: 100)
                 .background(Color.customView)
-                .keyboardType(keyboard)
+                .keyboardType(.numberPad)
                 .introspectTextField { (textField) in
                     let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: textField.frame.size.width, height: 44))
                     let flexButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
@@ -66,20 +64,19 @@ struct NumericTextfieldRow: View {
     
 }
 
-//struct TextfieldRowView_Previews: PreviewProvider {
-//
-//    static var previews: some View {
-//
-//        Group {
-//            TextfieldRowView(value: .constant(30), title: "Title1", placeholder: "Dni", textfieldUnit: "Unit", keyboard: .numberPad, maximumCharacters: 4)
-//                .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
-//                .previewDisplayName("iPhone 8")
-//            TextfieldRowView(value: .constant(30), title: "Title1", placeholder: "Dni", textfieldUnit: "Unit", keyboard: .numberPad, maximumCharacters: 4)
-//                .previewDevice(PreviewDevice(rawValue: "iPhone XS Max"))
-//                .previewDisplayName("iPhone XS Max")
-//                .environment(\.colorScheme, .dark)
-//        }
-//
-//    }
-//
-//}
+enum TextfieldUnit {
+    
+    case PLN
+    case percentage
+    case number
+    case day
+    
+    var value: String {
+        switch self {
+        case .number: return "n"
+        case .percentage: return "%"
+        case .PLN: return "zł"
+        case .day: return "dni"
+        }
+    }
+}

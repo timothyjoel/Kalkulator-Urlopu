@@ -15,8 +15,8 @@ struct SickLeaveView: View {
                 LinksRowView(webLinks: vm.webLinks)
             }
             SectionView(title: "Dane dotyczące zatrudnienia") {
-                NumericTextfieldRow(title: "Wynagrodzenie netto", textfieldUnit: "zł", value: $vm.query.moneyPerMonth, keyboard: .numberPad, maxValue: 100000)
-                NumericTextfieldRow(title: "Okres nieobecności", textfieldUnit: "dni", value: $vm.query.daysOnSickLeave, keyboard: .numberPad, maxValue: 365)
+                NumericTextfieldRow(title: "Wynagrodzenie netto", textfieldUnit: .PLN, value: $vm.query.moneyPerMonth, maxValue: 100000)
+                NumericTextfieldRow(title: "Okres nieobecności", textfieldUnit: .day, value: $vm.query.daysOnSickLeave, maxValue: 365)
             }
             SectionView(title: "Rodzaj zwolnienia") {
                 GroupedRadioButtonsView(items: SickLeaveReason.allCases, selectedItem: $vm.query.sickLeaveReason)

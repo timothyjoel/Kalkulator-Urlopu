@@ -16,7 +16,7 @@ struct MaternityLeaveView: View {
             }
             SectionView(title: "Dane dotyczące urlopu") {
                 DateRowView(title: "Data porodu", date: $vm.query.birthDate)
-                StepperRowView(title: "Liczba urodzonych dzieci podczas porodu: \(vm.query.numberOfKidsBorn)", value: $vm.query.numberOfKidsBorn, range: vm.query.numberOfKidsBornRange)
+                NumericTextfieldRow(title: "Liczba urodzonych dzieci podczas porodu", value: $vm.query.numberOfKidsBorn, maxValue: 5)
             }
             SectionView(title: "Urlop macierzyński") {
                 ResultRowView(title: "Liczba tygodni:", result: vm.result.maternityLeave)

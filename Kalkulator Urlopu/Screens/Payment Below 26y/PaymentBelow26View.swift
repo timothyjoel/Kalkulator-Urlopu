@@ -18,10 +18,10 @@ struct PaymentBelow26yView: View {
                 }
                 SectionView(title: "Dane dotyczące zatrudnienia") {
                     NumericTextfieldRow(title: "Wynagrodzenie brutto", textfieldUnit: "zł", value: $vm.grossSalary, keyboard: .numberPad, maxValue: 100000)
-                    ResultRowView(title: "Składka emerytalna", unit: "%", result: vm.skladkaEmerytalna)
-                    ResultRowView(title: "Składka rentowa", unit: "%", result: vm.skladkaRentowa)
-                    ResultRowView(title: "Składka chorobowa", unit: "%", result: vm.skladkaChorobowa)
-                    ResultRowView(title: "Składka na ubezpieczenie zdrowotne", unit: "%", result: vm.skladkaNaUbezpieczenieZdrowotne)
+                    ResultRowView(title: "Składka emerytalna", unit: "%", result: vm.pensionContribution1)
+                    ResultRowView(title: "Składka rentowa", unit: "%", result: vm.pensionContribution2)
+                    ResultRowView(title: "Składka chorobowa", unit: "%", result: vm.sicknessContribution)
+                    ResultRowView(title: "Składka na ubezpieczenie zdrowotne", unit: "%", result: vm.healhtInsuranceContribution)
                 }
                 
                 SectionView(title: "Wynagrodzenie") {
